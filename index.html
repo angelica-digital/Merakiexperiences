@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meraki Restaurant · Salento, Quindío</title>
-  <meta name="description" content="Local & Cosmo Experiences en Salento, Quindío. Cocina de autor, coctelería y tradición.">
+  <meta name="description" content="Local & Cosmo Experiences en Salento, Quindío. Cocina de autor, bebidas y tradición.">
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -85,7 +85,7 @@
       Local & Cosmo Experiences
     </h1>
     <p id="hero-subtitle" class="text-[#6E5D57] text-base sm:text-lg mb-6 leading-relaxed font-light">
-      Cocina de autor, coctelería y tradición en el corazón de Salento.
+      Cocina de autor, cafés especiales y tradición en el corazón de Salento.
     </p>
 
     <div class="flex items-center justify-center gap-3">
@@ -105,9 +105,9 @@
       <div class="flex items-center gap-2 overflow-x-auto w-full sm:w-auto pb-1 sm:pb-0 no-scrollbar" id="category-tabs">
         <button onclick="setCategory('all')" data-cat="all" class="cat-btn whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-medium transition-all bg-[#2B1E1A] text-white shadow-sm">Todo</button>
         <button onclick="setCategory('entradas')" data-cat="entradas" class="cat-btn whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-medium transition-all bg-white text-[#6E5D57] hover:bg-[#FDF8F5] border border-[#F0E5DE]">Entradas</button>
-        <button onclick="setCategory('fuertes')" data-cat="fuertes" class="cat-btn whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-medium transition-all bg-white text-[#6E5D57] hover:bg-[#FDF8F5] border border-[#F0E5DE]">Platos Fuertes</button>
-        <button onclick="setCategory('cocteles')" data-cat="cocteles" class="cat-btn whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-medium transition-all bg-white text-[#6E5D57] hover:bg-[#FDF8F5] border border-[#F0E5DE]">Coctelería</button>
-        <button onclick="setCategory('bebidas')" data-cat="bebidas" class="cat-btn whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-medium transition-all bg-white text-[#6E5D57] hover:bg-[#FDF8F5] border border-[#F0E5DE]">Bebidas & Café</button>
+        <button onclick="setCategory('fuertes')" data-cat="fuertes" class="cat-btn whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-medium transition-all bg-white text-[#6E5D57] hover:bg-[#FDF8F5] border border-[#F0E5DE]">Fuertes</button>
+        <button onclick="setCategory('calientes')" data-cat="calientes" class="cat-btn whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-medium transition-all bg-white text-[#6E5D57] hover:bg-[#FDF8F5] border border-[#F0E5DE]">Bebidas Calientes</button>
+        <button onclick="setCategory('bebidas')" data-cat="bebidas" class="cat-btn whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-medium transition-all bg-white text-[#6E5D57] hover:bg-[#FDF8F5] border border-[#F0E5DE]">Bebidas Frías</button>
       </div>
 
       <!-- Search Input -->
@@ -115,13 +115,24 @@
         <input
           type="text"
           id="search-input"
-          placeholder="Buscar plato o ingrediente..."
+          placeholder="Buscar plato o café..."
           oninput="handleSearch(this.value)"
           class="w-full bg-white border border-[#F0E5DE] rounded-full px-4 py-1.5 text-xs text-[#2B1E1A] placeholder-[#6E5D57]/60 focus:outline-none focus:border-[#A44A27]"
         />
       </div>
     </div>
   </section>
+
+  <!-- CANNABIS NOTICE BANNER -->
+  <div class="max-w-6xl mx-auto px-4 mt-6">
+    <div class="bg-[#A44A27]/5 border border-[#A44A27]/20 rounded-2xl p-3.5 flex items-center justify-between text-xs text-[#A44A27]">
+      <div class="flex items-center gap-2">
+        <span>🌿</span>
+        <span id="cannabis-text" class="font-medium">Puedes adicionar Gotas de Cannabis a cualquier bebida</span>
+      </div>
+      <span class="font-bold whitespace-nowrap" id="cannabis-price">+$5.000 COP</span>
+    </div>
+  </div>
 
   <!-- MENU GRID -->
   <main class="max-w-6xl mx-auto px-4 py-8">
@@ -226,17 +237,18 @@
       es: {
         badge: 'Salento, Quindío · Experiencia Gastronómica',
         heroTitle: 'Local & Cosmo Experiences',
-        heroSubtitle: 'Cocina de autor, coctelería y tradición en el corazón de Salento.',
+        heroSubtitle: 'Cocina de autor, cafés especiales y tradición en el corazón de Salento.',
         viewMenu: 'Ver Menú Digital',
         howToGet: 'Abrir en Google Maps',
         reserve: 'Reservar Mesa',
-        searchPlaceholder: 'Buscar plato o ingrediente...',
+        searchPlaceholder: 'Buscar plato o café...',
+        cannabisText: 'Puedes adicionar Gotas de Cannabis a cualquier bebida',
         categories: {
           all: 'Todo',
           entradas: 'Entradas',
           fuertes: 'Fuertes',
-          cocteles: 'Coctelería',
-          bebidas: 'Bebidas & Café'
+          calientes: 'Bebidas Calientes',
+          bebidas: 'Bebidas Frías'
         },
         faqTitle: 'Información para Viajeros',
         faqs: [
@@ -254,17 +266,18 @@
       en: {
         badge: 'Salento, Quindío · Dining Experience',
         heroTitle: 'Local & Cosmo Experiences',
-        heroSubtitle: 'Artisanal cuisine, signature cocktails, and local heritage in Salento.',
+        heroSubtitle: 'Artisanal cuisine, specialty coffee, and local heritage in Salento.',
         viewMenu: 'View Digital Menu',
         howToGet: 'Open in Google Maps',
         reserve: 'Book a Table',
-        searchPlaceholder: 'Search dish or ingredients...',
+        searchPlaceholder: 'Search food or coffee...',
+        cannabisText: 'You can add Cannabis Drops to any beverage',
         categories: {
           all: 'All',
           entradas: 'Appetizers',
           fuertes: 'Main Courses',
-          cocteles: 'Cocktails',
-          bebidas: 'Drinks & Coffee'
+          calientes: 'Hot Drinks',
+          bebidas: 'Cold Drinks'
         },
         faqTitle: 'Traveler Information',
         faqs: [
@@ -282,17 +295,18 @@
       pt: {
         badge: 'Salento, Quindío · Experiência Gastronômica',
         heroTitle: 'Local & Cosmo Experiences',
-        heroSubtitle: 'Cozinha autoral, coquetelaria e tradição no coração de Salento.',
+        heroSubtitle: 'Cozinha autoral, cafés especiais e tradição no coração de Salento.',
         viewMenu: 'Ver Cardápio Digital',
         howToGet: 'Abrir no Google Maps',
         reserve: 'Reservar Mesa',
-        searchPlaceholder: 'Buscar prato ou ingrediente...',
+        searchPlaceholder: 'Buscar prato ou café...',
+        cannabisText: 'Você pode adicionar Gotas de Cannabis em qualquer bebida',
         categories: {
           all: 'Tudo',
           entradas: 'Entradas',
           fuertes: 'Pratos Principais',
-          cocteles: 'Coquetéis',
-          bebidas: 'Bebidas e Café'
+          calientes: 'Bebidas Quentes',
+          bebidas: 'Bebidas Geladas'
         },
         faqTitle: 'Informações para Viajantes',
         faqs: [
@@ -310,7 +324,7 @@
     };
 
     const MENU_ITEMS = [
-      // ================= ENTRADAS (100% CARTA OFICIAL) =================
+      // ================= ENTRADAS =================
       { 
         id: 'e1', 
         cat: 'entradas', 
@@ -384,7 +398,7 @@
         } 
       },
 
-      // ================= FUERTES (100% CARTA OFICIAL) =================
+      // ================= FUERTES =================
       {
         id: 'f1',
         cat: 'fuertes',
@@ -554,29 +568,137 @@
         }
       },
 
-      // ================= COCTELERÍA =================
-      { id: 'c1', cat: 'cocteles', price: 32000, pop: true, name: { es: 'Meraki Botanic Gin', en: 'Meraki Botanic Gin Tonic', pt: 'Meraki Botanic Gin' }, desc: { es: 'Ginebra con botánicos locales, tónica premium, frutos rojos del bosque y romero.', en: 'Artisan gin infused with native botanicals, premium tonic, wild forest berries, and rosemary.', pt: 'Gin com botânicos locais, água tônica premium, frutas vermelhas e alecrim.' } },
-      { id: 'c2', cat: 'cocteles', price: 28000, pop: true, name: { es: 'Mojito de Maracuyá Silvestre', en: 'Passion Fruit Mojito', pt: 'Mojito de Maracujá' }, desc: { es: 'Ron blanco añejo, hierbabuena macerada, zumo de maracuyá natural y soda.', en: 'Aged white rum, freshly muddled garden mint, natural passion fruit pulp, and soda.', pt: 'Rum branco, hortelã fresca macerada, maracujá natural e água com gás.' } },
-      { id: 'c3', cat: 'cocteles', price: 34000, pop: false, name: { es: 'Margarita Salento de Fresa', en: 'Salento Strawberry Margarita', pt: 'Margarita de Morango Salento' }, desc: { es: 'Tequila reposado, triple sec, pulpa de fresa natural y escarchado de sal volcánica.', en: 'Reposado tequila, triple sec liqueur, fresh crushed strawberries, and volcanic salt rim.', pt: 'Tequila reposado, triple sec, morangos frescos batidos e borda de sal vulcânico.' } },
-      { id: 'c4', cat: 'cocteles', price: 27000, pop: true, name: { es: 'Carajillo de Café Especial', en: 'Specialty Coffee Carajillo', pt: 'Carajillo de Café Especial' }, desc: { es: 'Licor 43 batido en frío con espresso doble de origen Salento y perfume de canela.', en: 'Licor 43 shaken over ice with double origin Salento espresso and cinnamon zest.', pt: 'Licor 43 batido no gelo com espresso duplo de origem Salento e toque de canela.' } },
-      { id: 'c5', cat: 'cocteles', price: 26000, pop: false, name: { es: 'Caipiriña Clásica de Lima', en: 'Classic Lime Caipirinha', pt: 'Caipirinha Clássica de Limão' }, desc: { es: 'Cachaça brasileña tradicional, lima macerada con azúcar morena y hielo picado.', en: 'Brazilian cachaça spirit, fresh limes crushed with raw cane sugar, and crushed ice.', pt: 'Cachaça brasileira tradicional, limões macerados com açúcar e muito gelo.' } },
-      { id: 'c6', cat: 'cocteles', price: 33000, pop: false, name: { es: 'Aperol Spritz Meraki', en: 'Meraki Aperol Spritz', pt: 'Aperol Spritz Meraki' }, desc: { es: 'Aperol italiano, vino espumoso Prosecco, toque de soda mineral y naranja fresca.', en: 'Italian Aperol, crisp Prosecco sparkling wine, splash of soda, and a fresh orange slice.', pt: 'Aperol italiano, espumante Prosecco, água com gás e rodela de laranja fresca.' } },
-      { id: 'c7', cat: 'cocteles', price: 29000, pop: false, name: { es: 'Piña Colada Cremosa', en: 'Creamy Piña Colada', pt: 'Piña Colada Cremosa' }, desc: { es: 'Ron especiado, crema de coco natural espesa y jugo de piña dorada frappé.', en: 'Spiced rum blended with thick natural coconut cream and golden pineapple juice.', pt: 'Rum temperado com creme de coco natural e suco de abacaxi gelado.' } },
-      { id: 'c8', cat: 'cocteles', price: 31000, pop: false, name: { es: 'Moscow Mule con Jengibre', en: 'Fresh Ginger Moscow Mule', pt: 'Moscow Mule de Gengibre' }, desc: { es: 'Vodka destilado, cerveza de jengibre artesanal, limón exprimido en taza de cobre.', en: 'Premium vodka, spicy house ginger beer, freshly squeezed lime in a copper mug.', pt: 'Vodka destilada, cerveja artesanal de gengibre e limão na caneca de cobre.' } },
-      { id: 'c9', cat: 'cocteles', price: 25000, pop: false, name: { es: 'Sangría Tinta de la Casa (Copa)', en: 'House Red Sangria (Glass)', pt: 'Sangria Tinta da Casa (Taça)' }, desc: { es: 'Vino tinto joven macerado con manzanas, cítricos de la región y licor de naranja.', en: 'Red wine macerated with apples, local citrus fruits, triple sec liqueur, and cinnamon.', pt: 'Vinho tinto macerado com maçãs, frutas cítricas locais e licor de laranja.' } },
-      { id: 'c10', cat: 'cocteles', price: 24000, pop: false, name: { es: 'Cuba Libre Reserva Especial', en: 'Special Reserve Cuba Libre', pt: 'Cuba Libre Reserva Especial' }, desc: { es: 'Ron añejo colombiano 8 años, bebida de cola, gotas de amargo y rodaja de lima.', en: '8-year-old aged Colombian rum, classic cola, aromatic bitters dash, and fresh lime.', pt: 'Rum envelhecido 8 anos, refrigerante de cola, gotas de bitter e rodela de limão.' } },
+      // ================= BEBIDAS CALIENTES =================
+      {
+        id: 'bc1',
+        cat: 'calientes',
+        price: 5000,
+        pop: true,
+        name: { es: 'Tinto Colombiano', en: 'Colombian Drip Coffee', pt: 'Tinto Colombiano' },
+        desc: {
+          es: 'Café negro caliente preparado usando el método filtrado con granos de café colombiano seleccionado.',
+          en: 'Hot black coffee brewed with selected Colombian coffee beans using traditional drip filter method.',
+          pt: 'Café preto quente preparado com o método coado tradicional usando grãos colombianos selecionados.'
+        }
+      },
+      {
+        id: 'bc2',
+        cat: 'calientes',
+        price: 6000,
+        pop: false,
+        name: { es: 'Americano', en: 'Caffè Americano', pt: 'Café Americano' },
+        desc: {
+          es: 'Bebida caliente hecha a base de espresso suavizado con agua caliente.',
+          en: 'Hot classic beverage made with rich espresso diluted with hot water.',
+          pt: 'Bebida quente clássica feita com uma dose de espresso suavizada com água quente.'
+        }
+      },
+      {
+        id: 'bc3',
+        cat: 'calientes',
+        price: 7000,
+        pop: true,
+        name: { es: 'Espresso', en: 'Single Espresso', pt: 'Café Espresso' },
+        desc: {
+          es: 'Extracción corta de café colombiano finamente molido, preparada a alta presión.',
+          en: 'Short extraction of finely ground single origin Colombian coffee brewed under high pressure.',
+          pt: 'Extração curta de café colombiano finamente moído, preparado sob alta pressão.'
+        }
+      },
+      {
+        id: 'bc4',
+        cat: 'calientes',
+        price: 8000,
+        pop: false,
+        name: { es: 'Macchiato', en: 'Caffè Macchiato', pt: 'Café Macchiato' },
+        desc: {
+          es: 'Espresso marcado con una pequeña cantidad de leche vaporizada.',
+          en: 'Bold espresso stained with a silky touch of steamed milk microfoam.',
+          pt: 'Espresso intenso marcado com uma pequena porção de leite vaporizado.'
+        }
+      },
+      {
+        id: 'bc5',
+        cat: 'calientes',
+        price: 9000,
+        pop: true,
+        name: { es: 'Capuchino', en: 'Artisan Cappuccino', pt: 'Cappuccino Cremoso' },
+        desc: {
+          es: 'Bebida a base de espresso con leche vaporizada, finalizada con espuma de leche cremosa.',
+          en: 'Balanced espresso with hot textured milk topped with velvety thick milk foam.',
+          pt: 'Bebida à base de espresso com leite vaporizado e finalizada com espuma cremosa.'
+        }
+      },
+      {
+        id: 'bc6',
+        cat: 'calientes',
+        price: 9000,
+        pop: false,
+        name: { es: 'Café con Leche', en: 'Café Latte', pt: 'Café com Leite' },
+        desc: {
+          es: 'Espresso coronado con una generosa y suave porción de leche vaporizada.',
+          en: 'Smooth espresso blended with steamed milk for a delicate morning flavor.',
+          pt: 'Espresso com uma porção equilibrada e suave de leite vaporizado.'
+        }
+      },
+      {
+        id: 'bc7',
+        cat: 'calientes',
+        price: 9000,
+        pop: true,
+        name: { es: 'Mokaccino', en: 'Caffè Mocha', pt: 'Mocaccino' },
+        desc: {
+          es: 'Bebida caliente hecha con espresso, cacao y leche vaporizada, finalizada con espuma cremosa.',
+          en: 'Hot beverage made with rich espresso, pure cocoa, and steamed milk topped with foam.',
+          pt: 'Bebida quente com espresso, cacau e leite vaporizado, finalizada com espuma cremosa.'
+        }
+      },
+      {
+        id: 'bc8',
+        cat: 'calientes',
+        price: 12000,
+        pop: false,
+        name: { es: 'Green Chai', en: 'Spiced Green Chai', pt: 'Chá Verde Chai Especiado' },
+        desc: {
+          es: 'Bebida caliente hecha con leche, clavos, anís, jengibre, pimienta negra, cardamomo, spirulina y endulzada con panela orgánica.',
+          en: 'Warm milk infusion with cloves, star anise, ginger, black pepper, cardamom, spirulina, sweetened with organic panela.',
+          pt: 'Bebida quente com leite, cravo, anis, gengibre, pimenta-do-reino, cardamomo, spirulina e rapadura orgânica.'
+        }
+      },
+      {
+        id: 'bc9',
+        cat: 'calientes',
+        price: 9000,
+        pop: true,
+        name: { es: 'Chocolate Caliente', en: 'Organic Hot Chocolate', pt: 'Chocolate Quente' },
+        desc: {
+          es: 'Bebida caliente a base de leche con cacao orgánico endulzado con panela.',
+          en: 'Traditional hot drink prepared with organic cocoa and steamed milk sweetened with raw cane sugar.',
+          pt: 'Bebida quente à base de leite com cacau orgânico adoçado com rapadura.'
+        }
+      },
+      {
+        id: 'bc10',
+        cat: 'calientes',
+        price: 6000,
+        pop: false,
+        name: { es: 'Agua Panela', en: 'Traditional Agua Panela', pt: 'Água de Panela Quente' },
+        desc: {
+          es: 'Bebida caliente tradicional hecha con panela orgánica infusionada.',
+          en: 'Comforting traditional hot beverage made with brewed organic Colombian raw cane sugar.',
+          pt: 'Bebida quente típica colombiana feita com rapadura orgânica infusionada.'
+        }
+      },
 
-      // ================= BEBIDAS & CAFÉ =================
+      // ================= BEBIDAS FRÍAS =================
       { id: 'b1', cat: 'bebidas', price: 15000, pop: true, name: { es: 'Limonada de Coco Frappé', en: 'Creamy Coconut Limeade', pt: 'Limonada de Coco Cremosa' }, desc: { es: 'Zumo de limón recién exprimido licuado cremoso con leche de coco natural y hielo.', en: 'Freshly squeezed lime blended with pure rich coconut milk and crushed ice.', pt: 'Suco de limão batido de forma cremosa com leite de coco natural e gelo.' } },
       { id: 'b2', cat: 'bebidas', price: 12000, pop: false, name: { es: 'Limonada de Hierbabuena', en: 'Mint Limeade', pt: 'Limonada com Hortelã' }, desc: { es: 'Bebida refrescante de limón criollo con hojas enteras de hierbabuena maceradas.', en: 'Refreshing lime drink made with crushed fresh garden mint leaves over ice.', pt: 'Bebida refrescante de limão com folhas frescas de hortelã maceradas.' } },
       { id: 'b3', cat: 'bebidas', price: 10000, pop: false, name: { es: 'Jugo Natural de Maracuyá', en: 'Fresh Passion Fruit Juice', pt: 'Suco Natural de Maracujá' }, desc: { es: 'Pulpa 100% natural de maracuyá preparada en agua o en leche a elección.', en: '100% natural passion fruit pulp blended fresh with water or whole milk.', pt: 'Polpa 100% natural de maracujá batida com água ou leite à sua escolha.' } },
       { id: 'b4', cat: 'bebidas', price: 11000, pop: false, name: { es: 'Jugo de Mora Andina', en: 'Andean Blackberry Juice', pt: 'Suco de Amora Andina' }, desc: { es: 'Moras silvestres del Quindío licuadas al instante en agua mineral o en leche cremosa.', en: 'Wild Andean blackberries from the local highlands blended fresh in water or milk.', pt: 'Amoras silvestres da região andina preparadas na hora com água ou leite.' } },
       { id: 'b5', cat: 'bebidas', price: 10000, pop: false, name: { es: 'Jugo Natural de Mango Dulce', en: 'Sweet Mango Juice', pt: 'Suco Natural de Manga' }, desc: { es: 'Mango maduro seleccionado batido bien frío para un sabor tropical intenso.', en: 'Ripe tropical mango blended cold for a sweet and vibrant flavor.', pt: 'Manga madura selecionada e batida bem gelada com sabor tropical marcante.' } },
-      { id: 'b6', cat: 'bebidas', price: 7000, pop: true, name: { es: 'Espresso Origen Salento', en: 'Single Origin Salento Espresso', pt: 'Espresso Origem Salento' }, desc: { es: 'Extracción corta de café especial de altura cultivado en fincas de Salento.', en: 'Rich short extraction of specialty high-altitude coffee grown in Salento farms.', pt: 'Extração curta e intensa de café especial cultivado nas montanhas de Salento.' } },
-      { id: 'b7', cat: 'bebidas', price: 10000, pop: true, name: { es: 'Cappuccino Artesanal', en: 'Artisan Steamed Cappuccino', pt: 'Cappuccino Artesanal Cremoso' }, desc: { es: 'Doble shot de café especial con microespuma sedosa de leche y cacao puro.', en: 'Double shot of espresso balanced with silky steamed microfoam and cocoa.', pt: 'Dose dupla de café especial com microespuma de leite e cacau.' } },
-      { id: 'b8', cat: 'bebidas', price: 16000, pop: true, name: { es: 'Cerveza Artesanal del Quindío', en: 'Quindío Craft Beer (Bottle)', pt: 'Cerveja Artesanal de Quindío' }, desc: { es: 'Botella de cerveza artesanal local estilo IPA, Amber Ale o Rubia Dorada.', en: 'Local craft beer bottle available in IPA, Amber Ale, or crisp Golden Ale style.', pt: 'Garrafa de cerveja artesanal local nos estilos IPA, Amber Ale ou Blonde Ale.' } },
-      { id: 'b9', cat: 'bebidas', price: 10000, pop: false, name: { es: 'Cerveza Club Colombia', en: 'Club Colombia Premium Beer', pt: 'Cerveja Club Colombia Dorada' }, desc: { es: 'Cerveza lager tradicional colombiana servida en copa fría.', en: 'Traditional Colombian premium lager served chilled with frosted glass.', pt: 'Cerveja premium tradicional colombiana servida bem gelada.' } },
-      { id: 'b10', cat: 'bebidas', price: 7000, pop: false, name: { es: 'Agua Manantial / Con Gas', en: 'Bottled Spring / Sparkling Water', pt: 'Água Mineral / Com Gás' }, desc: { es: 'Agua pura de manantial andino, disponible sin gas o con gas y limón.', en: 'Pure Andean spring water, available still or sparkling with fresh lemon.', pt: 'Água pura da fonte andina, disponível com ou sem gás e rodela de limão.' } }
+      { id: 'b6', cat: 'bebidas', price: 16000, pop: true, name: { es: 'Cerveza Artesanal del Quindío', en: 'Quindío Craft Beer (Bottle)', pt: 'Cerveja Artesanal de Quindío' }, desc: { es: 'Botella de cerveza artesanal local estilo IPA, Amber Ale o Rubia Dorada.', en: 'Local craft beer bottle available in IPA, Amber Ale, or crisp Golden Ale style.', pt: 'Garrafa de cerveja artesanal local nos estilos IPA, Amber Ale ou Blonde Ale.' } },
+      { id: 'b7', cat: 'bebidas', price: 10000, pop: false, name: { es: 'Cerveza Club Colombia', en: 'Club Colombia Premium Beer', pt: 'Cerveja Club Colombia Dorada' }, desc: { es: 'Cerveza lager tradicional colombiana servida en copa fría.', en: 'Traditional Colombian premium lager served chilled with frosted glass.', pt: 'Cerveja premium tradicional colombiana servida bem gelada.' } },
+      { id: 'b8', cat: 'bebidas', price: 7000, pop: false, name: { es: 'Agua Manantial / Con Gas', en: 'Bottled Spring / Sparkling Water', pt: 'Água Mineral / Com Gás' }, desc: { es: 'Agua pura de manantial andino, disponible sin gas o con gas y limón.', en: 'Pure Andean spring water, available still or sparkling with fresh lemon.', pt: 'Água pura da fonte andina, disponível com ou sem gás e rodela de limão.' } }
     ];
 
     function formatPrice(priceCop, lang) {
@@ -616,6 +738,8 @@
       document.getElementById('btn-how-to-get').textContent = t.howToGet;
       document.getElementById('nav-reserve-btn').textContent = t.reserve;
       document.getElementById('search-input').placeholder = t.searchPlaceholder;
+      document.getElementById('cannabis-text').textContent = t.cannabisText;
+      document.getElementById('cannabis-price').innerHTML = `+${formatPrice(5000, lang)}`;
       document.getElementById('faq-title').textContent = t.faqTitle;
       document.getElementById('footer-loc-title').textContent = t.locationTitle;
       document.getElementById('footer-loc-address').textContent = t.locationText;
