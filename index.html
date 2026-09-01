@@ -107,7 +107,7 @@
         <button onclick="setCategory('entradas')" data-cat="entradas" class="cat-btn whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-medium transition-all bg-white text-[#6E5D57] hover:bg-[#FDF8F5] border border-[#F0E5DE]">Entradas</button>
         <button onclick="setCategory('fuertes')" data-cat="fuertes" class="cat-btn whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-medium transition-all bg-white text-[#6E5D57] hover:bg-[#FDF8F5] border border-[#F0E5DE]">Fuertes</button>
         <button onclick="setCategory('calientes')" data-cat="calientes" class="cat-btn whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-medium transition-all bg-white text-[#6E5D57] hover:bg-[#FDF8F5] border border-[#F0E5DE]">Bebidas Calientes</button>
-        <button onclick="setCategory('bebidas')" data-cat="bebidas" class="cat-btn whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-medium transition-all bg-white text-[#6E5D57] hover:bg-[#FDF8F5] border border-[#F0E5DE]">Bebidas Frías</button>
+        <button onclick="setCategory('frias')" data-cat="frias" class="cat-btn whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-medium transition-all bg-white text-[#6E5D57] hover:bg-[#FDF8F5] border border-[#F0E5DE]">Bebidas Frías</button>
       </div>
 
       <!-- Search Input -->
@@ -115,7 +115,7 @@
         <input
           type="text"
           id="search-input"
-          placeholder="Buscar plato o café..."
+          placeholder="Buscar plato o bebida..."
           oninput="handleSearch(this.value)"
           class="w-full bg-white border border-[#F0E5DE] rounded-full px-4 py-1.5 text-xs text-[#2B1E1A] placeholder-[#6E5D57]/60 focus:outline-none focus:border-[#A44A27]"
         />
@@ -241,14 +241,14 @@
         viewMenu: 'Ver Menú Digital',
         howToGet: 'Abrir en Google Maps',
         reserve: 'Reservar Mesa',
-        searchPlaceholder: 'Buscar plato o café...',
+        searchPlaceholder: 'Buscar plato o bebida...',
         cannabisText: 'Puedes adicionar Gotas de Cannabis a cualquier bebida',
         categories: {
           all: 'Todo',
           entradas: 'Entradas',
           fuertes: 'Fuertes',
           calientes: 'Bebidas Calientes',
-          bebidas: 'Bebidas Frías'
+          frias: 'Bebidas Frías'
         },
         faqTitle: 'Información para Viajeros',
         faqs: [
@@ -270,14 +270,14 @@
         viewMenu: 'View Digital Menu',
         howToGet: 'Open in Google Maps',
         reserve: 'Book a Table',
-        searchPlaceholder: 'Search food or coffee...',
+        searchPlaceholder: 'Search food or beverage...',
         cannabisText: 'You can add Cannabis Drops to any beverage',
         categories: {
           all: 'All',
           entradas: 'Appetizers',
           fuertes: 'Main Courses',
           calientes: 'Hot Drinks',
-          bebidas: 'Cold Drinks'
+          frias: 'Cold Drinks'
         },
         faqTitle: 'Traveler Information',
         faqs: [
@@ -299,14 +299,14 @@
         viewMenu: 'Ver Cardápio Digital',
         howToGet: 'Abrir no Google Maps',
         reserve: 'Reservar Mesa',
-        searchPlaceholder: 'Buscar prato ou café...',
+        searchPlaceholder: 'Buscar prato ou bebida...',
         cannabisText: 'Você pode adicionar Gotas de Cannabis em qualquer bebida',
         categories: {
           all: 'Tudo',
           entradas: 'Entradas',
           fuertes: 'Pratos Principais',
           calientes: 'Bebidas Quentes',
-          bebidas: 'Bebidas Geladas'
+          frias: 'Bebidas Geladas'
         },
         faqTitle: 'Informações para Viajantes',
         faqs: [
@@ -324,7 +324,7 @@
     };
 
     const MENU_ITEMS = [
-      // ================= ENTRADAS =================
+      // ================= ENTRADAS (100% CARTA OFICIAL) =================
       { 
         id: 'e1', 
         cat: 'entradas', 
@@ -398,7 +398,7 @@
         } 
       },
 
-      // ================= FUERTES =================
+      // ================= FUERTES (100% CARTA OFICIAL) =================
       {
         id: 'f1',
         cat: 'fuertes',
@@ -568,7 +568,7 @@
         }
       },
 
-      // ================= BEBIDAS CALIENTES =================
+      // ================= BEBIDAS CALIENTES (100% CARTA OFICIAL) =================
       {
         id: 'bc1',
         cat: 'calientes',
@@ -690,15 +690,259 @@
         }
       },
 
-      // ================= BEBIDAS FRÍAS =================
-      { id: 'b1', cat: 'bebidas', price: 15000, pop: true, name: { es: 'Limonada de Coco Frappé', en: 'Creamy Coconut Limeade', pt: 'Limonada de Coco Cremosa' }, desc: { es: 'Zumo de limón recién exprimido licuado cremoso con leche de coco natural y hielo.', en: 'Freshly squeezed lime blended with pure rich coconut milk and crushed ice.', pt: 'Suco de limão batido de forma cremosa com leite de coco natural e gelo.' } },
-      { id: 'b2', cat: 'bebidas', price: 12000, pop: false, name: { es: 'Limonada de Hierbabuena', en: 'Mint Limeade', pt: 'Limonada com Hortelã' }, desc: { es: 'Bebida refrescante de limón criollo con hojas enteras de hierbabuena maceradas.', en: 'Refreshing lime drink made with crushed fresh garden mint leaves over ice.', pt: 'Bebida refrescante de limão com folhas frescas de hortelã maceradas.' } },
-      { id: 'b3', cat: 'bebidas', price: 10000, pop: false, name: { es: 'Jugo Natural de Maracuyá', en: 'Fresh Passion Fruit Juice', pt: 'Suco Natural de Maracujá' }, desc: { es: 'Pulpa 100% natural de maracuyá preparada en agua o en leche a elección.', en: '100% natural passion fruit pulp blended fresh with water or whole milk.', pt: 'Polpa 100% natural de maracujá batida com água ou leite à sua escolha.' } },
-      { id: 'b4', cat: 'bebidas', price: 11000, pop: false, name: { es: 'Jugo de Mora Andina', en: 'Andean Blackberry Juice', pt: 'Suco de Amora Andina' }, desc: { es: 'Moras silvestres del Quindío licuadas al instante en agua mineral o en leche cremosa.', en: 'Wild Andean blackberries from the local highlands blended fresh in water or milk.', pt: 'Amoras silvestres da região andina preparadas na hora com água ou leite.' } },
-      { id: 'b5', cat: 'bebidas', price: 10000, pop: false, name: { es: 'Jugo Natural de Mango Dulce', en: 'Sweet Mango Juice', pt: 'Suco Natural de Manga' }, desc: { es: 'Mango maduro seleccionado batido bien frío para un sabor tropical intenso.', en: 'Ripe tropical mango blended cold for a sweet and vibrant flavor.', pt: 'Manga madura selecionada e batida bem gelada com sabor tropical marcante.' } },
-      { id: 'b6', cat: 'bebidas', price: 16000, pop: true, name: { es: 'Cerveza Artesanal del Quindío', en: 'Quindío Craft Beer (Bottle)', pt: 'Cerveja Artesanal de Quindío' }, desc: { es: 'Botella de cerveza artesanal local estilo IPA, Amber Ale o Rubia Dorada.', en: 'Local craft beer bottle available in IPA, Amber Ale, or crisp Golden Ale style.', pt: 'Garrafa de cerveja artesanal local nos estilos IPA, Amber Ale ou Blonde Ale.' } },
-      { id: 'b7', cat: 'bebidas', price: 10000, pop: false, name: { es: 'Cerveza Club Colombia', en: 'Club Colombia Premium Beer', pt: 'Cerveja Club Colombia Dorada' }, desc: { es: 'Cerveza lager tradicional colombiana servida en copa fría.', en: 'Traditional Colombian premium lager served chilled with frosted glass.', pt: 'Cerveja premium tradicional colombiana servida bem gelada.' } },
-      { id: 'b8', cat: 'bebidas', price: 7000, pop: false, name: { es: 'Agua Manantial / Con Gas', en: 'Bottled Spring / Sparkling Water', pt: 'Água Mineral / Com Gás' }, desc: { es: 'Agua pura de manantial andino, disponible sin gas o con gas y limón.', en: 'Pure Andean spring water, available still or sparkling with fresh lemon.', pt: 'Água pura da fonte andina, disponível com ou sem gás e rodela de limão.' } }
+      // ================= BEBIDAS FRÍAS (100% CARTA OFICIAL: JUGOS, COCKTAILS, MOCKTAILS & OTRAS) =================
+      {
+        id: 'bf1',
+        cat: 'frias',
+        price: 12000,
+        pop: true,
+        name: { es: 'Vaso de Jugo Natural', en: 'Fresh Fruit Juice Glass', pt: 'Copo de Suco Natural' },
+        desc: {
+          es: 'Mango, maracuyá, lulo, fresa, mora, piña, guanábana, coco o uva.',
+          en: 'Choice of: Mango, passion fruit, lulo, strawberry, blackberry, pineapple, soursop, coconut, or grape.',
+          pt: 'Sabores à sua escolha: Manga, maracujá, lulo, morango, amora, abacaxi, graviola, coco ou uva.'
+        }
+      },
+      {
+        id: 'bf2',
+        cat: 'frias',
+        price: 30000,
+        pop: true,
+        name: { es: 'Margarita Tamarindo', en: 'Tamarind Margarita Cocktail', pt: 'Margarita de Tamarindo' },
+        desc: {
+          es: 'Bebida alcohólica, frapeada con hielo, tequila y almíbar de tamarindo hecho en casa.',
+          en: 'Frozen alcoholic cocktail blended with ice, tequila, and house-made tamarind syrup.',
+          pt: 'Bebida alcoólica frappé com gelo, tequila e xarope artesanal de tamarindo da casa.'
+        }
+      },
+      {
+        id: 'bf3',
+        cat: 'frias',
+        price: 30000,
+        pop: false,
+        name: { es: 'Margarita Jamaica', en: 'Hibiscus Margarita Cocktail', pt: 'Margarita de Hibisco (Jamaica)' },
+        desc: {
+          es: 'Bebida alcohólica, frapeada con hielo, tequila y almíbar de flor de jamaica hecha en casa.',
+          en: 'Frozen alcoholic cocktail with tequila and house-crafted hibiscus flower syrup.',
+          pt: 'Bebida alcoólica frappé com gelo, tequila e xarope artesanal de flor de hibisco da casa.'
+        }
+      },
+      {
+        id: 'bf4',
+        cat: 'frias',
+        price: 16000,
+        pop: true,
+        name: { es: 'Jardín Tropical (Mocktail)', en: 'Tropical Garden Mocktail', pt: 'Jardim Tropical (Sem Álcool)' },
+        desc: {
+          es: 'Bebida fría a base de mango, piña y maracuyá, macerado con albahaca, limón mandarina y finalizada con soda.',
+          en: 'Refreshing mocktail with mango, pineapple, passion fruit, muddled fresh basil, mandarin lime, and sparkling soda.',
+          pt: 'Mocktail refrescante de manga, abacaxi e maracujá com manjericão macerado, limão-cravo e água com gás.'
+        }
+      },
+      {
+        id: 'bf5',
+        cat: 'frias',
+        price: 16000,
+        pop: false,
+        name: { es: 'Rojo Andino (Mocktail)', en: 'Andean Red Berry Mocktail', pt: 'Vermelho Andino (Sem Álcool)' },
+        desc: {
+          es: 'Bebida fría elaborada con mora, fresa, uva, menta jengibre, endulzada con jarabe de flor de jamaica y terminada con soda fría.',
+          en: 'Cold beverage made with blackberry, strawberry, grape, ginger mint, hibiscus syrup, and chilled soda.',
+          pt: 'Bebida fria com amora, morango, uva, hortelã, gengibre, xarope de hibisco e água com gás gelada.'
+        }
+      },
+      {
+        id: 'bf6',
+        cat: 'frias',
+        price: 16000,
+        pop: true,
+        name: { es: 'Cafetal Cítrico', en: 'Citrus Cold Brew Coffee Mocktail', pt: 'Cafetal Cítrico Gelado' },
+        desc: {
+          es: 'Bebida fría de café colombiano, mezclado con jarabe de panela y limón mandarina, servido con hielo, finalizado con soda.',
+          en: 'Iced Colombian coffee mixed with raw cane panela syrup, mandarin lime, lots of ice, topped with sparkling soda.',
+          pt: 'Bebida gelada de café colombiano com xarope de rapadura, limão-cravo e água com gás sobre gelo.'
+        }
+      },
+      {
+        id: 'bf7',
+        cat: 'frias',
+        price: 15000,
+        pop: false,
+        name: { es: 'Batido Amarillo', en: 'Yellow Sunshine Smoothie', pt: 'Smoothie Amarelo Tropical' },
+        desc: {
+          es: 'Bebida fría preparada con piña, mango, maracuyá, zucchini, aloe de vera.',
+          en: 'Refreshing yellow smoothie prepared with pineapple, sweet mango, passion fruit, zucchini, and aloe vera.',
+          pt: 'Bebida fria e nutritiva com abacaxi, manga madura, maracujá, abobrinha e aloe vera.'
+        }
+      },
+      {
+        id: 'bf8',
+        cat: 'frias',
+        price: 15000,
+        pop: false,
+        name: { es: 'Batido Verde', en: 'Green Detox Smoothie', pt: 'Smoothie Verde Detox' },
+        desc: {
+          es: 'Batido frío preparado con pepino, espinaca, piña, apio y limón, endulzado con miel y servido con hielo.',
+          en: 'Cold detox smoothie prepared with cucumber, spinach, pineapple, celery, lime, pure honey, and ice.',
+          pt: 'Smoothie verde com pepino, espinafre, abacaxi, aipo, limão, adoçado com mel puro e servido com gelo.'
+        }
+      },
+      {
+        id: 'bf9',
+        cat: 'frias',
+        price: 20000,
+        pop: true,
+        name: { es: 'Refajo Colombiano', en: 'Colombian Refajo Beer Cocktail', pt: 'Refajo Típico Colombiano' },
+        desc: {
+          es: 'Bebida alcohólica tradicional con cerveza rubia y soda de Kola.',
+          en: 'Traditional Colombian social beverage pairing crisp blonde lager with refreshing Colombian Kola soda.',
+          pt: 'Bebida alcoólica tradicional colombiana combinando cerveja clara com refrigerante de cola regional.'
+        }
+      },
+      {
+        id: 'bf10',
+        cat: 'frias',
+        price: 30000,
+        pop: false,
+        name: { es: 'Uva Colada Cocktail', en: 'Uva Colada Cream Cocktail', pt: 'Uva Colada Cocktail' },
+        desc: {
+          es: 'Bebida alcohólica, cremosa a base de uva negra, crema de coco y ron.',
+          en: 'Rich and creamy cocktail made with dark grapes, thick coconut cream, and aged rum.',
+          pt: 'Coquetel cremoso à base de uvas pretas frescas, creme de coco e rum.'
+        }
+      },
+      {
+        id: 'bf11',
+        cat: 'frias',
+        price: 30000,
+        pop: true,
+        name: { es: 'Mojito de Piña', en: 'Pineapple Passion Mojito', pt: 'Mojito de Abacaxi Tropical' },
+        desc: {
+          es: 'Bebida alcohólica, con piña, mango, maracuyá, hierbabuena y ron.',
+          en: 'Tropical rum mojito shaken with fresh pineapple, mango, passion fruit, and aromatic garden mint.',
+          pt: 'Mojito especial com rum, abacaxi, manga, maracujá e folhas frescas de hortelã.'
+        }
+      },
+      {
+        id: 'bf12',
+        cat: 'frias',
+        price: 20000,
+        pop: false,
+        name: { es: 'Copa de Vino', en: 'Glass of Wine', pt: 'Taça de Vinho' },
+        desc: {
+          es: 'Copa de vino tinto o blanco seleccionado de la casa.',
+          en: 'House selected glass of red or white wine.',
+          pt: 'Taça de vinho tinto ou branco selecionado da casa.'
+        }
+      },
+      {
+        id: 'bf13',
+        cat: 'frias',
+        price: 20000,
+        pop: true,
+        name: { es: 'Cerveza Local Artesanal', en: 'Local Craft Beer', pt: 'Cerveja Artesanal Local' },
+        desc: {
+          es: 'Cerveza artesanal elaborada en el Quindío.',
+          en: 'Locally crafted artisan beer from the Quindío region.',
+          pt: 'Cerveja artesanal especial produzida na região de Quindío.'
+        }
+      },
+      {
+        id: 'bf14',
+        cat: 'frias',
+        price: 10000,
+        pop: false,
+        name: { es: 'Cerveza Nacional', en: 'National Beer', pt: 'Cerveja Nacional' },
+        desc: {
+          es: 'Cerveza nacional fría tradicional.',
+          en: 'Classic chilled Colombian domestic beer.',
+          pt: 'Cerveja nacional tradicional bem gelada.'
+        }
+      },
+      {
+        id: 'bf15',
+        cat: 'frias',
+        price: 12000,
+        pop: false,
+        name: { es: 'Cerveza Corona', en: 'Corona Extra Beer', pt: 'Cerveja Corona Extra' },
+        desc: {
+          es: 'Botella de cerveza Corona servida fría con rodaja de limón.',
+          en: 'Chilled Corona Extra bottle served with a fresh slice of lime.',
+          pt: 'Garrafa de cerveja Corona servida com rodela de limão.'
+        }
+      },
+      {
+        id: 'bf16',
+        cat: 'frias',
+        price: 7000,
+        pop: false,
+        name: { es: 'Coca Cola', en: 'Coca Cola Classic', pt: 'Coca-Cola Tradicional' },
+        desc: {
+          es: 'Gaseosa Coca Cola servida con hielo y limón.',
+          en: 'Classic Coca Cola served with ice and lemon.',
+          pt: 'Refrigerante Coca-Cola servido com gelo e limão.'
+        }
+      },
+      {
+        id: 'bf17',
+        cat: 'frias',
+        price: 7000,
+        pop: false,
+        name: { es: 'Coca Cola Zero', en: 'Coca Cola Zero Sugar', pt: 'Coca-Cola Zero Açúcar' },
+        desc: {
+          es: 'Gaseosa Coca Cola Zero azúcar servida fría con hielo.',
+          en: 'Chilled zero sugar Coca Cola served with ice.',
+          pt: 'Coca-Cola Zero açúcar servida bem gelada.'
+        }
+      },
+      {
+        id: 'bf18',
+        cat: 'frias',
+        price: 7000,
+        pop: false,
+        name: { es: 'Bretaña', en: 'Bretaña Sparkling Club Soda', pt: 'Água com Gás Bretaña' },
+        desc: {
+          es: 'Agua carbonatada Bretaña servida fría.',
+          en: 'Traditional sparkling soda water served chilled with lemon.',
+          pt: 'Água carbonatada Bretaña servida gelada com limão.'
+        }
+      },
+      {
+        id: 'bf19',
+        cat: 'frias',
+        price: 12000,
+        pop: false,
+        name: { es: 'Agua de Coco', en: 'Pure Coconut Water', pt: 'Água de Coco Natural' },
+        desc: {
+          es: 'Agua de coco natural refrescante.',
+          en: '100% natural refreshing coconut water.',
+          pt: 'Água de coco pura e natural bem refrescante.'
+        }
+      },
+      {
+        id: 'bf20',
+        cat: 'frias',
+        price: 5000,
+        pop: false,
+        name: { es: 'Agua Sin Gas', en: 'Still Spring Water', pt: 'Água Mineral Sem Gás' },
+        desc: {
+          es: 'Botella de agua pura sin gas.',
+          en: 'Pure still bottled spring water.',
+          pt: 'Garrafa de água mineral pura sem gás.'
+        }
+      },
+      {
+        id: 'bf21',
+        cat: 'frias',
+        price: 5000,
+        pop: false,
+        name: { es: 'Agua Con Gas', en: 'Sparkling Spring Water', pt: 'Água Mineral Com Gás' },
+        desc: {
+          es: 'Botella de agua mineral con gas servida con limón.',
+          en: 'Sparkling mineral water served with fresh lime.',
+          pt: 'Água mineral com gás servida com rodela de limão.'
+        }
+      }
     ];
 
     function formatPrice(priceCop, lang) {
