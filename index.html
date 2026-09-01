@@ -201,11 +201,26 @@
     let currentCategory = 'all';
     let currentSearch = '';
 
-    // Tasas de cambio estimadas de referencia
-    const RATES = {
+    // Tasas de cambio de respaldo (Fallback)
+    let RATES = {
       USD: 4000,
       BRL: 750
     };
+
+    // Consulta de tasa en tiempo real sin API Key
+    async function fetchExchangeRates() {
+      try {
+        const res = await fetch('https://open.er-api.com/v6/latest/COP');
+        const data = await res.json();
+        if (data && data.rates) {
+          if (data.rates.USD) RATES.USD = 1 / data.rates.USD;
+          if (data.rates.BRL) RATES.BRL = 1 / data.rates.BRL;
+          renderMenu();
+        }
+      } catch (error) {
+        console.warn('Utilizando tasas de cambio por defecto:', error);
+      }
+    }
 
     const DICTIONARY = {
       es: {
@@ -347,7 +362,8 @@
     function formatPrice(priceCop, lang) {
       const formattedCop = `$${priceCop.toLocaleString('es-CO')}`;
       if (lang === 'en') {
-        const usd = (priceCop / RATES.USD).toFixed(priceCop % RATES.USD === 0 ? 0 : 1);
+        const usdVal = priceCop / RATES.USD;
+        const usd = usdVal < 10 ? usdVal.toFixed(1) : Math.round(usdVal);
         return `<span>${formattedCop}</span> <span class="text-[11px] font-normal text-[#6E5D57] ml-1">(~$${usd} USD)</span>`;
       }
       if (lang === 'pt') {
@@ -482,6 +498,7 @@
 
     // Initialize
     setLanguage('es');
+    fetchExchangeRates();
   </script>
 </body>
 </html>
