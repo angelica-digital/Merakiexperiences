@@ -201,6 +201,12 @@
     let currentCategory = 'all';
     let currentSearch = '';
 
+    // Tasas de cambio estimadas de referencia
+    const RATES = {
+      USD: 4000,
+      BRL: 750
+    };
+
     const DICTIONARY = {
       es: {
         badge: 'Salento, Quindío · Experiencia Gastronómica',
@@ -338,6 +344,19 @@
       { id: '40', cat: 'bebidas', price: 7000, pop: false, name: { es: 'Agua Manantial / Con Gas', en: 'Bottled Spring / Sparkling Water', pt: 'Água Mineral / Com Gás' }, desc: { es: 'Agua pura de manantial andino, disponible sin gas o con gas y limón.', en: 'Pure Andean spring water, available still or sparkling with fresh lemon.', pt: 'Água pura da fonte andina, disponível com ou sem gás e rodela de limão.' } }
     ];
 
+    function formatPrice(priceCop, lang) {
+      const formattedCop = `$${priceCop.toLocaleString('es-CO')}`;
+      if (lang === 'en') {
+        const usd = (priceCop / RATES.USD).toFixed(priceCop % RATES.USD === 0 ? 0 : 1);
+        return `<span>${formattedCop}</span> <span class="text-[11px] font-normal text-[#6E5D57] ml-1">(~$${usd} USD)</span>`;
+      }
+      if (lang === 'pt') {
+        const brl = Math.round(priceCop / RATES.BRL);
+        return `<span>${formattedCop}</span> <span class="text-[11px] font-normal text-[#6E5D57] ml-1">(~R$ ${brl})</span>`;
+      }
+      return formattedCop;
+    }
+
     function setLanguage(lang) {
       currentLang = lang;
       
@@ -441,9 +460,9 @@
                 <h3 class="font-serif text-lg text-[#2B1E1A] font-medium leading-snug">
                   ${item.name[currentLang]}
                 </h3>
-                <span class="text-sm font-bold text-[#A44A27] whitespace-nowrap">
-                  $${item.price.toLocaleString('es-CO')}
-                </span>
+                <div class="text-sm font-bold text-[#A44A27] whitespace-nowrap text-right">
+                  ${formatPrice(item.price, currentLang)}
+                </div>
               </div>
               <p class="text-xs text-[#6E5D57] leading-relaxed font-light">
                 ${item.desc[currentLang]}
