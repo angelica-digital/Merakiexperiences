@@ -234,7 +234,7 @@
         categories: {
           all: 'Todo',
           entradas: 'Entradas',
-          fuertes: 'Platos Fuertes',
+          fuertes: 'Fuertes',
           cocteles: 'Coctelería',
           bebidas: 'Bebidas & Café'
         },
@@ -310,9 +310,9 @@
     };
 
     const MENU_ITEMS = [
-      // ================= ENTRADAS (Actualizadas 100% con la carta oficial) =================
+      // ================= ENTRADAS (100% CARTA OFICIAL) =================
       { 
-        id: '1', 
+        id: 'e1', 
         cat: 'entradas', 
         price: 20000, 
         pop: true, 
@@ -324,7 +324,7 @@
         } 
       },
       { 
-        id: '2', 
+        id: 'e2', 
         cat: 'entradas', 
         price: 35000, 
         pop: true, 
@@ -336,7 +336,7 @@
         } 
       },
       { 
-        id: '3', 
+        id: 'e3', 
         cat: 'entradas', 
         price: 40000, 
         pop: false, 
@@ -348,7 +348,7 @@
         } 
       },
       { 
-        id: '4', 
+        id: 'e4', 
         cat: 'entradas', 
         price: 35000, 
         pop: true, 
@@ -360,7 +360,7 @@
         } 
       },
       { 
-        id: '5', 
+        id: 'e5', 
         cat: 'entradas', 
         price: 28000, 
         pop: false, 
@@ -372,7 +372,7 @@
         } 
       },
       { 
-        id: '6', 
+        id: 'e6', 
         cat: 'entradas', 
         price: 25000, 
         pop: false, 
@@ -384,41 +384,199 @@
         } 
       },
 
-      // ================= FUERTES =================
-      { id: '11', cat: 'fuertes', price: 45000, pop: true, name: { es: 'Trucha Asada Tradicional', en: 'Traditional Grilled Trout', pt: 'Truta Grelhada Tradicional' }, desc: { es: 'Filete fresco de trucha a la plancha, patacón gigante tostado, arroz de coco y ensalada.', en: 'Fresh local trout fillet grilled to perfection, giant plantain, coconut rice, and house salad.', pt: 'Filé fresco de truta grelhado, patacão crocante, arroz de coco e salada da casa.' } },
-      { id: '12', cat: 'fuertes', price: 49000, pop: true, name: { es: 'Trucha al Ajillo Cremoso', en: 'Garlic Cream Trout', pt: 'Truta ao Alho Cremoso' }, desc: { es: 'Trucha de río bañada en salsa cremosa de ajo confitado, vino blanco, perejil y patacón.', en: 'Mountain trout in a rich roasted garlic white wine cream sauce with plantain.', pt: 'Truta fresca banhada em molho cremoso de alho confitado, vinho branco e patacão.' } },
-      { id: '13', cat: 'fuertes', price: 52000, pop: false, name: { es: 'Trucha en Salsa de Champiñones', en: 'Mushroom Sauce Trout', pt: 'Truta com Cogumelos' }, desc: { es: 'Filete de trucha sobre reducción sedosa de champiñones salteados al fuego y queso gratinado.', en: 'Trout fillet served with a creamy sautéed mushroom reduction and melted golden cheese.', pt: 'Filé de truta com redução aveludada de cogumelos salteados e queijo gratinado.' } },
-      { id: '14', cat: 'fuertes', price: 38000, pop: true, name: { es: 'Hamburguesa Meraki Burger', en: 'Meraki Signature Burger', pt: 'Hambúrguer Meraki Special' }, desc: { es: '180g de res premium, queso madurado, tocineta caramelizada, cebolla crispy y papas.', en: '180g premium beef patty, aged cheese, caramelized bacon, crispy onions, and rustic fries.', pt: '180g de carne premium, queijo curado, bacon caramelizado, cebola crispy e batatas.' } },
-      { id: '15', cat: 'fuertes', price: 42000, pop: false, name: { es: 'Birria Monster Burger', en: 'Birria Monster Burger', pt: 'Birria Monster Burger' }, desc: { es: 'Carne artesanal coronada con birria cocinada 8 horas, queso fundido y consomé aparte.', en: 'Handcrafted beef topped with 8-hour braised beef birria, melted cheese, and dipping broth.', pt: 'Hambúrguer coberto com carne de birria cozida por 8 horas e caldo de imersão.' } },
-      { id: '16', cat: 'fuertes', price: 48000, pop: true, name: { es: 'Costillas BBQ en Miel de Panela', en: 'Panela Honey BBQ Ribs', pt: 'Costelinha BBQ com Rapadura' }, desc: { es: 'Costillas de cerdo tiernas glaseadas al carbón con salsa barbacoa de panela y papas rústicas.', en: 'Slow-smoked tender pork ribs caramelized in cane sugar BBQ glaze, served with potato wedges.', pt: 'Costelinha de porco macia defumada na brasa com glacê agridoce e batatas rústicas.' } },
-      { id: '17', cat: 'fuertes', price: 54000, pop: false, name: { es: 'Punta de Anca Angus (300g)', en: 'Grilled Angus Rump Steak (300g)', pt: 'Picanha Angus na Brasa (300g)' }, desc: { es: 'Corte jugoso a la brasa con chimichurri de la casa, papa criolla salteada y ensalada fresca.', en: 'Charcoal grilled steak served with signature chimichurri, roasted baby potatoes, and salad.', pt: 'Corte nobre grelhado na brasa com chimichurri da casa, batatinhas salteadas e salada.' } },
-      { id: '18', cat: 'fuertes', price: 36000, pop: false, name: { es: 'Pechuga Campesina a la Plancha', en: 'Herb Grilled Chicken Breast', pt: 'Peito de Frango às Ervas' }, desc: { es: 'Filete de pechuga marinada en romero y cítricos, servido con arroz blanco y puré rústico.', en: 'Tender chicken breast marinated in fresh rosemary and citrus, served with rice and mash.', pt: 'Peito de frango marinado em alecrim e notas cítricas, servido com arroz e purê rústico.' } },
-      { id: '19', cat: 'fuertes', price: 34000, pop: false, name: { es: 'Bowl Silvestre Veggie', en: 'Wild Harvest Veggie Bowl', pt: 'Bowl Silvestre Veggie' }, desc: { es: 'Quinoa real, falafels crocantes, aguacate Hass, vegetales asados y aderezo tahini-limón.', en: 'Royal quinoa, crunchy falafel, ripe avocado, fire-roasted vegetables, and lemon tahini.', pt: 'Quinoa, falafels crocantes, abacate fresco, legumes grelhados e molho de tahine com limão.' } },
-      { id: '20', cat: 'fuertes', price: 37000, pop: false, name: { es: 'Pasta Carbonara con Tocineta', en: 'Smoked Bacon Carbonara Pasta', pt: 'Massa Carbonara com Bacon' }, desc: { es: 'Fettuccine al dente en salsa sedosa de yemas, tocineta crocante y queso parmesano.', en: 'Fettuccine pasta tossed in a rich egg yolk cream sauce, crispy cured bacon, and parmesan.', pt: 'Fettuccine al dente em emulsão clássica de gemas, bacon crocante e queijo parmesão.' } },
+      // ================= FUERTES (100% CARTA OFICIAL) =================
+      {
+        id: 'f1',
+        cat: 'fuertes',
+        price: 15000,
+        pop: false,
+        name: { es: 'Crema de Verduras', en: 'Vegetable Cream Soup', pt: 'Creme de Legumes' },
+        desc: {
+          es: 'Reconfortante crema elaborada con vegetales de temporada, terminada con una mezcla de crema de leche, queso parmesano y crotones artesanales.',
+          en: 'Comforting seasonal vegetable cream soup topped with heavy cream, parmesan cheese, and artisan croutons.',
+          pt: 'Creme reconfortante de legumes da estação finalizado com creme de leite, queijo parmesão e croutons artesanais.'
+        }
+      },
+      {
+        id: 'f2',
+        cat: 'fuertes',
+        price: 18000,
+        pop: false,
+        name: { es: 'Crema de Trucha', en: 'Smoked Trout Cream Soup', pt: 'Creme de Truta Defumada' },
+        desc: {
+          es: 'Delicada crema elaborada con trucha ahumada terminada con una mezcla de crema de leche, queso parmesano y crotones artesanales.',
+          en: 'Delicate smoked trout soup finished with a blend of cream, grated parmesan, and crisp artisan croutons.',
+          pt: 'Creme delicado de truta defumada finalizado com creme de leite, queijo parmesão e croutons artesanais.'
+        }
+      },
+      {
+        id: 'f3',
+        cat: 'fuertes',
+        price: 35000,
+        pop: false,
+        name: { es: 'Pechuga Asada', en: 'Grilled Chicken Breast', pt: 'Peito de Frango Grelhado' },
+        desc: {
+          es: 'Pechuga de pollo a la plancha, dorada por fuera, jugosa por dentro y llena de sabor. Servida sobre salsa de queso, mix de lechugas frescas y papa criolla colombiana.',
+          en: 'Seared chicken breast served over creamy cheese sauce, fresh garden greens, and traditional Colombian baby yellow potatoes.',
+          pt: 'Peito de frango grelhado dourado servido sobre molho de queijo, mix de folhas frescas e batata crioula colombiana.'
+        }
+      },
+      {
+        id: 'f4',
+        cat: 'fuertes',
+        price: 40000,
+        pop: false,
+        name: { es: 'Pollo Criollo', en: 'Traditional Creole Chicken', pt: 'Frango Criollo Tradicional' },
+        desc: {
+          es: 'Pollo cocinado en nuestra salsa criolla de tomate, cebolla y cilantro, servido sobre una cama de arroz blanco y maíz. Honra los sabores de nuestra tierra.',
+          en: 'Chicken braised in Colombian creole sauce (tomato, onion, cilantro) over white rice and sweet corn.',
+          pt: 'Frango cozido em molho criollo tradicional de tomate, cebola e coentro sobre arroz branco e milho.'
+        }
+      },
+      {
+        id: 'f5',
+        cat: 'fuertes',
+        price: 50000,
+        pop: true,
+        name: { es: 'Pechuga Gratinada', en: 'Au Gratin Chicken Breast', pt: 'Peito de Frango Gratinado' },
+        desc: {
+          es: 'Filete de pollo gratinado con queso mozzarella y parmesano; acompañado de ensalada de la casa y papas criollas.',
+          en: 'Chicken breast gratin with melted mozzarella and parmesan cheese, served with house salad and baby yellow potatoes.',
+          pt: 'Filé de frango gratinado com queijo muçarela e parmesão, salada da casa e batatas crioulas.'
+        }
+      },
+      {
+        id: 'f6',
+        cat: 'fuertes',
+        price: 55000,
+        pop: true,
+        name: { es: 'Trucha Asada', en: 'Wood-Smoked River Trout', pt: 'Truta Defumada na Brasa' },
+        desc: {
+          es: 'Trucha fresca ahumada durante 5 horas en madera de naranjo, servida sobre una crema de queso y ajo, con patacón tradicional y ensalada fresca de la casa.',
+          en: 'Fresh local trout smoked for 5 hours in orange wood, served over garlic cream cheese, crispy plantain toston, and fresh salad.',
+          pt: 'Truta fresca defumada por 5 horas em lenha de laranjeira sobre creme de queijo e alho, patacão tradicional e salada fresca.'
+        }
+      },
+      {
+        id: 'f7',
+        cat: 'fuertes',
+        price: 55000,
+        pop: true,
+        name: { es: 'Costillas al Horno', en: 'Slow-Baked BBQ Ribs', pt: 'Costelinha BBQ ao Forno' },
+        desc: {
+          es: 'Costillas de cerdo cocinadas lentamente durante 8 horas hasta que la carne se desprende del hueso, bañadas en salsa BBQ de la casa y servidas sobre papas cremosas. Un plato insignia.',
+          en: '8-hour slow-cooked tender pork ribs glazed in house BBQ sauce and served over creamy mashed potatoes. Signature dish.',
+          pt: 'Costelinha de porco assada lentamente por 8 horas, glacê barbecue da casa e batatas cremosas. Prato assinatura.'
+        }
+      },
+      {
+        id: 'f8',
+        cat: 'fuertes',
+        price: 55000,
+        pop: false,
+        name: { es: 'Estofado de Cerdo', en: 'Red Wine Pork Stew', pt: 'Ensopado de Porco ao Vinho' },
+        desc: {
+          es: 'Cerdo cocinado lentamente durante 8 horas con zanahoria, bean y arveja, en una reducción de vino tinto, servidos con arroz blanco y papa criolla colombiana.',
+          en: '8-hour braised pork stew with carrots and peas in rich red wine reduction, served with white rice and baby yellow potatoes.',
+          pt: 'Carne de porco cozida lentamente por 8 horas com legumes em redução de vinho tinto, arroz branco e batata crioula.'
+        }
+      },
+      {
+        id: 'f9',
+        cat: 'fuertes',
+        price: 50000,
+        pop: true,
+        name: { es: 'Salteado de Res', en: 'Wok Beef Stir-Fry', pt: 'Salteado de Carne ao Wok' },
+        desc: {
+          es: 'Res salteada al wok con tomate, cebolla, cilantro, papas fritas, salsa soya y una reducción de vino tinto. Servidos sobre arroz blanco.',
+          en: 'Wok-seared beef with tomatoes, onions, cilantro, fries, soy sauce, and red wine reduction over white rice.',
+          pt: 'Tiras de carne salteadas na wok com tomate, cebola, coentro, batata frita, shoyu e vinho tinto sobre arroz branco.'
+        }
+      },
+      {
+        id: 'f10',
+        cat: 'fuertes',
+        price: 50000,
+        pop: false,
+        name: { es: 'Patacón de Birria', en: 'Birria Plantain Toston', pt: 'Patacão com Birria' },
+        desc: {
+          es: 'Patacón crujiente servido con birria de res cocinada lentamente, queso mozzarella, cheddar, guacamole, pico de gallo y cilantro.',
+          en: 'Crispy green plantain topped with slow-braised beef birria, melted mozzarella, cheddar, guacamole, pico de gallo, and cilantro.',
+          pt: 'Patacão crocante coberto com birria bovina, queijo muçarela, cheddar, guacamole, pico de gallo e coentro.'
+        }
+      },
+      {
+        id: 'f11',
+        cat: 'fuertes',
+        price: 50000,
+        pop: false,
+        name: { es: 'Fajitas Mixtas', en: 'Mixed Sizzling Fajitas', pt: 'Fajitas Mistas' },
+        desc: {
+          es: 'Res y pollo salteados con cebolla y pimentón, servidos con tortillas de trigo calientes, guacamole fresco, pico de gallo y lechugas. Una invitación a crear cada bocado.',
+          en: 'Sautéed beef and chicken with peppers and onions, warm wheat tortillas, fresh guacamole, and pico de gallo.',
+          pt: 'Carne e frango salteados com cebola e pimentão, servidos com tortilhas de trigo quentes, guacamole e pico de gallo.'
+        }
+      },
+      {
+        id: 'f12',
+        cat: 'fuertes',
+        price: 50000,
+        pop: false,
+        name: { es: 'Tacos x 5', en: 'Street Tacos Tasting (5 pcs)', pt: 'Combo 5 Tacos Variados' },
+        desc: {
+          es: 'Cinco tacos que reúnen los sabores más icónicos de México: Asada de res, cochinita, chicharrón, tinga de pollo y pastor. Elaborados con ingredientes frescos.',
+          en: 'Five authentic street tacos: grilled beef, cochinita pibil, crispy pork, chicken tinga, and al pastor.',
+          pt: 'Cinco tacos mexicanos autênticos: carne assada, cochinita, torresmo, frango tinga e pastor com temperos frescos.'
+        }
+      },
+      {
+        id: 'f13',
+        cat: 'fuertes',
+        price: 55000,
+        pop: true,
+        name: { es: 'Tacos de Birria', en: 'Cheesy Birria Tacos (4 pcs)', pt: 'Tacos de Birria com Consomé' },
+        desc: {
+          es: '4 Tortillas de maíz rellenas con queso fundido y birria de res cocinada lentamente. Servidos con cebolla, cilantro fresco y el tradicional consomé caliente.',
+          en: '4 corn tortillas with melted cheese and juicy beef birria, served with onions, cilantro, and warm dipping broth.',
+          pt: '4 tortilhas de milho com queijo derretido e birria bovina, servidas com cebola, coentro e caldo quente para mergulhar.'
+        }
+      },
+      {
+        id: 'f14',
+        cat: 'fuertes',
+        price: 40000,
+        pop: false,
+        name: { es: 'Quesadilla', en: 'Signature Stuffed Quesadilla', pt: 'Quesadilla Especial' },
+        desc: {
+          es: 'Tortilla de trigo dorada rellena de quesos fundidos, pollo desmechado y frijol caraota en salsa de birria. Finalizada con guacamole, pico de gallo, cebolla encurtida, crema y cilantro.',
+          en: 'Golden flour tortilla filled with melted cheese, shredded chicken, and black beans in birria sauce with guacamole and pico de gallo.',
+          pt: 'Tortilha de trigo tostada recheada com queijo derretido, frango desfiado e feijão preto ao molho de birria, servida com guacamole.'
+        }
+      },
 
       // ================= COCTELERÍA =================
-      { id: '21', cat: 'cocteles', price: 32000, pop: true, name: { es: 'Meraki Botanic Gin', en: 'Meraki Botanic Gin Tonic', pt: 'Meraki Botanic Gin' }, desc: { es: 'Ginebra con botánicos locales, tónica premium, frutos rojos del bosque y romero.', en: 'Artisan gin infused with native botanicals, premium tonic, wild forest berries, and rosemary.', pt: 'Gin com botânicos locais, água tônica premium, frutas vermelhas e alecrim.' } },
-      { id: '22', cat: 'cocteles', price: 28000, pop: true, name: { es: 'Mojito de Maracuyá Silvestre', en: 'Passion Fruit Mojito', pt: 'Mojito de Maracujá' }, desc: { es: 'Ron blanco añejo, hierbabuena macerada, zumo de maracuyá natural y soda.', en: 'Aged white rum, freshly muddled garden mint, natural passion fruit pulp, and soda.', pt: 'Rum branco, hortelã fresca macerada, maracujá natural e água com gás.' } },
-      { id: '23', cat: 'cocteles', price: 34000, pop: false, name: { es: 'Margarita Salento de Fresa', en: 'Salento Strawberry Margarita', pt: 'Margarita de Morango Salento' }, desc: { es: 'Tequila reposado, triple sec, pulpa de fresa natural y escarchado de sal volcánica.', en: 'Reposado tequila, triple sec liqueur, fresh crushed strawberries, and volcanic salt rim.', pt: 'Tequila reposado, triple sec, morangos frescos batidos e borda de sal vulcânico.' } },
-      { id: '24', cat: 'cocteles', price: 27000, pop: true, name: { es: 'Carajillo de Café Especial', en: 'Specialty Coffee Carajillo', pt: 'Carajillo de Café Especial' }, desc: { es: 'Licor 43 batido en frío con espresso doble de origen Salento y perfume de canela.', en: 'Licor 43 shaken over ice with double origin Salento espresso and cinnamon zest.', pt: 'Licor 43 batido no gelo com espresso duplo de origem Salento e toque de canela.' } },
-      { id: '25', cat: 'cocteles', price: 26000, pop: false, name: { es: 'Caipiriña Clásica de Lima', en: 'Classic Lime Caipirinha', pt: 'Caipirinha Clássica de Limão' }, desc: { es: 'Cachaça brasileña tradicional, lima macerada con azúcar morena y hielo picado.', en: 'Brazilian cachaça spirit, fresh limes crushed with raw cane sugar, and crushed ice.', pt: 'Cachaça brasileira tradicional, limões macerados com açúcar e muito gelo.' } },
-      { id: '26', cat: 'cocteles', price: 33000, pop: false, name: { es: 'Aperol Spritz Meraki', en: 'Meraki Aperol Spritz', pt: 'Aperol Spritz Meraki' }, desc: { es: 'Aperol italiano, vino espumoso Prosecco, toque de soda mineral y naranja fresca.', en: 'Italian Aperol, crisp Prosecco sparkling wine, splash of soda, and a fresh orange slice.', pt: 'Aperol italiano, espumante Prosecco, água com gás e rodela de laranja fresca.' } },
-      { id: '27', cat: 'cocteles', price: 29000, pop: false, name: { es: 'Piña Colada Cremosa', en: 'Creamy Piña Colada', pt: 'Piña Colada Cremosa' }, desc: { es: 'Ron especiado, crema de coco natural espesa y jugo de piña dorada frappé.', en: 'Spiced rum blended with thick natural coconut cream and golden pineapple juice.', pt: 'Rum temperado com creme de coco natural e suco de abacaxi gelado.' } },
-      { id: '28', cat: 'cocteles', price: 31000, pop: false, name: { es: 'Moscow Mule con Jengibre', en: 'Fresh Ginger Moscow Mule', pt: 'Moscow Mule de Gengibre' }, desc: { es: 'Vodka destilado, cerveza de jengibre artesanal, limón exprimido en taza de cobre.', en: 'Premium vodka, spicy house ginger beer, freshly squeezed lime in a copper mug.', pt: 'Vodka destilada, cerveja artesanal de gengibre e limão na caneca de cobre.' } },
-      { id: '29', cat: 'cocteles', price: 25000, pop: false, name: { es: 'Sangría Tinta de la Casa (Copa)', en: 'House Red Sangria (Glass)', pt: 'Sangria Tinta da Casa (Taça)' }, desc: { es: 'Vino tinto joven macerado con manzanas, cítricos de la región y licor de naranja.', en: 'Red wine macerated with apples, local citrus fruits, triple sec liqueur, and cinnamon.', pt: 'Vinho tinto macerado com maçãs, frutas cítricas locais e licor de laranja.' } },
-      { id: '30', cat: 'cocteles', price: 24000, pop: false, name: { es: 'Cuba Libre Reserva Especial', en: 'Special Reserve Cuba Libre', pt: 'Cuba Libre Reserva Especial' }, desc: { es: 'Ron añejo colombiano 8 años, bebida de cola, gotas de amargo y rodaja de lima.', en: '8-year-old aged Colombian rum, classic cola, aromatic bitters dash, and fresh lime.', pt: 'Rum envelhecido 8 anos, refrigerante de cola, gotas de bitter e rodela de limão.' } },
+      { id: 'c1', cat: 'cocteles', price: 32000, pop: true, name: { es: 'Meraki Botanic Gin', en: 'Meraki Botanic Gin Tonic', pt: 'Meraki Botanic Gin' }, desc: { es: 'Ginebra con botánicos locales, tónica premium, frutos rojos del bosque y romero.', en: 'Artisan gin infused with native botanicals, premium tonic, wild forest berries, and rosemary.', pt: 'Gin com botânicos locais, água tônica premium, frutas vermelhas e alecrim.' } },
+      { id: 'c2', cat: 'cocteles', price: 28000, pop: true, name: { es: 'Mojito de Maracuyá Silvestre', en: 'Passion Fruit Mojito', pt: 'Mojito de Maracujá' }, desc: { es: 'Ron blanco añejo, hierbabuena macerada, zumo de maracuyá natural y soda.', en: 'Aged white rum, freshly muddled garden mint, natural passion fruit pulp, and soda.', pt: 'Rum branco, hortelã fresca macerada, maracujá natural e água com gás.' } },
+      { id: 'c3', cat: 'cocteles', price: 34000, pop: false, name: { es: 'Margarita Salento de Fresa', en: 'Salento Strawberry Margarita', pt: 'Margarita de Morango Salento' }, desc: { es: 'Tequila reposado, triple sec, pulpa de fresa natural y escarchado de sal volcánica.', en: 'Reposado tequila, triple sec liqueur, fresh crushed strawberries, and volcanic salt rim.', pt: 'Tequila reposado, triple sec, morangos frescos batidos e borda de sal vulcânico.' } },
+      { id: 'c4', cat: 'cocteles', price: 27000, pop: true, name: { es: 'Carajillo de Café Especial', en: 'Specialty Coffee Carajillo', pt: 'Carajillo de Café Especial' }, desc: { es: 'Licor 43 batido en frío con espresso doble de origen Salento y perfume de canela.', en: 'Licor 43 shaken over ice with double origin Salento espresso and cinnamon zest.', pt: 'Licor 43 batido no gelo com espresso duplo de origem Salento e toque de canela.' } },
+      { id: 'c5', cat: 'cocteles', price: 26000, pop: false, name: { es: 'Caipiriña Clásica de Lima', en: 'Classic Lime Caipirinha', pt: 'Caipirinha Clássica de Limão' }, desc: { es: 'Cachaça brasileña tradicional, lima macerada con azúcar morena y hielo picado.', en: 'Brazilian cachaça spirit, fresh limes crushed with raw cane sugar, and crushed ice.', pt: 'Cachaça brasileira tradicional, limões macerados com açúcar e muito gelo.' } },
+      { id: 'c6', cat: 'cocteles', price: 33000, pop: false, name: { es: 'Aperol Spritz Meraki', en: 'Meraki Aperol Spritz', pt: 'Aperol Spritz Meraki' }, desc: { es: 'Aperol italiano, vino espumoso Prosecco, toque de soda mineral y naranja fresca.', en: 'Italian Aperol, crisp Prosecco sparkling wine, splash of soda, and a fresh orange slice.', pt: 'Aperol italiano, espumante Prosecco, água com gás e rodela de laranja fresca.' } },
+      { id: 'c7', cat: 'cocteles', price: 29000, pop: false, name: { es: 'Piña Colada Cremosa', en: 'Creamy Piña Colada', pt: 'Piña Colada Cremosa' }, desc: { es: 'Ron especiado, crema de coco natural espesa y jugo de piña dorada frappé.', en: 'Spiced rum blended with thick natural coconut cream and golden pineapple juice.', pt: 'Rum temperado com creme de coco natural e suco de abacaxi gelado.' } },
+      { id: 'c8', cat: 'cocteles', price: 31000, pop: false, name: { es: 'Moscow Mule con Jengibre', en: 'Fresh Ginger Moscow Mule', pt: 'Moscow Mule de Gengibre' }, desc: { es: 'Vodka destilado, cerveza de jengibre artesanal, limón exprimido en taza de cobre.', en: 'Premium vodka, spicy house ginger beer, freshly squeezed lime in a copper mug.', pt: 'Vodka destilada, cerveja artesanal de gengibre e limão na caneca de cobre.' } },
+      { id: 'c9', cat: 'cocteles', price: 25000, pop: false, name: { es: 'Sangría Tinta de la Casa (Copa)', en: 'House Red Sangria (Glass)', pt: 'Sangria Tinta da Casa (Taça)' }, desc: { es: 'Vino tinto joven macerado con manzanas, cítricos de la región y licor de naranja.', en: 'Red wine macerated with apples, local citrus fruits, triple sec liqueur, and cinnamon.', pt: 'Vinho tinto macerado com maçãs, frutas cítricas locais e licor de laranja.' } },
+      { id: 'c10', cat: 'cocteles', price: 24000, pop: false, name: { es: 'Cuba Libre Reserva Especial', en: 'Special Reserve Cuba Libre', pt: 'Cuba Libre Reserva Especial' }, desc: { es: 'Ron añejo colombiano 8 años, bebida de cola, gotas de amargo y rodaja de lima.', en: '8-year-old aged Colombian rum, classic cola, aromatic bitters dash, and fresh lime.', pt: 'Rum envelhecido 8 anos, refrigerante de cola, gotas de bitter e rodela de limão.' } },
 
       // ================= BEBIDAS & CAFÉ =================
-      { id: '31', cat: 'bebidas', price: 15000, pop: true, name: { es: 'Limonada de Coco Frappé', en: 'Creamy Coconut Limeade', pt: 'Limonada de Coco Cremosa' }, desc: { es: 'Zumo de limón recién exprimido licuado cremoso con leche de coco natural y hielo.', en: 'Freshly squeezed lime blended with pure rich coconut milk and crushed ice.', pt: 'Suco de limão batido de forma cremosa com leite de coco natural e gelo.' } },
-      { id: '32', cat: 'bebidas', price: 12000, pop: false, name: { es: 'Limonada de Hierbabuena', en: 'Mint Limeade', pt: 'Limonada com Hortelã' }, desc: { es: 'Bebida refrescante de limón criollo con hojas enteras de hierbabuena maceradas.', en: 'Refreshing lime drink made with crushed fresh garden mint leaves over ice.', pt: 'Bebida refrescante de limão com folhas frescas de hortelã maceradas.' } },
-      { id: '33', cat: 'bebidas', price: 10000, pop: false, name: { es: 'Jugo Natural de Maracuyá', en: 'Fresh Passion Fruit Juice', pt: 'Suco Natural de Maracujá' }, desc: { es: 'Pulpa 100% natural de maracuyá preparada en agua o en leche a elección.', en: '100% natural passion fruit pulp blended fresh with water or whole milk.', pt: 'Polpa 100% natural de maracujá batida com água ou leite à sua escolha.' } },
-      { id: '34', cat: 'bebidas', price: 11000, pop: false, name: { es: 'Jugo de Mora Andina', en: 'Andean Blackberry Juice', pt: 'Suco de Amora Andina' }, desc: { es: 'Moras silvestres del Quindío licuadas al instante en agua mineral o en leche cremosa.', en: 'Wild Andean blackberries from the local highlands blended fresh in water or milk.', pt: 'Amoras silvestres da região andina preparadas na hora com água ou leite.' } },
-      { id: '35', cat: 'bebidas', price: 10000, pop: false, name: { es: 'Jugo Natural de Mango Dulce', en: 'Sweet Mango Juice', pt: 'Suco Natural de Manga' }, desc: { es: 'Mango maduro seleccionado batido bien frío para un sabor tropical intenso.', en: 'Ripe tropical mango blended cold for a sweet and vibrant flavor.', pt: 'Manga madura selecionada e batida bem gelada com sabor tropical marcante.' } },
-      { id: '36', cat: 'bebidas', price: 7000, pop: true, name: { es: 'Espresso Origen Salento', en: 'Single Origin Salento Espresso', pt: 'Espresso Origem Salento' }, desc: { es: 'Extracción corta de café especial de altura cultivado en fincas de Salento.', en: 'Rich short extraction of specialty high-altitude coffee grown in Salento farms.', pt: 'Extração curta e intensa de café especial cultivado nas montanhas de Salento.' } },
-      { id: '37', cat: 'bebidas', price: 10000, pop: true, name: { es: 'Cappuccino Artesanal', en: 'Artisan Steamed Cappuccino', pt: 'Cappuccino Artesanal Cremoso' }, desc: { es: 'Doble shot de café especial con microespuma sedosa de leche y cacao puro.', en: 'Double shot of espresso balanced with silky steamed microfoam and cocoa.', pt: 'Dose dupla de café especial com microespuma de leite e cacau.' } },
-      { id: '38', cat: 'bebidas', price: 16000, pop: true, name: { es: 'Cerveza Artesanal del Quindío', en: 'Quindío Craft Beer (Bottle)', pt: 'Cerveja Artesanal de Quindío' }, desc: { es: 'Botella de cerveza artesanal local estilo IPA, Amber Ale o Rubia Dorada.', en: 'Local craft beer bottle available in IPA, Amber Ale, or crisp Golden Ale style.', pt: 'Garrafa de cerveja artesanal local nos estilos IPA, Amber Ale ou Blonde Ale.' } },
-      { id: '39', cat: 'bebidas', price: 10000, pop: false, name: { es: 'Cerveza Club Colombia', en: 'Club Colombia Premium Beer', pt: 'Cerveja Club Colombia Dorada' }, desc: { es: 'Cerveza lager tradicional colombiana servida en copa fría.', en: 'Traditional Colombian premium lager served chilled with frosted glass.', pt: 'Cerveja premium tradicional colombiana servida bem gelada.' } },
-      { id: '40', cat: 'bebidas', price: 7000, pop: false, name: { es: 'Agua Manantial / Con Gas', en: 'Bottled Spring / Sparkling Water', pt: 'Água Mineral / Com Gás' }, desc: { es: 'Agua pura de manantial andino, disponible sin gas o con gas y limón.', en: 'Pure Andean spring water, available still or sparkling with fresh lemon.', pt: 'Água pura da fonte andina, disponível com ou sem gás e rodela de limão.' } }
+      { id: 'b1', cat: 'bebidas', price: 15000, pop: true, name: { es: 'Limonada de Coco Frappé', en: 'Creamy Coconut Limeade', pt: 'Limonada de Coco Cremosa' }, desc: { es: 'Zumo de limón recién exprimido licuado cremoso con leche de coco natural y hielo.', en: 'Freshly squeezed lime blended with pure rich coconut milk and crushed ice.', pt: 'Suco de limão batido de forma cremosa com leite de coco natural e gelo.' } },
+      { id: 'b2', cat: 'bebidas', price: 12000, pop: false, name: { es: 'Limonada de Hierbabuena', en: 'Mint Limeade', pt: 'Limonada com Hortelã' }, desc: { es: 'Bebida refrescante de limón criollo con hojas enteras de hierbabuena maceradas.', en: 'Refreshing lime drink made with crushed fresh garden mint leaves over ice.', pt: 'Bebida refrescante de limão com folhas frescas de hortelã maceradas.' } },
+      { id: 'b3', cat: 'bebidas', price: 10000, pop: false, name: { es: 'Jugo Natural de Maracuyá', en: 'Fresh Passion Fruit Juice', pt: 'Suco Natural de Maracujá' }, desc: { es: 'Pulpa 100% natural de maracuyá preparada en agua o en leche a elección.', en: '100% natural passion fruit pulp blended fresh with water or whole milk.', pt: 'Polpa 100% natural de maracujá batida com água ou leite à sua escolha.' } },
+      { id: 'b4', cat: 'bebidas', price: 11000, pop: false, name: { es: 'Jugo de Mora Andina', en: 'Andean Blackberry Juice', pt: 'Suco de Amora Andina' }, desc: { es: 'Moras silvestres del Quindío licuadas al instante en agua mineral o en leche cremosa.', en: 'Wild Andean blackberries from the local highlands blended fresh in water or milk.', pt: 'Amoras silvestres da região andina preparadas na hora com água ou leite.' } },
+      { id: 'b5', cat: 'bebidas', price: 10000, pop: false, name: { es: 'Jugo Natural de Mango Dulce', en: 'Sweet Mango Juice', pt: 'Suco Natural de Manga' }, desc: { es: 'Mango maduro seleccionado batido bien frío para un sabor tropical intenso.', en: 'Ripe tropical mango blended cold for a sweet and vibrant flavor.', pt: 'Manga madura selecionada e batida bem gelada com sabor tropical marcante.' } },
+      { id: 'b6', cat: 'bebidas', price: 7000, pop: true, name: { es: 'Espresso Origen Salento', en: 'Single Origin Salento Espresso', pt: 'Espresso Origem Salento' }, desc: { es: 'Extracción corta de café especial de altura cultivado en fincas de Salento.', en: 'Rich short extraction of specialty high-altitude coffee grown in Salento farms.', pt: 'Extração curta e intensa de café especial cultivado nas montanhas de Salento.' } },
+      { id: 'b7', cat: 'bebidas', price: 10000, pop: true, name: { es: 'Cappuccino Artesanal', en: 'Artisan Steamed Cappuccino', pt: 'Cappuccino Artesanal Cremoso' }, desc: { es: 'Doble shot de café especial con microespuma sedosa de leche y cacao puro.', en: 'Double shot of espresso balanced with silky steamed microfoam and cocoa.', pt: 'Dose dupla de café especial com microespuma de leite e cacau.' } },
+      { id: 'b8', cat: 'bebidas', price: 16000, pop: true, name: { es: 'Cerveza Artesanal del Quindío', en: 'Quindío Craft Beer (Bottle)', pt: 'Cerveja Artesanal de Quindío' }, desc: { es: 'Botella de cerveza artesanal local estilo IPA, Amber Ale o Rubia Dorada.', en: 'Local craft beer bottle available in IPA, Amber Ale, or crisp Golden Ale style.', pt: 'Garrafa de cerveja artesanal local nos estilos IPA, Amber Ale ou Blonde Ale.' } },
+      { id: 'b9', cat: 'bebidas', price: 10000, pop: false, name: { es: 'Cerveza Club Colombia', en: 'Club Colombia Premium Beer', pt: 'Cerveja Club Colombia Dorada' }, desc: { es: 'Cerveza lager tradicional colombiana servida en copa fría.', en: 'Traditional Colombian premium lager served chilled with frosted glass.', pt: 'Cerveja premium tradicional colombiana servida bem gelada.' } },
+      { id: 'b10', cat: 'bebidas', price: 7000, pop: false, name: { es: 'Agua Manantial / Con Gas', en: 'Bottled Spring / Sparkling Water', pt: 'Água Mineral / Com Gás' }, desc: { es: 'Agua pura de manantial andino, disponible sin gas o con gas y limón.', en: 'Pure Andean spring water, available still or sparkling with fresh lemon.', pt: 'Água pura da fonte andina, disponível com ou sem gás e rodela de limão.' } }
     ];
 
     function formatPrice(priceCop, lang) {
