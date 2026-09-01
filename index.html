@@ -310,19 +310,81 @@
     };
 
     const MENU_ITEMS = [
-      // ENTRADAS
-      { id: '1', cat: 'entradas', price: 20000, pop: true, name: { es: 'Nachos Sencillos', en: 'Classic Nachos', pt: 'Nachos Clássicos' }, desc: { es: 'Totopos de maíz crujientes acompañados de guacamole artesanal fresco y toque cítrico.', en: 'Crispy corn tortilla chips served with fresh house guacamole and citrus notes.', pt: 'Tortilhas de milho crocantes servidas com guacamole artesanal fresco e toque cítrico.' } },
-      { id: '2', cat: 'entradas', price: 35000, pop: true, name: { es: 'Nachos con Birria', en: 'Birria Nachos', pt: 'Nachos com Birria' }, desc: { es: 'Totopos con queso fundido, carne birria desmechada en cocción lenta y guacamole.', en: 'Tortilla chips topped with melted cheese, slow-cooked shredded birria beef, and guacamole.', pt: 'Tortilhas com queijo derretido, carne de birria desfiada em fogo lento e guacamole.' } },
-      { id: '3', cat: 'entradas', price: 40000, pop: false, name: { es: 'Ceviche Meraki', en: 'Meraki Style Ceviche', pt: 'Ceviche Meraki' }, desc: { es: 'Crocante de chicharrón y trucha marinados al limón con cebolla morada y ají suave.', en: 'Crispy pork belly and local trout marinated in lime, red onion, cilantro, and mild pepper.', pt: 'Crocante de torresmo e truta marinados no limão com cebola roxa e pimenta suave.' } },
-      { id: '4', cat: 'entradas', price: 32000, pop: false, name: { es: 'Papas Rústicas con Birria', en: 'Rustic Birria Fries', pt: 'Batatas Rústicas com Birria' }, desc: { es: 'Papas doradas en gajos bañadas en cheddar fundido, birria tierna y crema agria.', en: 'Golden rustic potato wedges topped with melted cheddar, tender beef birria, and sour cream.', pt: 'Batatas rústicas cobertas com queijo cheddar derretido, birria macia e sour cream.' } },
-      { id: '5', cat: 'entradas', price: 18000, pop: false, name: { es: 'Trilogía de Patacones', en: 'Plantain Trio with Hogao', pt: 'Trilogia de Patacões' }, desc: { es: 'Patacones de plátano verde recién hechos servidos con hogao tradicional y guacamole.', en: 'Crispy green plantains served with traditional Colombian hogao sauce and house guacamole.', pt: 'Patacões crocantes com molho hogao tradicional colombiano e guacamole da casa.' } },
-      { id: '6', cat: 'entradas', price: 24000, pop: false, name: { es: 'Falafels Artesanales', en: 'Artisanal Falafel Bites', pt: 'Falafels Artesanais' }, desc: { es: 'Croquetas de garbanzo especiadas, hierbas frescas y salsa tártara de ajo confitado.', en: 'Crispy spiced chickpea fritters with fresh herbs and roasted garlic tahini dip.', pt: 'Bolinhos crocantes de grão-de-bico temperados com ervas finas e molho de alho confitado.' } },
-      { id: '7', cat: 'entradas', price: 22000, pop: false, name: { es: 'Cazuelita de Frijoles Paisas', en: 'Traditional Bean Bowl', pt: 'Caldinho de Feijão Paisa' }, desc: { es: 'Frijoles criollos en cocción lenta con plátano maduro picado y trozos de chicharrón crocante.', en: 'Slow-cooked local red beans with sweet ripe plantain and crispy pork belly bits.', pt: 'Feijão regional cozido lentamente com banana-da-terra madura e pedaços de torresmo.' } },
-      { id: '8', cat: 'entradas', price: 18000, pop: true, name: { es: 'Empanadas de la Casa (3 uds)', en: 'House Empanadas (3 pcs)', pt: 'Empanadas da Casa (3 un)' }, desc: { es: 'Masa de maíz crujiente rellena de carne desmechada sazonada, acompañadas de ají casero.', en: 'Crisp corn pastry stuffed with seasoned shredded beef, served with artisanal salsa.', pt: 'Massa de milho crocante recheada com carne desfiada temperada e molho artesanal.' } },
-      { id: '9', cat: 'entradas', price: 26000, pop: false, name: { es: 'Queso Campesino a la Parrilla', en: 'Grilled Artisan Cheese', pt: 'Queijo Camponês Grelhado' }, desc: { es: 'Queso local dorado a la brasa con miel de panela aromatizada y frutos secos.', en: 'Local cheese grilled on coals topped with infused cane sugar reduction and toasted nuts.', pt: 'Queijo artesanal grelhado na brasa com redução de rapadura e castanhas tostadas.' } },
-      { id: '10', cat: 'entradas', price: 28000, pop: false, name: { es: 'Alitas Glaseadas al Café', en: 'Coffee Glazed Wings', pt: 'Asinhas Glaciadas ao Café' }, desc: { es: 'Alitas crocantes bañadas en salsa BBQ artesanal con reducción de café especial de Salento.', en: 'Crispy wings glazed in house BBQ sauce infused with Salento specialty coffee reduction.', pt: 'Asinhas crocantes com molho barbecue artesanal e redução de café especial de Salento.' } },
+      // ================= ENTRADAS (Actualizadas 100% con la carta oficial) =================
+      { 
+        id: '1', 
+        cat: 'entradas', 
+        price: 20000, 
+        pop: true, 
+        name: { es: 'Nachos Sencillos', en: 'Classic Nachos', pt: 'Nachos Clássicos' }, 
+        desc: { 
+          es: 'Totopos de maíz recién horneados, acompañados de guacamole artesanal y un toque cítrico que despertará el paladar. El comienzo perfecto para compartir, conversar y abrir el apetito.', 
+          en: 'Freshly baked corn tortilla chips served with artisanal guacamole and a citrus note to awaken your palate. Perfect for sharing.', 
+          pt: 'Tortilhas de milho assadas na hora, acompanhadas de guacamole artesanal e um toque cítrico perfeito para abrir o apetite e compartilhar.' 
+        } 
+      },
+      { 
+        id: '2', 
+        cat: 'entradas', 
+        price: 35000, 
+        pop: true, 
+        name: { es: 'Nachos con Birria', en: 'Birria Nachos', pt: 'Nachos com Birria' }, 
+        desc: { 
+          es: 'Crujientes totopos de maíz cubiertos con queso fundido y nuestra birria cocinada lentamente durante horas. Coronados con guacamole fresco, pico de gallo y cebolla encurtida. Intensos y jugosos.', 
+          en: 'Crispy corn tortilla chips topped with melted cheese, slow-braised beef birria, fresh guacamole, pico de gallo, and pickled onions.', 
+          pt: 'Tortilhas crocantes cobertas com queijo derretido, birria cozida lentamente, guacamole fresco, pico de gallo e cebola em conserva.' 
+        } 
+      },
+      { 
+        id: '3', 
+        cat: 'entradas', 
+        price: 40000, 
+        pop: false, 
+        name: { es: 'Ceviche', en: 'House Ceviche', pt: 'Ceviche da Casa' }, 
+        desc: { 
+          es: 'Porción de cerdo crujiente marinado en limón fresco, mezclado con tomate, cebolla morada, cilantro y un toque de ají. Servido sobre guacamole artesanal y acompañado de tostones de plátano.', 
+          en: 'Crispy pork belly marinated in fresh lime juice with tomato, red onion, cilantro, and mild chili over artisanal guacamole with fried plantain tostones.', 
+          pt: 'Porção de torresmo crocante marinado em limão fresco com tomate, cebola roxa, coentro e pimenta, servido sobre guacamole artesanal e patacões.' 
+        } 
+      },
+      { 
+        id: '4', 
+        cat: 'entradas', 
+        price: 35000, 
+        pop: true, 
+        name: { es: 'Papas con Birria', en: 'Birria Fries', pt: 'Batatas com Birria' }, 
+        desc: { 
+          es: 'Papas crocantes cubiertas con queso fundido y birria de res cocinada lentamente en sus propios jugos. Coronadas con guacamole, pico de gallo y cebolla encurtida.', 
+          en: 'Crispy fries covered with melted cheese and beef birria slow-cooked in its own juices, topped with guacamole, pico de gallo, and pickled onions.', 
+          pt: 'Batatas crocantes cobertas com queijo derretido e birria de carne cozida nos próprios sucos, finalizadas com guacamole, pico de gallo e cebola em conserva.' 
+        } 
+      },
+      { 
+        id: '5', 
+        cat: 'entradas', 
+        price: 28000, 
+        pop: false, 
+        name: { es: 'Papas con Parmesano', en: 'Parmesan Herb Fries', pt: 'Batatas com Parmesão' }, 
+        desc: { 
+          es: 'Papas doradas y crujientes bañadas en mantequilla aromatizada con ajo y perejil, terminadas con queso parmesano y un toque de finas hierbas. Simples, irresistibles y llenas de carácter.', 
+          en: 'Golden crispy fries tossed in garlic-parsley butter, finished with aged parmesan cheese and fine aromatic herbs.', 
+          pt: 'Batatas douradas e crocantes envoltas em manteiga aromatizada com alho e salsa, finalizadas com queijo parmesão e ervas finas.' 
+        } 
+      },
+      { 
+        id: '6', 
+        cat: 'entradas', 
+        price: 25000, 
+        pop: false, 
+        name: { es: 'Patacones de la Casa', en: 'House Fried Plantains', pt: 'Patacões da Casa' }, 
+        desc: { 
+          es: 'Tostones de plátano crocante típicos de Salento acompañados de guacamole y salsa de la casa.', 
+          en: 'Crispy green plantain tostones typical of Salento, served with house guacamole and signature dipping sauce.', 
+          pt: 'Patacões de banana-da-terra crocantes típicos de Salento servidos com guacamole e molho especial da casa.' 
+        } 
+      },
 
-      // FUERTES
+      // ================= FUERTES =================
       { id: '11', cat: 'fuertes', price: 45000, pop: true, name: { es: 'Trucha Asada Tradicional', en: 'Traditional Grilled Trout', pt: 'Truta Grelhada Tradicional' }, desc: { es: 'Filete fresco de trucha a la plancha, patacón gigante tostado, arroz de coco y ensalada.', en: 'Fresh local trout fillet grilled to perfection, giant plantain, coconut rice, and house salad.', pt: 'Filé fresco de truta grelhado, patacão crocante, arroz de coco e salada da casa.' } },
       { id: '12', cat: 'fuertes', price: 49000, pop: true, name: { es: 'Trucha al Ajillo Cremoso', en: 'Garlic Cream Trout', pt: 'Truta ao Alho Cremoso' }, desc: { es: 'Trucha de río bañada en salsa cremosa de ajo confitado, vino blanco, perejil y patacón.', en: 'Mountain trout in a rich roasted garlic white wine cream sauce with plantain.', pt: 'Truta fresca banhada em molho cremoso de alho confitado, vinho branco e patacão.' } },
       { id: '13', cat: 'fuertes', price: 52000, pop: false, name: { es: 'Trucha en Salsa de Champiñones', en: 'Mushroom Sauce Trout', pt: 'Truta com Cogumelos' }, desc: { es: 'Filete de trucha sobre reducción sedosa de champiñones salteados al fuego y queso gratinado.', en: 'Trout fillet served with a creamy sautéed mushroom reduction and melted golden cheese.', pt: 'Filé de truta com redução aveludada de cogumelos salteados e queijo gratinado.' } },
@@ -334,7 +396,7 @@
       { id: '19', cat: 'fuertes', price: 34000, pop: false, name: { es: 'Bowl Silvestre Veggie', en: 'Wild Harvest Veggie Bowl', pt: 'Bowl Silvestre Veggie' }, desc: { es: 'Quinoa real, falafels crocantes, aguacate Hass, vegetales asados y aderezo tahini-limón.', en: 'Royal quinoa, crunchy falafel, ripe avocado, fire-roasted vegetables, and lemon tahini.', pt: 'Quinoa, falafels crocantes, abacate fresco, legumes grelhados e molho de tahine com limão.' } },
       { id: '20', cat: 'fuertes', price: 37000, pop: false, name: { es: 'Pasta Carbonara con Tocineta', en: 'Smoked Bacon Carbonara Pasta', pt: 'Massa Carbonara com Bacon' }, desc: { es: 'Fettuccine al dente en salsa sedosa de yemas, tocineta crocante y queso parmesano.', en: 'Fettuccine pasta tossed in a rich egg yolk cream sauce, crispy cured bacon, and parmesan.', pt: 'Fettuccine al dente em emulsão clássica de gemas, bacon crocante e queijo parmesão.' } },
 
-      // COCTELES
+      // ================= COCTELERÍA =================
       { id: '21', cat: 'cocteles', price: 32000, pop: true, name: { es: 'Meraki Botanic Gin', en: 'Meraki Botanic Gin Tonic', pt: 'Meraki Botanic Gin' }, desc: { es: 'Ginebra con botánicos locales, tónica premium, frutos rojos del bosque y romero.', en: 'Artisan gin infused with native botanicals, premium tonic, wild forest berries, and rosemary.', pt: 'Gin com botânicos locais, água tônica premium, frutas vermelhas e alecrim.' } },
       { id: '22', cat: 'cocteles', price: 28000, pop: true, name: { es: 'Mojito de Maracuyá Silvestre', en: 'Passion Fruit Mojito', pt: 'Mojito de Maracujá' }, desc: { es: 'Ron blanco añejo, hierbabuena macerada, zumo de maracuyá natural y soda.', en: 'Aged white rum, freshly muddled garden mint, natural passion fruit pulp, and soda.', pt: 'Rum branco, hortelã fresca macerada, maracujá natural e água com gás.' } },
       { id: '23', cat: 'cocteles', price: 34000, pop: false, name: { es: 'Margarita Salento de Fresa', en: 'Salento Strawberry Margarita', pt: 'Margarita de Morango Salento' }, desc: { es: 'Tequila reposado, triple sec, pulpa de fresa natural y escarchado de sal volcánica.', en: 'Reposado tequila, triple sec liqueur, fresh crushed strawberries, and volcanic salt rim.', pt: 'Tequila reposado, triple sec, morangos frescos batidos e borda de sal vulcânico.' } },
@@ -346,7 +408,7 @@
       { id: '29', cat: 'cocteles', price: 25000, pop: false, name: { es: 'Sangría Tinta de la Casa (Copa)', en: 'House Red Sangria (Glass)', pt: 'Sangria Tinta da Casa (Taça)' }, desc: { es: 'Vino tinto joven macerado con manzanas, cítricos de la región y licor de naranja.', en: 'Red wine macerated with apples, local citrus fruits, triple sec liqueur, and cinnamon.', pt: 'Vinho tinto macerado com maçãs, frutas cítricas locais e licor de laranja.' } },
       { id: '30', cat: 'cocteles', price: 24000, pop: false, name: { es: 'Cuba Libre Reserva Especial', en: 'Special Reserve Cuba Libre', pt: 'Cuba Libre Reserva Especial' }, desc: { es: 'Ron añejo colombiano 8 años, bebida de cola, gotas de amargo y rodaja de lima.', en: '8-year-old aged Colombian rum, classic cola, aromatic bitters dash, and fresh lime.', pt: 'Rum envelhecido 8 anos, refrigerante de cola, gotas de bitter e rodela de limão.' } },
 
-      // BEBIDAS & CAFE
+      // ================= BEBIDAS & CAFÉ =================
       { id: '31', cat: 'bebidas', price: 15000, pop: true, name: { es: 'Limonada de Coco Frappé', en: 'Creamy Coconut Limeade', pt: 'Limonada de Coco Cremosa' }, desc: { es: 'Zumo de limón recién exprimido licuado cremoso con leche de coco natural y hielo.', en: 'Freshly squeezed lime blended with pure rich coconut milk and crushed ice.', pt: 'Suco de limão batido de forma cremosa com leite de coco natural e gelo.' } },
       { id: '32', cat: 'bebidas', price: 12000, pop: false, name: { es: 'Limonada de Hierbabuena', en: 'Mint Limeade', pt: 'Limonada com Hortelã' }, desc: { es: 'Bebida refrescante de limón criollo con hojas enteras de hierbabuena maceradas.', en: 'Refreshing lime drink made with crushed fresh garden mint leaves over ice.', pt: 'Bebida refrescante de limão com folhas frescas de hortelã maceradas.' } },
       { id: '33', cat: 'bebidas', price: 10000, pop: false, name: { es: 'Jugo Natural de Maracuyá', en: 'Fresh Passion Fruit Juice', pt: 'Suco Natural de Maracujá' }, desc: { es: 'Pulpa 100% natural de maracuyá preparada en agua o en leche a elección.', en: '100% natural passion fruit pulp blended fresh with water or whole milk.', pt: 'Polpa 100% natural de maracujá batida com água ou leite à sua escolha.' } },
