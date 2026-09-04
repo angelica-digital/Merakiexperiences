@@ -92,7 +92,7 @@
       <a id="btn-view-menu" href="#menu" class="bg-[#A44A27] hover:bg-[#C86B47] text-white px-6 py-3 rounded-full text-sm font-medium transition-all shadow-sm">
         Ver Menú &amp; Experiencias
       </a>
-      <a id="btn-how-to-get" href="https://maps.google.com/?q=Carrera+3+%235-56+Salento+Quindio" target="_blank" rel="noopener noreferrer" class="border border-[#F0E5DE] bg-white/60 hover:bg-[#F0E5DE]/40 text-[#2B1E1A] px-6 py-3 rounded-full text-sm font-medium transition-colors">
+      <a id="btn-how-to-get" href="https://share.google/dESclTaohLZJgrkCX" target="_blank" rel="noopener noreferrer" class="border border-[#F0E5DE] bg-white/60 hover:bg-[#F0E5DE]/40 text-[#2B1E1A] px-6 py-3 rounded-full text-sm font-medium transition-colors">
         Abrir en Google Maps
       </a>
     </div>
@@ -171,7 +171,7 @@
         <p id="footer-loc-address" class="text-xs text-[#F0E5DE]/80 mb-1">Carrera 3 #5-56, Salento, Quindío, Colombia</p>
         <p id="footer-loc-hours" class="text-xs text-[#F0E5DE]/80 mb-3">Lunes a Domingo: 12:00 PM – 10:00 PM</p>
         <a
-          href="https://maps.google.com/?q=Carrera+3+%235-56+Salento+Quindio"
+          href="https://share.google/dESclTaohLZJgrkCX"
           target="_blank"
           rel="noopener noreferrer"
           class="text-xs text-[#C86B47] hover:underline"
@@ -337,7 +337,7 @@
     };
 
     const MENU_ITEMS = [
-      // ================= EXPERIENCIAS (Imágenes 1024x640 px · aspect-[16/10] · Sin Emojis) =================
+      // ================= EXPERIENCIAS (Imágenes 1024x640 px · aspect-[16/10] · Mensajes de WhatsApp personalizados) =================
       {
         id: 'exp1',
         cat: 'experiencias',
@@ -354,6 +354,11 @@
           es: 'Sabores de Salento (por Meraki)', 
           en: 'Flavors of Salento (by Meraki)', 
           pt: 'Sabores de Salento (por Meraki)' 
+        },
+        waMsg: {
+          es: '¡Hola! Me gustaría reservar la experiencia "Sabores de Salento (por Meraki)". ¿Qué fechas y horarios tienen disponibles?',
+          en: 'Hello! I would like to book the "Flavors of Salento (by Meraki)" experience. What dates and times are available?',
+          pt: 'Olá! Gostaria de reservar a experiência "Sabores de Salento (por Meraki)". Quais datas e horários estão disponíveis?'
         },
         intro: {
           es: 'Un viaje a fuego lento por los sabores de Salento y la cocina de autor:',
@@ -403,6 +408,11 @@
           en: 'The Voice of Plants (Grow Ganja)', 
           pt: 'A Voz das Plantas (Grow Ganja)' 
         },
+        waMsg: {
+          es: '¡Hola! Quiero información y disponibilidad para reservar la experiencia "La Voz de las Plantas (Grow Ganja)".',
+          en: 'Hello! I want information and availability to book "The Voice of Plants (Grow Ganja)" experience.',
+          pt: 'Olá! Quero informações e disponibilidade para reservar a experiência "A Voz das Plantas (Grow Ganja)".'
+        },
         intro: {
           es: 'Recorrido botánico y sensorial para reconectar con el bienestar vegetal:',
           en: 'A sensory and botanical exploration to reconnect with plant wellness:',
@@ -450,6 +460,11 @@
           es: 'Salento Real: Historias Detrás de sus Calles', 
           en: 'Salento Real: Stories Behind the Streets', 
           pt: 'Salento Real: Histórias por Trás das Ruas' 
+        },
+        waMsg: {
+          es: '¡Hola! Me interesa reservar la caminata cultural "Salento Real: Historias Detrás de sus Calles". ¿Me confirman cupos disponibles?',
+          en: 'Hello! I am interested in booking the cultural walk "Salento Real: Stories Behind the Streets". Can you confirm available spots?',
+          pt: 'Olá! Tenho interesse em reservar a caminhada cultural "Salento Real: Histórias por Trás das Ruas". Pode me confirmar vagas?'
         },
         intro: {
           es: 'No vengas solo a ver Salento, ven a entenderlo. Caminata cultural en 5 momentos:',
@@ -501,6 +516,11 @@
           es: 'Grow Ganja: De la Semilla a la Transformación', 
           en: 'Grow Ganja: From Seed to Transformation', 
           pt: 'Grow Ganja: Da Semente à Transformação' 
+        },
+        waMsg: {
+          es: '¡Hola! Me gustaría recibir información sobre la experiencia "Grow Ganja: De la Semilla a la Transformación".',
+          en: 'Hello! I would like to receive information about the "Grow Ganja: From Seed to Transformation" experience.',
+          pt: 'Olá! Gostaria de receber informações sobre a experiência "Grow Ganja: Da Semente à Transformação".'
         },
         intro: {
           es: 'Experiencia turística pionera en educación cannábica sin mitos ni estigmas:',
@@ -1317,7 +1337,8 @@
       grid.innerHTML = filtered.map(item => {
         const isExp = item.isExp;
         const metaText = isExp ? (typeof item.meta === 'object' ? item.meta[currentLang] : item.meta) : '';
-        const expWaMsg = encodeURIComponent(`Hola Meraki, quiero información y reservar la experiencia: ${item.name[currentLang]}`);
+        const specificWaMsg = isExp && item.waMsg ? item.waMsg[currentLang] : DICTIONARY[currentLang].whatsappMsg;
+        const expWaMsg = encodeURIComponent(specificWaMsg);
         const aspectClass = isExp ? 'aspect-[16/10]' : 'aspect-[4/5]';
 
         return `
