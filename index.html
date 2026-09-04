@@ -72,12 +72,12 @@
       transform: translateY(-3px);
       border-color: #A44A27;
     }
-    /* Estilo exacto del botón flotante y color de WhatsApp idéntico a la referencia */
+    /* Botón flotante con los colores de acento de Meraki (Terracota/Marrón) */
     .whatsapp-float-btn {
       position: fixed;
       bottom: 24px;
       right: 24px;
-      background: #25D366;
+      background: linear-gradient(135deg, #A44A27 0%, #C86B47 100%);
       color: white;
       width: 60px;
       height: 60px;
@@ -85,19 +85,19 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 30px;
-      box-shadow: 0 0 25px rgba(37, 211, 102, 0.7);
+      font-size: 28px;
+      box-shadow: 0 8px 24px rgba(164, 74, 39, 0.4);
       z-index: 9998;
       transition: all 0.3s ease;
       animation: pulse-float 2s ease-in-out infinite;
     }
     @keyframes pulse-float {
-      0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(37, 211, 102, 0.6); }
-      50% { transform: scale(1.08); box-shadow: 0 0 35px rgba(37, 211, 102, 0.9); }
+      0%, 100% { transform: scale(1); box-shadow: 0 8px 24px rgba(164, 74, 39, 0.4); }
+      50% { transform: scale(1.08); box-shadow: 0 12px 35px rgba(200, 107, 71, 0.6); }
     }
     .whatsapp-float-btn:hover {
-      transform: scale(1.15);
-      background: #20bd5a;
+      transform: scale(1.12);
+      background: linear-gradient(135deg, #C86B47 0%, #A44A27 100%);
     }
   </style>
 </head>
@@ -304,7 +304,7 @@
     </div>
   </footer>
 
-  <!-- FLOATING WHATSAPP BUTTON (Con el logo oficial y color verde exacto de referencia) -->
+  <!-- FLOATING WHATSAPP BUTTON (Con los colores y diseño corporativo de Meraki) -->
   <a
     id="floating-wa"
     href="https://wa.me/573222858658"
@@ -422,7 +422,7 @@
         faqTitle: 'Informações para Viajantes e Hotéis',
         faqs: [
           { q: 'Como agendar uma das Experiências Meraki?', a: 'Você pode agendar diretamente pelo WhatsApp com antecedência para garantir vagas e horários.' },
-          { q: 'Hotéis e pousadas podem oferecer essas experiências aos hóspedes?', a: 'Sim, realizamos parcerias com hospedagens locais para proporcionar experiências gastronômicas e botânicas exclusivas.' },
+          { q: 'Hotéis e pousadas podem oferecer estas experiências aos hóspedes?', a: 'Sim, realizamos parcerias com hospedagens locais para proporcionar experiências gastronômicas e botânicas exclusivas.' },
           { q: 'Quais formas de pagamento são aceitas?', a: 'Aceitamos cartões internacionais, pagamentos por aproximação e dinheiro em espécie (COP).' },
           { q: 'Existem opções vegetarianas?', a: 'Sim, dispomos de alternativas adaptadas tanto no menu quanto na experiência gastronômica.' }
         ],
