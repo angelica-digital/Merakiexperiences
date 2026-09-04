@@ -265,6 +265,7 @@
         openMap: 'Abrir en Google Maps →',
         whatsappMsg: '¡Hola! Quiero consultar disponibilidad y hacer una reserva en Meraki Salento.',
         bookExp: 'Reservar Experiencia',
+        orderBtn: 'Pedir →',
         tagExp: 'Experiencia',
         tagFeatured: 'Destacada'
       },
@@ -298,6 +299,7 @@
         openMap: 'Open in Google Maps →',
         whatsappMsg: 'Hello! I would like to inquire about bookings and experiences at Meraki Salento.',
         bookExp: 'Book Experience',
+        orderBtn: 'Order →',
         tagExp: 'Experience',
         tagFeatured: 'Featured'
       },
@@ -309,7 +311,7 @@
         howToGet: 'Abrir no Google Maps',
         reserve: 'Reservar Mesa',
         searchPlaceholder: 'Buscar prato ou experiência...',
-        cannabisText: 'Você pode adicionar Gotas de Cannabis em qualquer bebida',
+        cannabisText: 'Você pode adicionar Gotas de Cannabis a qualquer bebida',
         categories: {
           all: 'Tudo',
           experiencias: 'Experiências',
@@ -331,13 +333,14 @@
         openMap: 'Abrir no Google Maps →',
         whatsappMsg: 'Olá! Gostaria de consultar informações e reservas no Meraki Salento.',
         bookExp: 'Reservar Experiência',
+        orderBtn: 'Pedir →',
         tagExp: 'Experiência',
         tagFeatured: 'Destaque'
       }
     };
 
     const MENU_ITEMS = [
-      // ================= EXPERIENCIAS (Imágenes 1024x640 px · aspect-[16/10] · Mensajes de WhatsApp personalizados) =================
+      // ================= EXPERIENCIAS =================
       {
         id: 'exp1',
         cat: 'experiencias',
@@ -554,7 +557,7 @@
         }
       },
 
-      // ================= ENTRADAS (1080x1350 px · aspect-[4/5]) =================
+      // ================= ENTRADAS =================
       { 
         id: 'e1', 
         cat: 'entradas', 
@@ -634,7 +637,7 @@
         } 
       },
 
-      // ================= FUERTES (1080x1350 px · aspect-[4/5]) =================
+      // ================= FUERTES =================
       {
         id: 'f1',
         cat: 'fuertes',
@@ -818,7 +821,7 @@
         }
       },
 
-      // ================= BEBIDAS CALIENTES (1080x1350 px · aspect-[4/5]) =================
+      // ================= BEBIDAS CALIENTES =================
       {
         id: 'bc1',
         cat: 'calientes',
@@ -950,7 +953,7 @@
         }
       },
 
-      // ================= BEBIDAS FRÍAS (1080x1350 px · aspect-[4/5]) =================
+      // ================= BEBIDAS FRÍAS =================
       {
         id: 'bf1',
         cat: 'frias',
@@ -1337,8 +1340,23 @@
       grid.innerHTML = filtered.map(item => {
         const isExp = item.isExp;
         const metaText = isExp ? (typeof item.meta === 'object' ? item.meta[currentLang] : item.meta) : '';
-        const specificWaMsg = isExp && item.waMsg ? item.waMsg[currentLang] : DICTIONARY[currentLang].whatsappMsg;
-        const expWaMsg = encodeURIComponent(specificWaMsg);
+        
+        // Mensaje personalizado para WhatsApp dependiendo si es Experiencia o Plato/Bebida regular
+        let waText = '';
+        if (isExp && item.waMsg) {
+          waText = item.waMsg[currentLang];
+        } else {
+          const itemName = item.name[currentLang];
+          const itemPrice = item.price > 0 ? ` ($${item.price.toLocaleString('es-CO')} COP)` : '';
+          if (currentLang === 'en') {
+            waText = `Hello Meraki! I would like to order: ${itemName}${itemPrice}. Please let me know the details.`;
+          } else if (currentLang === 'pt') {
+            waText = `Olá Meraki! Gostaria de pedir: ${itemName}${itemPrice}. Poderia me orientar sobre o pedido?`;
+          } else {
+            waText = `¡Hola Meraki! Me gustaría pedir: ${itemName}${itemPrice}. ¿Me confirman para proceder con el pedido?`;
+          }
+        }
+        const waMsgEncoded = encodeURIComponent(waText);
         const aspectClass = isExp ? 'aspect-[16/10]' : 'aspect-[4/5]';
 
         return `
@@ -1390,7 +1408,7 @@
                   ${item.footerQuote[currentLang]}
                 </p>
               ` : `
-                <p class="text-xs text-[#6E5D57] leading-relaxed font-light">
+                <p class="text-xs text-[#6E5D57] leading-relaxed font-light mb-4">
                   ${item.desc[currentLang]}
                 </p>
               `}
@@ -1404,16 +1422,14 @@
               </span>
             ` : '<div></div>'}
 
-            ${isExp ? `
-              <a 
-                href="https://wa.me/573222858658?text=${expWaMsg}" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                class="bg-[#A44A27] hover:bg-[#C86B47] text-white text-xs px-3.5 py-1.5 rounded-full font-medium transition-colors shadow-sm"
-              >
-                ${DICTIONARY[currentLang].bookExp} →
-              </a>
-            ` : ''}
+            <a 
+              href="https://wa.me/573222858658?text=${waMsgEncoded}" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="bg-[#A44A27] hover:bg-[#C86B47] text-white text-xs px-4 py-2 rounded-full font-medium transition-colors shadow-sm ml-auto"
+            >
+              ${isExp ? DICTIONARY[currentLang].bookExp : DICTIONARY[currentLang].orderBtn}
+            </a>
           </div>
         </div>
       `}).join('');
