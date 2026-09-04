@@ -212,13 +212,11 @@
     let currentCategory = 'all';
     let currentSearch = '';
 
-    // Tasas de cambio de respaldo (Fallback)
     let RATES = {
       USD: 4000,
       BRL: 750
     };
 
-    // Consulta de tasa en tiempo real sin API Key
     async function fetchExchangeRates() {
       try {
         const res = await fetch('https://open.er-api.com/v6/latest/COP');
@@ -324,7 +322,7 @@
     };
 
     const MENU_ITEMS = [
-      // ================= ENTRADAS (Con imágenes subidas a la raíz de GitHub) =================
+      // ================= ENTRADAS (1080x1350 px) =================
       { 
         id: 'e1', 
         cat: 'entradas', 
@@ -968,7 +966,6 @@
     function setLanguage(lang) {
       currentLang = lang;
       
-      // Update Buttons
       ['es', 'en', 'pt'].forEach(l => {
         const btn = document.getElementById(`btn-${l}`);
         if (l === lang) {
@@ -980,7 +977,6 @@
 
       const t = DICTIONARY[lang];
 
-      // Update Texts
       document.getElementById('hero-badge').textContent = t.badge;
       document.getElementById('hero-title').textContent = t.heroTitle;
       document.getElementById('hero-subtitle').textContent = t.heroSubtitle;
@@ -996,22 +992,17 @@
       document.getElementById('footer-loc-hours').textContent = t.hours;
       document.getElementById('footer-loc-link').textContent = t.openMap;
 
-      // Update Category Buttons Text
       document.querySelectorAll('.cat-btn').forEach(btn => {
         const catKey = btn.getAttribute('data-cat');
         btn.textContent = t.categories[catKey];
       });
 
-      // Update WhatsApp Links
       const waUrl = `https://wa.me/573222858658?text=${encodeURIComponent(t.whatsappMsg)}`;
       document.getElementById('nav-reserve-btn').href = waUrl;
       document.getElementById('footer-whatsapp-btn').href = waUrl;
       document.getElementById('floating-wa').href = waUrl;
 
-      // Render FAQs
       renderFaqs();
-
-      // Re-render Menu
       renderMenu();
     }
 
@@ -1066,7 +1057,7 @@
         <div class="bg-white rounded-2xl border border-[#F0E5DE] overflow-hidden hover:shadow-md transition-shadow flex flex-col justify-between">
           <div>
             ${item.img ? `
-              <div class="w-full h-48 bg-[#F0E5DE]/40 overflow-hidden relative">
+              <div class="w-full aspect-[4/5] bg-[#F0E5DE]/40 overflow-hidden relative">
                 <img 
                   src="${item.img}" 
                   alt="${item.name[currentLang]}" 
