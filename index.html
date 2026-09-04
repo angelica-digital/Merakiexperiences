@@ -719,12 +719,13 @@
         }
       },
 
-      // ================= BEBIDAS FRÍAS =================
+      // ================= BEBIDAS FRÍAS (1080x1350 px com imagens exatas) =================
       {
         id: 'bf1',
         cat: 'frias',
         price: 12000,
         pop: true,
+        img: 'Vaso de Jugo Natural.png',
         name: { es: 'Vaso de Jugo Natural', en: 'Fresh Fruit Juice Glass', pt: 'Copo de Suco Natural' },
         desc: {
           es: 'Mango, maracuyá, lulo, fresa, mora, piña, guanábana, coco o uva.',
@@ -737,6 +738,7 @@
         cat: 'frias',
         price: 30000,
         pop: true,
+        img: 'Margarita Tamarindo.png',
         name: { es: 'Margarita Tamarindo', en: 'Tamarind Margarita Cocktail', pt: 'Margarita de Tamarindo' },
         desc: {
           es: 'Bebida alcohólica, frapeada con hielo, tequila y almíbar de tamarindo hecho en casa.',
@@ -749,6 +751,7 @@
         cat: 'frias',
         price: 30000,
         pop: false,
+        img: 'Margarita Jamaica.png',
         name: { es: 'Margarita Jamaica', en: 'Hibiscus Margarita Cocktail', pt: 'Margarita de Hibisco (Jamaica)' },
         desc: {
           es: 'Bebida alcohólica, frapeada con hielo, tequila y almíbar de flor de jamaica hecha en casa.',
@@ -761,6 +764,7 @@
         cat: 'frias',
         price: 16000,
         pop: true,
+        img: 'Jardín Tropical (Mocktail).png',
         name: { es: 'Jardín Tropical (Mocktail)', en: 'Tropical Garden Mocktail', pt: 'Jardim Tropical (Sem Álcool)' },
         desc: {
           es: 'Bebida fría a base de mango, piña y maracuyá, macerado con albahaca, limón mandarina y finalizada con soda.',
@@ -773,6 +777,7 @@
         cat: 'frias',
         price: 16000,
         pop: false,
+        img: 'Rojo Andino (Mocktail).png',
         name: { es: 'Rojo Andino (Mocktail)', en: 'Andean Red Berry Mocktail', pt: 'Vermelho Andino (Sem Álcool)' },
         desc: {
           es: 'Bebida fría elaborada con mora, fresa, uva, menta jengibre, endulzada con jarabe de flor de jamaica y terminada con soda fría.',
@@ -785,6 +790,7 @@
         cat: 'frias',
         price: 16000,
         pop: true,
+        img: 'Cafetal Cítrico.png',
         name: { es: 'Cafetal Cítrico', en: 'Citrus Cold Brew Coffee Mocktail', pt: 'Cafetal Cítrico Gelado' },
         desc: {
           es: 'Bebida fría de café colombiano, mezclado con jarabe de panela y limón mandarina, servido con hielo, finalizado con soda.',
@@ -797,6 +803,7 @@
         cat: 'frias',
         price: 15000,
         pop: false,
+        img: 'Batido Amarillo.png',
         name: { es: 'Batido Amarillo', en: 'Yellow Sunshine Smoothie', pt: 'Smoothie Amarelo Tropical' },
         desc: {
           es: 'Bebida fría preparada con piña, mango, maracuyá, zucchini, aloe de vera.',
@@ -809,6 +816,7 @@
         cat: 'frias',
         price: 15000,
         pop: false,
+        img: 'Batido Verde.png',
         name: { es: 'Batido Verde', en: 'Green Detox Smoothie', pt: 'Smoothie Verde Detox' },
         desc: {
           es: 'Batido frío preparado con pepino, espinaca, piña, apio y limón, endulzado con miel y servido con hielo.',
@@ -821,6 +829,7 @@
         cat: 'frias',
         price: 20000,
         pop: true,
+        img: 'Refajo Colombiano.png',
         name: { es: 'Refajo Colombiano', en: 'Colombian Refajo Beer Cocktail', pt: 'Refajo Típico Colombiano' },
         desc: {
           es: 'Bebida alcohólica tradicional con cerveza rubia y soda de Kola.',
@@ -833,6 +842,7 @@
         cat: 'frias',
         price: 30000,
         pop: false,
+        img: 'Uva Colada Cocktail.png',
         name: { es: 'Uva Colada Cocktail', en: 'Uva Colada Cream Cocktail', pt: 'Uva Colada Cocktail' },
         desc: {
           es: 'Bebida alcohólica, cremosa a base de uva negra, crema de coco y ron.',
@@ -845,6 +855,7 @@
         cat: 'frias',
         price: 30000,
         pop: true,
+        img: 'Mojito de Piña.png',
         name: { es: 'Mojito de Piña', en: 'Pineapple Passion Mojito', pt: 'Mojito de Abacaxi Tropical' },
         desc: {
           es: 'Bebida alcohólica, con piña, mango, maracuyá, hierbabuena y ron.',
@@ -1087,7 +1098,7 @@
                   src="${item.img}" 
                   alt="${item.name[currentLang]}" 
                   class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                  onerror="this.closest('.bg-white').style.display='none'"
+                  onerror="this.parentElement.style.display='none'"
                 />
               </div>
             ` : ''}
