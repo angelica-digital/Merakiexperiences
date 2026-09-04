@@ -335,7 +335,7 @@
     };
 
     const MENU_ITEMS = [
-      // ================= EXPERIENCIAS (CORREGIDAS 100% POR IDIOMA) =================
+      // ================= EXPERIENCIAS FORMATADAS CON PASOS VISUALES =================
       {
         id: 'exp1',
         cat: 'experiencias',
@@ -353,10 +353,35 @@
           en: '🍍 Flavors of Salento (by Meraki)', 
           pt: '🍍 Sabores de Salento (por Meraki)' 
         },
-        desc: {
-          es: 'Un viaje a fuego lento por los sabores locales. Experiencia gastronómica de 4 tiempos: bienvenida con introducción a la filosofía de Meraki, pequeña degustación, plato principal artesanal a elección, bebida de la casa y cierre con café colombiano especial. "El amor se cocina a fuego lento."',
-          en: 'A slow-cooked journey through local flavors. 4-course culinary experience: welcome introduction to Meraki’s philosophy, tasting appetizer, slow-cooked signature main dish of choice, house drink, and single-origin Colombian coffee finish. "Love is slow-cooked."',
-          pt: 'Uma viagem em fogo lento pelos sabores locais. Experiência gastronômica em 4 tempos: introdução à filosofia Meraki, degustação de entrada, prato principal artesanal à escolha, bebida da casa e encerramento com café colombiano especial. "O amor se cozinha em fogo lento."'
+        intro: {
+          es: 'Un viaje a fuego lento por los sabores de Salento y la cocina de autor:',
+          en: 'A slow-cooked journey connecting local roots with signature gastronomy:',
+          pt: 'Uma viagem em fogo lento conectando raízes locais e culinária autoral:'
+        },
+        steps: {
+          es: [
+            { t: 'Bienvenida', d: 'Introducción a la filosofía culinaria de Meraki' },
+            { t: 'Degustación', d: 'Apertura con bocados de origen local' },
+            { t: 'Plato Principal', d: 'Receta de cocción lenta artesanal a tu elección' },
+            { t: 'Cierre de Origen', d: 'Bebida de la casa y café colombiano de especialidad' }
+          ],
+          en: [
+            { t: 'Welcome', d: 'Introduction to Meraki’s culinary philosophy' },
+            { t: 'Tasting', d: 'Curated local appetizers' },
+            { t: 'Main Course', d: 'Slow-cooked artisan dish of your choice' },
+            { t: 'Origin Finish', d: 'House beverage & single-origin Colombian coffee' }
+          ],
+          pt: [
+            { t: 'Boas-vindas', d: 'Introdução à filosofia de cozinha do Meraki' },
+            { t: 'Degustação', d: 'Abertura com sabores típicos da região' },
+            { t: 'Prato Principal', d: 'Receita artesanal em fogo lento à sua escolha' },
+            { t: 'Encerramento', d: 'Bebida da casa e café colombiano especial' }
+          ]
+        },
+        footerQuote: {
+          es: '“El amor se cocina a fuego lento.”',
+          en: '“Love is slow-cooked.”',
+          pt: '“O amor se cozinha em fogo lento.”'
         }
       },
       {
@@ -376,10 +401,35 @@
           en: '🌿 The Voice of Plants (Grow Ganja)', 
           pt: '🌿 A Voz das Plantas (Grow Ganja)' 
         },
-        desc: {
-          es: 'Experiencia botánica y sensorial en 4 momentos: 1. El Jardín (reconocimiento de plantas medicinales y aromáticas) · 2. Los Sentidos (aromaterapia y texturas) · 3. El Laboratorio (procesos de extracción y formulación botánica) · 4. Crea & Lleva: prepara tu propio producto botánico guiado como recuerdo de Salento.',
-          en: 'Botanical and sensory journey in 4 stages: 1. The Garden (identifying aromatic & medicinal herbs) · 2. The Senses (aromatherapy exploration) · 3. The Lab (extraction & botanical formulation) · 4. Create & Take Home: handcraft your own botanical product to take home from Salento.',
-          pt: 'Vivência botânica e sensorial em 4 etapas: 1. O Jardim (ervas aromáticas e medicinais) · 2. Os Sentidos (aromaterapia e texturas) · 3. O Laboratório (extração e formulações) · 4. Crie & Leve: prepare seu próprio produto botânico guiado para levar de lembrança.'
+        intro: {
+          es: 'Recorrido botánico y sensorial para reconectar con el bienestar vegetal:',
+          en: 'A sensory and botanical exploration to reconnect with plant wellness:',
+          pt: 'Uma exploração botânica e sensorial para se reconectar com as plantas:'
+        },
+        steps: {
+          es: [
+            { t: 'El Jardín (Conocer)', d: 'Reconocimiento táctil y aromático de plantas medicinales' },
+            { t: 'Los Sentidos (Sentir)', d: 'Exploración aromática de aceites, resinas y texturas' },
+            { t: 'El Laboratorio (Transformar)', d: 'Procesos de maceración, extracción y formulación' },
+            { t: 'Crea & Lleva (Recordar)', d: 'Elabora tu propio producto botánico guiado como recuerdo' }
+          ],
+          en: [
+            { t: 'The Garden (Learn)', d: 'Identify and touch aromatic and medicinal herbs' },
+            { t: 'The Senses (Feel)', d: 'Aromatherapy exploration of textures and oils' },
+            { t: 'The Lab (Transform)', d: 'Extraction methods and modern botanical formulation' },
+            { t: 'Craft & Keep (Create)', d: 'Handcraft your own botanical souvenir to take home' }
+          ],
+          pt: [
+            { t: 'O Jardim (Conhecer)', d: 'Identificação e toque em plantas medicinais e aromáticas' },
+            { t: 'Os Sentidos (Sentir)', d: 'Exploração sensorial de texturas e óleos essenciais' },
+            { t: 'O Laboratório (Transformar)', d: 'Processos de maceração, extração e formulação' },
+            { t: 'Crie & Leve (Lembrar)', d: 'Prepare seu próprio produto botânico para levar para casa' }
+          ]
+        },
+        footerQuote: {
+          es: '“Las plantas siempre han hablado. Nosotros aprendimos a escucharlas.”',
+          en: '“Plants have always spoken. We just learned to listen.”',
+          pt: '“As plantas sempre falaram. Nós aprendemos a escutá-las.”'
         }
       },
       {
@@ -399,10 +449,38 @@
           en: '🏘️ Salento Real: Stories Behind the Streets', 
           pt: '🏘️ Salento Real: Histórias por Trás das Ruas' 
         },
-        desc: {
-          es: 'No vengas solo a ver Salento, ven a entenderlo. Caminata cultural en 5 momentos: Origen, Memoria local (historias que no están en Google), Calle Real con sus personajes y artesanos, Mirador panorámico para interpretar el territorio, y degustación de Sabores & Memoria fotográfica, concluyendo en Meraki.',
-          en: 'Don’t just see Salento, understand it. Cultural walking tour in 5 parts: Origins, Untold local heritage, Calle Real artisan encounters, Panoramic mountain viewpoint, and Regional tasting with photographic history, finishing back at Meraki.',
-          pt: 'Não venha apenas ver Salento, venha compreendê-lo. Passeio a pé cultural em 5 atos: Origem, Memória oral do vilarejo, personagens da Calle Real, Mirante panorâmico e degustação de Sabores com memória fotográfica, finalizando no Meraki.'
+        intro: {
+          es: 'No vengas solo a ver Salento, ven a entenderlo. Caminata cultural en 5 momentos:',
+          en: 'Don’t just visit Salento, understand its roots. Walking tour in 5 parts:',
+          pt: 'Não venha apenas visitar Salento, venha entendê-lo. Caminhada em 5 atos:'
+        },
+        steps: {
+          es: [
+            { t: 'Origen', d: 'Punto de partida en Meraki y contexto del territorio' },
+            { t: 'Memoria Local', d: 'Historias reales y patrimonio que no están en Google' },
+            { t: 'Calle Real', d: 'Encuentros cercanos con artesanos y emprendedores locales' },
+            { t: 'El Mirador', d: 'Comprensión del paisaje, cordillera y desarrollo turístico' },
+            { t: 'Sabores & Memoria', d: 'Cata de chocolatería, memoria fotográfica y regreso a Meraki' }
+          ],
+          en: [
+            { t: 'Origins', d: 'Departure from Meraki and regional history overview' },
+            { t: 'Untold Heritage', d: 'Authentic local stories absent from conventional guides' },
+            { t: 'Calle Real', d: 'Interactions with authentic local artisans and craftspeople' },
+            { t: 'The Viewpoint', d: 'Reading the mountain landscape and Valley context' },
+            { t: 'Flavors & Memory', d: 'Artisan chocolate stop, photographic history, and wrap-up' }
+          ],
+          pt: [
+            { t: 'Origens', d: 'Ponto de partida no Meraki e introdução à história' },
+            { t: 'Memória Oral', d: 'Histórias e personagens que não aparecem na internet' },
+            { t: 'Calle Real', d: 'Conversas com artesãos e pioneiros da vila' },
+            { t: 'Mirante', d: 'Visão panorâmica da cordilheira e leitura geográfica' },
+            { t: 'Sabores & Registro', d: 'Degustação artesanal, fotos históricas e retorno ao Meraki' }
+          ]
+        },
+        footerQuote: {
+          es: '“Personas → Historias → Territorio → Sabores”',
+          en: '“People → Stories → Territory → Flavors”',
+          pt: '“Pessoas → Histórias → Território → Sabores”'
         }
       },
       {
@@ -422,10 +500,35 @@
           en: '🌱 Grow Ganja: From Seed to Transformation', 
           pt: '🌱 Grow Ganja: Da Semente à Transformação' 
         },
-        desc: {
-          es: 'Experiencia turística pionera en Salento enfocada en educación cannábica sin tabúes. Recorrido estructurado a través de todo el ciclo: selección de semillas, germinación, fases de cultivo, anatomía, perfiles de terpenos y cannabinoides, culminando en el laboratorio con sus procesos de formulación botánica.',
-          en: 'Pioneering educational cannabis experience in Salento. A complete masterclass through the plant’s entire cycle: seed genetics, germination, growth phases, terpene profiles, cannabinoids, and modern laboratory botanical formulation methods.',
-          pt: 'Experiência pioneira em educação canábica em Salento sem estigmas. Conheça todo o ciclo da planta: genética de sementes, germinação, etapas de cultivo, terpenos, canabinoides e formulação botânica contemporânea em laboratório.'
+        intro: {
+          es: 'Experiencia turística pionera en educación cannábica sin mitos ni estigmas:',
+          en: 'Pioneering educational cannabis masterclass breaking myths and taboos:',
+          pt: 'Experiência pioneira em educação canábica descomplicada e sem estigmas:'
+        },
+        steps: {
+          es: [
+            { t: 'Genética & Semillas', d: 'Selección de cepas, germinación y primeros cuidados' },
+            { t: 'Cultivo Vivo', d: 'Fases vegetativas, floración, sustratos y nutrición orgánica' },
+            { t: 'Anatomía & Aromas', d: 'Comprensión de terpenos, cannabinoides y perfiles aromáticos' },
+            { t: 'Cosecha & Laboratorio', d: 'Procesos de secado, curado y formulación de derivados botánicos' }
+          ],
+          en: [
+            { t: 'Genetics & Seeds', d: 'Strain selection, seed viability, and germination science' },
+            { t: 'Living Crop', d: 'Vegetative growth, organic substrates, and flowering care' },
+            { t: 'Terpenes & Anatomy', d: 'Unpacking cannabinoids, aromas, and sensory profiles' },
+            { t: 'Harvest & Lab', d: 'Curing techniques, drying standards, and botanical formulations' }
+          ],
+          pt: [
+            { t: 'Genética & Sementes', d: 'Seleção de sementes, germinação e manejo inicial' },
+            { t: 'Cultivo Orgânico', d: 'Fases de crescimento, floração e nutrição da planta' },
+            { t: 'Aromas & Terpenos', d: 'Entendimento dos canabinoides e perfis aromáticos' },
+            { t: 'Colheita & Laboratório', d: 'Secagem, cura e formulação botânica contemporânea' }
+          ]
+        },
+        footerQuote: {
+          es: '“De la semilla a la planta, y de la planta a su transformación.”',
+          en: '“From seed to plant, and from plant to transformation.”',
+          pt: '“Da semente à planta, e da planta à sua transformação.”'
         }
       },
 
@@ -1194,8 +1297,9 @@
       const filtered = MENU_ITEMS.filter(item => {
         const matchCat = currentCategory === 'all' || item.cat === currentCategory;
         const name = item.name[currentLang].toLowerCase();
-        const desc = item.desc[currentLang].toLowerCase();
-        const matchSearch = name.includes(currentSearch) || desc.includes(currentSearch);
+        const descMatch = item.desc ? item.desc[currentLang].toLowerCase().includes(currentSearch) : false;
+        const introMatch = item.intro ? item.intro[currentLang].toLowerCase().includes(currentSearch) : false;
+        const matchSearch = name.includes(currentSearch) || descMatch || introMatch;
         return matchCat && matchSearch;
       });
 
@@ -1245,9 +1349,27 @@
                   ${formatPrice(item.price, currentLang)}
                 </div>
               </div>
-              <p class="text-xs text-[#6E5D57] leading-relaxed font-light">
-                ${item.desc[currentLang]}
-              </p>
+
+              ${isExp ? `
+                <p class="text-xs text-[#2B1E1A] font-medium mb-3">
+                  ${item.intro[currentLang]}
+                </p>
+                <ul class="space-y-1.5 mb-3">
+                  ${item.steps[currentLang].map((s, idx) => `
+                    <li class="text-[11px] leading-relaxed text-[#6E5D57] flex items-start gap-1.5">
+                      <span class="text-[#A44A27] font-bold shrink-0">${idx + 1}.</span>
+                      <span><strong class="text-[#2B1E1A] font-semibold">${s.t}:</strong> ${s.d}</span>
+                    </li>
+                  `).join('')}
+                </ul>
+                <p class="text-[11px] italic text-[#A44A27] font-medium pt-1 border-t border-[#F0E5DE]">
+                  ${item.footerQuote[currentLang]}
+                </p>
+              ` : `
+                <p class="text-xs text-[#6E5D57] leading-relaxed font-light">
+                  ${item.desc[currentLang]}
+                </p>
+              `}
             </div>
           </div>
 
@@ -1263,7 +1385,7 @@
                 href="https://wa.me/573222858658?text=${expWaMsg}" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                class="bg-[#A44A27] hover:bg-[#C86B47] text-white text-xs px-3.5 py-1.5 rounded-full font-medium transition-colors"
+                class="bg-[#A44A27] hover:bg-[#C86B47] text-white text-xs px-3.5 py-1.5 rounded-full font-medium transition-colors shadow-sm"
               >
                 ${DICTIONARY[currentLang].bookExp} →
               </a>
