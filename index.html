@@ -53,7 +53,6 @@
       -ms-overflow-style: none;
       scrollbar-width: none;
     }
-    /* Círculos de redes sociales en tono marrón sofisticado */
     .footer-social-circle {
       width: 44px;
       height: 44px;
@@ -73,11 +72,12 @@
       transform: translateY(-3px);
       border-color: #A44A27;
     }
+    /* Estilo exacto del botón flotante y color de WhatsApp idéntico a la referencia */
     .whatsapp-float-btn {
       position: fixed;
       bottom: 24px;
       right: 24px;
-      background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      background: #25D366;
       color: white;
       width: 60px;
       height: 60px;
@@ -85,18 +85,19 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 28px;
-      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.6);
+      font-size: 30px;
+      box-shadow: 0 0 25px rgba(37, 211, 102, 0.7);
       z-index: 9998;
       transition: all 0.3s ease;
       animation: pulse-float 2s ease-in-out infinite;
     }
     @keyframes pulse-float {
-      0%, 100% { transform: scale(1); box-shadow: 0 8px 24px rgba(37, 211, 102, 0.6); }
-      50% { transform: scale(1.1); box-shadow: 0 12px 35px rgba(37, 211, 102, 0.9); }
+      0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(37, 211, 102, 0.6); }
+      50% { transform: scale(1.08); box-shadow: 0 0 35px rgba(37, 211, 102, 0.9); }
     }
     .whatsapp-float-btn:hover {
       transform: scale(1.15);
+      background: #20bd5a;
     }
   </style>
 </head>
@@ -202,7 +203,7 @@
     </div>
   </section>
 
-  <!-- UBICACIÓN & HORARIOS INTERACTIVE SECTION (Tono Marrón Sofisticado) -->
+  <!-- UBICACIÓN & HORARIOS INTERACTIVE SECTION -->
   <section class="bg-[#2B1E1A] text-[#FDF8F5] py-16 px-4">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-12">
@@ -269,7 +270,7 @@
     </div>
   </section>
 
-  <!-- FOOTER (Tono Marrón Sofisticado) -->
+  <!-- FOOTER -->
   <footer class="bg-[#211612] text-[#FDF8F5] pt-12 pb-8 px-4 border-t border-[#3A2A25]">
     <div class="max-w-4xl mx-auto text-center flex flex-col items-center justify-center">
       
@@ -303,7 +304,7 @@
     </div>
   </footer>
 
-  <!-- FLOATING WHATSAPP BUTTON -->
+  <!-- FLOATING WHATSAPP BUTTON (Con el logo oficial y color verde exacto de referencia) -->
   <a
     id="floating-wa"
     href="https://wa.me/573222858658"
