@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meraki Restaurant · Salento, Quindío</title>
-  <meta name="description" content="Local & Cosmo Experiences en Salento, Quindío. Cocina de autor, bebidas y tradición.">
+  <title>Meraki Restaurant & Experiences · Salento, Quindío</title>
+  <meta name="description" content="Local & Cosmo Experiences en Salento, Quindío. Cocina de autor, bebidas, tours y tradición.">
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -79,18 +79,18 @@
   <!-- HERO SECTION -->
   <section class="px-4 pt-12 pb-8 text-center max-w-3xl mx-auto">
     <span id="hero-badge" class="inline-block text-[11px] uppercase tracking-[0.15em] text-[#A44A27] font-semibold mb-3 px-3 py-1 rounded-full bg-[#A44A27]/10">
-      Salento, Quindío · Experiencia Gastronómica
+      Salento, Quindío · Experiencia Gastronómica &amp; Cultural
     </span>
     <h1 id="hero-title" class="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#A44A27] tracking-tight font-normal mb-4">
-      Local & Cosmo Experiences
+      Local &amp; Cosmo Experiences
     </h1>
     <p id="hero-subtitle" class="text-[#6E5D57] text-base sm:text-lg mb-6 leading-relaxed font-light">
-      Cocina de autor, cafés especiales y tradición en el corazón de Salento.
+      Cocina de autor, cafés especiales, bienestar botánico y experiencias exclusivas en Salento.
     </p>
 
     <div class="flex items-center justify-center gap-3">
       <a id="btn-view-menu" href="#menu" class="bg-[#A44A27] hover:bg-[#C86B47] text-white px-6 py-3 rounded-full text-sm font-medium transition-all shadow-sm">
-        Ver Menú Digital
+        Ver Menú &amp; Experiencias
       </a>
       <a id="btn-how-to-get" href="https://maps.google.com/?q=Carrera+3+%235-56+Salento+Quindio" target="_blank" rel="noopener noreferrer" class="border border-[#F0E5DE] bg-white/60 hover:bg-[#F0E5DE]/40 text-[#2B1E1A] px-6 py-3 rounded-full text-sm font-medium transition-colors">
         Abrir en Google Maps
@@ -104,6 +104,7 @@
       <!-- Categories Tabs -->
       <div class="flex items-center gap-2 overflow-x-auto w-full sm:w-auto pb-1 sm:pb-0 no-scrollbar" id="category-tabs">
         <button onclick="setCategory('all')" data-cat="all" class="cat-btn whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-medium transition-all bg-[#2B1E1A] text-white shadow-sm">Todo</button>
+        <button onclick="setCategory('experiencias')" data-cat="experiencias" class="cat-btn whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-medium transition-all bg-white text-[#6E5D57] hover:bg-[#FDF8F5] border border-[#F0E5DE]">✨ Experiencias</button>
         <button onclick="setCategory('entradas')" data-cat="entradas" class="cat-btn whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-medium transition-all bg-white text-[#6E5D57] hover:bg-[#FDF8F5] border border-[#F0E5DE]">Entradas</button>
         <button onclick="setCategory('fuertes')" data-cat="fuertes" class="cat-btn whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-medium transition-all bg-white text-[#6E5D57] hover:bg-[#FDF8F5] border border-[#F0E5DE]">Fuertes</button>
         <button onclick="setCategory('calientes')" data-cat="calientes" class="cat-btn whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-medium transition-all bg-white text-[#6E5D57] hover:bg-[#FDF8F5] border border-[#F0E5DE]">Bebidas Calientes</button>
@@ -115,7 +116,7 @@
         <input
           type="text"
           id="search-input"
-          placeholder="Buscar plato o bebida..."
+          placeholder="Buscar plato o experiencia..."
           oninput="handleSearch(this.value)"
           class="w-full bg-white border border-[#F0E5DE] rounded-full px-4 py-1.5 text-xs text-[#2B1E1A] placeholder-[#6E5D57]/60 focus:outline-none focus:border-[#A44A27]"
         />
@@ -145,7 +146,7 @@
   <section class="bg-white border-t border-[#F0E5DE] py-12 px-4">
     <div class="max-w-3xl mx-auto">
       <h2 id="faq-title" class="font-serif text-2xl sm:text-3xl text-[#A44A27] text-center mb-8 font-medium">
-        Información para Viajeros
+        Información para Viajeros y Hoteles
       </h2>
       <div class="space-y-4" id="faq-list">
         <!-- FAQs populated via JS -->
@@ -159,12 +160,12 @@
       <div>
         <h3 class="font-serif text-2xl tracking-[0.2em] text-[#FDF8F5] mb-2">MERAKI</h3>
         <p class="text-xs text-[#F0E5DE]/70 leading-relaxed font-light">
-          Local and Cosmo Experiences · Salento, Quindío.
+          Local &amp; Cosmo Experiences · Salento, Quindío.
         </p>
       </div>
 
       <div>
-        <h4 id="footer-loc-title" class="text-sm font-semibold text-white mb-2">Ubicación & Horarios</h4>
+        <h4 id="footer-loc-title" class="text-sm font-semibold text-white mb-2">Ubicación &amp; Horarios</h4>
         <p id="footer-loc-address" class="text-xs text-[#F0E5DE]/80 mb-1">Carrera 3 #5-56, Salento, Quindío, Colombia</p>
         <p id="footer-loc-hours" class="text-xs text-[#F0E5DE]/80 mb-3">Lunes a Domingo: 12:00 PM – 10:00 PM</p>
         <a
@@ -227,102 +228,185 @@
           renderMenu();
         }
       } catch (error) {
-        console.warn('Utilizando tasas de cambio por defecto:', error);
+        console.warn('Tasas por defecto:', error);
       }
     }
 
     const DICTIONARY = {
       es: {
-        badge: 'Salento, Quindío · Experiencia Gastronómica',
+        badge: 'Salento, Quindío · Experiencia Gastronómica & Cultural',
         heroTitle: 'Local & Cosmo Experiences',
-        heroSubtitle: 'Cocina de autor, cafés especiales y tradición en el corazón de Salento.',
-        viewMenu: 'Ver Menú Digital',
+        heroSubtitle: 'Cocina de autor, cafés especiales, bienestar botánico y experiencias exclusivas en Salento.',
+        viewMenu: 'Ver Menú & Experiencias',
         howToGet: 'Abrir en Google Maps',
         reserve: 'Reservar Mesa',
-        searchPlaceholder: 'Buscar plato o bebida...',
+        searchPlaceholder: 'Buscar plato o experiencia...',
         cannabisText: 'Puedes adicionar Gotas de Cannabis a cualquier bebida',
         categories: {
           all: 'Todo',
+          experiencias: '✨ Experiencias',
           entradas: 'Entradas',
           fuertes: 'Fuertes',
           calientes: 'Bebidas Calientes',
           frias: 'Bebidas Frías'
         },
-        faqTitle: 'Información para Viajeros',
+        faqTitle: 'Información para Viajeros y Hoteles',
         faqs: [
-          { q: '¿Qué métodos de pago aceptan?', a: 'Aceptamos tarjetas internacionales (Visa, Mastercard, Amex), pagos digitales locales (Nequi, Daviplata) y efectivo en Pesos Colombianos (COP).' },
-          { q: '¿Tienen opciones vegetarianas y sin gluten?', a: 'Sí, disponemos de opciones vegetarianas y platos adaptables. Informa a nuestro equipo al ordenar.' },
-          { q: '¿Es necesario reservar con antelación?', a: 'Atendemos por orden de llegada; para grupos grandes recomendamos reservar previamente vía WhatsApp.' },
-          { q: '¿El restaurante es pet-friendly?', a: 'Sí, recibimos con gusto a mascotas educadas en nuestras áreas exteriores y terraza.' }
+          { q: '¿Cómo reservar una de las Experiencias Meraki?', a: 'Puedes reservar directamente por WhatsApp con anticipación para asegurar disponibilidad de cupos y horarios.' },
+          { q: '¿Los hoteles y alojamientos pueden ofrecer estas experiencias a sus huéspedes?', a: 'Sí, contamos con convenios para hoteles que deseen enriquecer la estadía de sus visitantes con nuestras experiencias gastronómicas y botánicas.' },
+          { q: '¿Qué métodos de pago aceptan?', a: 'Aceptamos tarjetas internacionales (Visa, Mastercard, Amex), transferencias digitales y efectivo COP.' },
+          { q: '¿Tienen opciones vegetarianas en la carta?', a: 'Sí, disponemos de opciones adaptables tanto en el menú regular como en la experiencia gastronómica.' }
         ],
         locationTitle: 'Ubicación & Horarios',
         locationText: 'Carrera 3 #5-56, Salento, Quindío, Colombia',
         hours: 'Lunes a Domingo: 12:00 PM – 10:00 PM',
         openMap: 'Abrir en Google Maps →',
-        whatsappMsg: '¡Hola! Quiero consultar disponibilidad y hacer una reserva en Meraki Salento.'
+        whatsappMsg: '¡Hola! Quiero consultar disponibilidad y hacer una reserva en Meraki Salento.',
+        bookExp: 'Reservar Experiencia'
       },
       en: {
-        badge: 'Salento, Quindío · Dining Experience',
+        badge: 'Salento, Quindío · Gastronomy & Cultural Experiences',
         heroTitle: 'Local & Cosmo Experiences',
-        heroSubtitle: 'Artisanal cuisine, specialty coffee, and local heritage in Salento.',
-        viewMenu: 'View Digital Menu',
+        heroSubtitle: 'Artisanal cuisine, specialty coffees, botanical wellness, and exclusive tours in Salento.',
+        viewMenu: 'View Menu & Experiences',
         howToGet: 'Open in Google Maps',
         reserve: 'Book a Table',
-        searchPlaceholder: 'Search food or beverage...',
+        searchPlaceholder: 'Search food or experience...',
         cannabisText: 'You can add Cannabis Drops to any beverage',
         categories: {
           all: 'All',
+          experiencias: '✨ Experiences',
           entradas: 'Appetizers',
           fuertes: 'Main Courses',
           calientes: 'Hot Drinks',
           frias: 'Cold Drinks'
         },
-        faqTitle: 'Traveler Information',
+        faqTitle: 'Information for Travelers & Hotels',
         faqs: [
-          { q: 'What payment methods do you accept?', a: 'We accept international credit cards (Visa, Mastercard, Amex), contactless payments, and cash in Colombian Pesos (COP).' },
-          { q: 'Do you offer vegetarian or gluten-free options?', a: 'Yes, we have dedicated vegetarian selections and customizable plates. Please let our team know when ordering.' },
-          { q: 'Is it necessary to make a reservation?', a: 'Walk-ins are welcome. For large groups, we recommend booking in advance via WhatsApp.' },
-          { q: 'Are you pet-friendly?', a: 'Yes, well-behaved pets are welcome in our open terrace areas.' }
+          { q: 'How do I book a Meraki Experience?', a: 'You can book directly in advance via WhatsApp to secure spots and schedules.' },
+          { q: 'Can hotels offer these experiences to their guests?', a: 'Yes, we collaborate with local hotels and accommodations looking to provide signature experiences.' },
+          { q: 'What payment methods do you accept?', a: 'We accept international credit cards (Visa, Mastercard, Amex), digital transfers, and cash COP.' },
+          { q: 'Are there vegetarian options available?', a: 'Yes, we offer plant-based alternatives across both the regular menu and culinary experiences.' }
         ],
         locationTitle: 'Location & Hours',
-        locationText: 'Carrera 3 #5-56, Salento, Quindio, Colombia',
+        locationText: 'Carrera 3 #5-56, Salento, Quindío, Colombia',
         hours: 'Monday to Sunday: 12:00 PM – 10:00 PM',
         openMap: 'Open in Google Maps →',
-        whatsappMsg: 'Hello! I would like to inquire about table availability and reservations at Meraki Salento.'
+        whatsappMsg: 'Hello! I would like to inquire about bookings and experiences at Meraki Salento.',
+        bookExp: 'Book Experience'
       },
       pt: {
-        badge: 'Salento, Quindío · Experiência Gastronômica',
+        badge: 'Salento, Quindío · Experiência Gastronômica & Cultural',
         heroTitle: 'Local & Cosmo Experiences',
-        heroSubtitle: 'Cozinha autoral, cafés especiais e tradição no coração de Salento.',
-        viewMenu: 'Ver Cardápio Digital',
+        heroSubtitle: 'Cozinha autoral, cafés especiais, bem-estar botânico e vivências exclusivas em Salento.',
+        viewMenu: 'Ver Cardápio & Experiências',
         howToGet: 'Abrir no Google Maps',
         reserve: 'Reservar Mesa',
-        searchPlaceholder: 'Buscar prato ou bebida...',
+        searchPlaceholder: 'Buscar prato ou experiência...',
         cannabisText: 'Você pode adicionar Gotas de Cannabis em qualquer bebida',
         categories: {
           all: 'Tudo',
+          experiencias: '✨ Experiências',
           entradas: 'Entradas',
           fuertes: 'Pratos Principais',
           calientes: 'Bebidas Quentes',
           frias: 'Bebidas Geladas'
         },
-        faqTitle: 'Informações para Viajantes',
+        faqTitle: 'Informações para Viajantes e Hotéis',
         faqs: [
-          { q: 'Quais formas de pagamento são aceitas?', a: 'Aceitamos cartões internacionais (Visa, Mastercard, Amex), pagamentos por aproximação e dinheiro em espécie (COP).' },
-          { q: 'Existem opções vegetarianas ou sem glúten?', a: 'Sim, dispomos de opções vegetarianas e pratos adaptáveis. Basta solicitar à nossa equipe.' },
-          { q: 'É necessário fazer reserva com antecedência?', a: 'Atendemos por ordem de chegada; para grupos, recomendamos reservar com antecedência pelo WhatsApp.' },
-          { q: 'O restaurante é pet-friendly?', a: 'Sim, animais de estimação são muito bem-vindos nas áreas externas e varanda.' }
+          { q: 'Como agendar uma das Experiências Meraki?', a: 'Você pode agendar diretamente pelo WhatsApp com antecedência para garantir vagas e horários.' },
+          { q: 'Hotéis e pousadas podem oferecer essas experiências aos hóspedes?', a: 'Sim, realizamos parcerias com hospedagens locais para proporcionar experiências gastronômicas e botânicas exclusivas.' },
+          { q: 'Quais formas de pagamento são aceitas?', a: 'Aceitamos cartões internacionais, pagamentos por aproximação e dinheiro em espécie (COP).' },
+          { q: 'Existem opções vegetarianas?', a: 'Sim, dispomos de alternativas adaptadas tanto no menu quanto na experiência gastronômica.' }
         ],
         locationTitle: 'Localização e Horários',
         locationText: 'Carrera 3 #5-56, Salento, Quindío, Colômbia',
         hours: 'Segunda a Domingo: 12:00 – 22:00',
         openMap: 'Abrir no Google Maps →',
-        whatsappMsg: 'Olá! Gostaria de consultar informações e disponibilidade de reserva no Meraki Salento.'
+        whatsappMsg: 'Olá! Gostaria de consultar informações e reservas no Meraki Salento.',
+        bookExp: 'Reservar Experiência'
       }
     };
 
-    // LISTA ÚNICA Y COMPLETA CON TODAS LAS IMÁGENES (1080x1350 px)
     const MENU_ITEMS = [
+      // ================= EXPERIENCIAS TURÍSTICAS & GASTRONÓMICAS =================
+      {
+        id: 'exp1',
+        cat: 'experiencias',
+        price: 0,
+        isExp: true,
+        pop: true,
+        img: '',
+        meta: '60–75 min · Meraki Salento · ES / EN',
+        name: { 
+          es: '🍍 Flavors of Salento (by Meraki)', 
+          en: '🍍 Flavors of Salento (by Meraki)', 
+          pt: '🍍 Flavors of Salento (by Meraki)' 
+        },
+        desc: {
+          es: 'Un viaje a fuego lento por los sabores locales. Experiencia gastronómica de 4 tiempos: bienvenida, pequeña degustación, plato principal artesanal a elección, bebida de la casa y cierre con café colombiano especial. "El amor se cocina a fuego lento."',
+          en: 'A slow-cooked journey through local flavors. 4-course culinary experience: welcome, tasting, slow-cooked main course of choice, house beverage, and specialty Colombian coffee finish. "Love is slow-cooked."',
+          pt: 'Uma viagem em fogo lento pelos sabores locais. Experiência gastronômica em 4 tempos: boas-vindas, pequena degustação, prato principal artesanal à escolha, bebida da casa e encerramento com café colombiano especial.'
+        }
+      },
+      {
+        id: 'exp2',
+        cat: 'experiencias',
+        price: 0,
+        isExp: true,
+        pop: true,
+        img: '',
+        meta: '90–120 min · Grow Ganja / Meraki · ES / EN',
+        name: { 
+          es: '🌿 The Voice of Plants (Grow Ganja)', 
+          en: '🌿 The Voice of Plants (Grow Ganja)', 
+          pt: '🌿 The Voice of Plants (Grow Ganja)' 
+        },
+        desc: {
+          es: 'Experiencia botánica y sensorial en 4 momentos: 1. El Jardín (conocer plantas medicinales y aromáticas) · 2. Los Sentidos (exploración sensorial) · 3. El Laboratorio (procesos de transformación botánica) · 4. Crea & Lleva: prepara tu propio producto botánico para llevar a casa.',
+          en: 'Botanical & sensory experience in 4 steps: 1. The Garden (medicinal herbs) · 2. The Senses (aromatherapy exploration) · 3. The Lab (botanical transformations) · 4. Create & Take Home your own crafted product.',
+          pt: 'Experiência botânica e sensorial em 4 momentos: 1. O Jardim · 2. Os Sentidos · 3. O Laboratório de formulações · 4. Crie e leve seu próprio produto botânico como lembrança de Salento.'
+        }
+      },
+      {
+        id: 'exp3',
+        cat: 'experiencias',
+        price: 0,
+        isExp: true,
+        pop: true,
+        img: '',
+        meta: '2h 30 min · 3:00 PM · Grupos máx. 6 pers.',
+        name: { 
+          es: '🏘️ Salento Real: The Stories Behind the Streets', 
+          en: '🏘️ Salento Real: The Stories Behind the Streets', 
+          pt: '🏘️ Salento Real: As Histórias por Trás das Ruas' 
+        },
+        desc: {
+          es: 'No vengas solo a ver Salento, ven a entenderlo. Caminata cultural en 5 momentos: Origen, Memoria (historias que no están en Google), Calle Real y sus personajes, Mirador del territorio y Sabores & Memoria fotográfica, finalizando en Meraki.',
+          en: 'Don’t just see Salento, understand it. Cultural walking tour: Origin, Untold Memories, Calle Real artisans, Panoramic Viewpoint, and Local Flavors, concluding back at Meraki.',
+          pt: 'Não venha apenas ver Salento, venha compreendê-lo. Caminhada cultural por histórias locais, personagens da Calle Real, mirante panorâmico e sabores tradicionais, finalizando no Meraki.'
+        }
+      },
+      {
+        id: 'exp4',
+        cat: 'experiencias',
+        price: 0,
+        isExp: true,
+        pop: false,
+        img: '',
+        meta: '~2 horas · Educación Cannábica · Laboratorio',
+        name: { 
+          es: '🌱 Grow Ganja: Auto Cultivo (Seed to Transformation)', 
+          en: '🌱 Grow Ganja: Auto Cultivation (Seed to Transformation)', 
+          pt: '🌱 Grow Ganja: Cultivo & Transformação' 
+        },
+        desc: {
+          es: 'Experiencia turística pionera en educación cannábica. Recorrido estructurado desde la selección de semillas, germinación, fases de cultivo, anatomía, terpenos y cannabinoides, hasta los procesos de formulación botánica en laboratorio.',
+          en: 'Pioneering educational cannabis tour in Salento. Learn the full life-cycle from seed selection and grow stages to terpenes, cannabinoids, and laboratory botanical formulations.',
+          pt: 'Experiência turística pioneira em educação canábica em Salento. Conheça todo o ciclo da planta: da semente e cultivo aos terpenos, canabinoides e processos de transformação botânica em laboratório.'
+        }
+      },
+
       // ================= ENTRADAS =================
       { 
         id: 'e1', 
@@ -332,9 +416,9 @@
         img: 'nachossencillos.png',
         name: { es: 'Nachos Sencillos', en: 'Classic Nachos', pt: 'Nachos Clássicos' }, 
         desc: { 
-          es: 'Totopos de maíz recién horneados, acompañados de guacamole artesanal y un toque cítrico que despertará el paladar. El comienzo perfecto para compartir, conversar y abrir el apetito.', 
-          en: 'Freshly baked corn tortilla chips served with artisanal guacamole and a citrus note to awaken your palate. Perfect for sharing.', 
-          pt: 'Tortilhas de milho assadas na hora, acompanhadas de guacamole artesanal e um toque cítrico perfeito para abrir o apetite e compartilhar.' 
+          es: 'Totopos de maíz recién horneados, acompañados de guacamole artesanal y un toque cítrico que despertará el paladar.', 
+          en: 'Freshly baked corn tortilla chips served with artisanal guacamole and a citrus note to awaken your palate.', 
+          pt: 'Tortilhas de milho assadas na hora, acompanhadas de guacamole artesanal e um toque cítrico.' 
         } 
       },
       { 
@@ -345,7 +429,7 @@
         img: 'nachosconbirria.png',
         name: { es: 'Nachos con Birria', en: 'Birria Nachos', pt: 'Nachos com Birria' }, 
         desc: { 
-          es: 'Crujientes totopos de maíz cubiertos con queso fundido y nuestra birria cocinada lentamente durante horas. Coronados con guacamole fresco, pico de gallo y cebolla encurtida. Intensos y jugosos.', 
+          es: 'Crujientes totopos de maíz cubiertos con queso fundido y nuestra birria cocinada lentamente durante horas. Coronados con guacamole fresco, pico de gallo y cebolla encurtida.', 
           en: 'Crispy corn tortilla chips topped with melted cheese, slow-braised beef birria, fresh guacamole, pico de gallo, and pickled onions.', 
           pt: 'Tortilhas crocantes cobertas com queijo derretido, birria cozida lentamente, guacamole fresco, pico de gallo e cebola em conserva.' 
         } 
@@ -358,9 +442,9 @@
         img: 'Ceviche.png',
         name: { es: 'Ceviche', en: 'House Ceviche', pt: 'Ceviche da Casa' }, 
         desc: { 
-          es: 'Porción de cerdo crujiente marinado en limón fresco, mezclado con tomate, cebolla morada, cilantro y un toque de ají. Servido sobre guacamole artesanal y acompañado de tostones de plátano.', 
-          en: 'Crispy pork belly marinated in fresh lime juice with tomato, red onion, cilantro, and mild chili over artisanal guacamole with fried plantain tostones.', 
-          pt: 'Porção de torresmo crocante marinado em limão fresco com tomate, cebola roxa, coentro e pimenta, servido sobre guacamole artesanal e patacões.' 
+          es: 'Porción de cerdo crujiente marinado en limón fresco, mezclado con tomate, cebolla morada, cilantro y un toque de ají sobre guacamole con tostones.', 
+          en: 'Crispy pork belly marinated in fresh lime juice with tomato, red onion, cilantro, and mild chili over artisanal guacamole with fried plantains.', 
+          pt: 'Porção de torresmo crocante marinado em limão fresco com tomate, cebola roxa, coentro e pimenta sobre guacamole e patacões.' 
         } 
       },
       { 
@@ -371,9 +455,9 @@
         img: 'Papas con Birria.png',
         name: { es: 'Papas con Birria', en: 'Birria Fries', pt: 'Batatas com Birria' }, 
         desc: { 
-          es: 'Papas crocantes cubiertas con queso fundido y birria de res cocinada lentamente en sus propios jugos. Coronadas con guacamole, pico de gallo y cebolla encurtida.', 
-          en: 'Crispy fries covered with melted cheese and beef birria slow-cooked in its own juices, topped with guacamole, pico de gallo, and pickled onions.', 
-          pt: 'Batatas crocantes cobertas com queijo derretido e birria de carne cozida nos próprios sucos, finalizadas com guacamole, pico de gallo e cebola em conserva.' 
+          es: 'Papas crocantes cubiertas con queso fundido y birria de res cocinada lentamente en sus propios jugos con guacamole y pico de gallo.', 
+          en: 'Crispy fries covered with melted cheese and slow-cooked beef birria, topped with guacamole and pico de gallo.', 
+          pt: 'Batatas crocantes cobertas com queijo derretido e birria de carne bovina, finalizadas com guacamole e pico de gallo.' 
         } 
       },
       { 
@@ -384,9 +468,9 @@
         img: 'Papas con Parmesano.png',
         name: { es: 'Papas con Parmesano', en: 'Parmesan Herb Fries', pt: 'Batatas com Parmesão' }, 
         desc: { 
-          es: 'Papas doradas y crujientes bañadas en mantequilla aromatizada con ajo y perejil, terminadas con queso parmesano y un toque de finas hierbas. Simples, irresistibles y llenas de carácter.', 
-          en: 'Golden crispy fries tossed in garlic-parsley butter, finished with aged parmesan cheese and fine aromatic herbs.', 
-          pt: 'Batatas douradas e crocantes envoltas em manteiga aromatizada com alho e salsa, finalizadas com queijo parmesão e ervas finas.' 
+          es: 'Papas doradas y crujientes bañadas en mantequilla aromatizada con ajo y perejil, terminadas con queso parmesano y finas hierbas.', 
+          en: 'Golden crispy fries tossed in garlic-parsley butter, finished with aged parmesan cheese and fine herbs.', 
+          pt: 'Batatas douradas e crocantes envoltas em manteiga de alho e salsa, finalizadas com queijo parmesão e ervas finas.' 
         } 
       },
       { 
@@ -399,7 +483,7 @@
         desc: { 
           es: 'Tostones de plátano crocante típicos de Salento acompañados de guacamole y salsa de la casa.', 
           en: 'Crispy green plantain tostones typical of Salento, served with house guacamole and signature dipping sauce.', 
-          pt: 'Patacões de banana-da-terra crocantes típicos de Salento servidos com guacamole e molho especial da casa.' 
+          pt: 'Patacões de banana-da-terra crocantes típicos de Salento servidos com guacamole e molho da casa.' 
         } 
       },
 
@@ -412,9 +496,9 @@
         img: 'Crema de Verduras.png',
         name: { es: 'Crema de Verduras', en: 'Vegetable Cream Soup', pt: 'Creme de Legumes' },
         desc: {
-          es: 'Reconfortante crema elaborada con vegetales de temporada, terminada con una mezcla de crema de leche, queso parmesano y crotones artesanales.',
-          en: 'Comforting seasonal vegetable cream soup topped with heavy cream, parmesan cheese, and artisan croutons.',
-          pt: 'Creme reconfortante de legumes da estação finalizado com creme de leite, queijo parmesão e croutons artesanais.'
+          es: 'Reconfortante crema elaborada con vegetales de temporada, crema de leche, queso parmesano y crotones artesanales.',
+          en: 'Comforting seasonal vegetable cream soup topped with cream, parmesan cheese, and artisan croutons.',
+          pt: 'Creme reconfortante de legumes da estação com creme de leite, parmesão e croutons artesanais.'
         }
       },
       {
@@ -425,9 +509,9 @@
         img: 'Crema de Trucha.png',
         name: { es: 'Crema de Trucha', en: 'Smoked Trout Cream Soup', pt: 'Creme de Truta Defumada' },
         desc: {
-          es: 'Delicada crema elaborada con trucha ahumada terminada con una mezcla de crema de leche, queso parmesano y crotones artesanales.',
-          en: 'Delicate smoked trout soup finished with a blend of cream, grated parmesan, and crisp artisan croutons.',
-          pt: 'Creme delicado de truta defumada finalizado com creme de leite, queijo parmesão e croutons artesanais.'
+          es: 'Delicada crema elaborada con trucha ahumada, crema de leche, queso parmesano y crotones artesanales.',
+          en: 'Delicate smoked trout soup finished with cream, grated parmesan, and artisan croutons.',
+          pt: 'Creme delicado de truta defumada finalizado com creme de leite, queijo parmesão e croutons.'
         }
       },
       {
@@ -438,9 +522,9 @@
         img: 'Pechuga Asada.png',
         name: { es: 'Pechuga Asada', en: 'Grilled Chicken Breast', pt: 'Peito de Frango Grelhado' },
         desc: {
-          es: 'Pechuga de pollo a la plancha, dorada por fuera, jugosa por dentro y llena de sabor. Servida sobre salsa de queso, mix de lechugas frescas y papa criolla colombiana.',
-          en: 'Seared chicken breast served over creamy cheese sauce, fresh garden greens, and traditional Colombian baby yellow potatoes.',
-          pt: 'Peito de frango grelhado dourado servido sobre molho de queijo, mix de folhas frescas e batata crioula colombiana.'
+          es: 'Pechuga de pollo a la plancha dorada por fuera y jugosa por dentro sobre salsa de queso, mix de lechugas y papa criolla.',
+          en: 'Seared chicken breast served over creamy cheese sauce, fresh greens, and baby yellow potatoes.',
+          pt: 'Peito de frango grelhado dourado sobre molho de queijo, mix de folhas e batata crioula.'
         }
       },
       {
@@ -451,7 +535,7 @@
         img: 'Pollo Criollo.png',
         name: { es: 'Pollo Criollo', en: 'Traditional Creole Chicken', pt: 'Frango Criollo Tradicional' },
         desc: {
-          es: 'Pollo cocinado en nuestra salsa criolla de tomate, cebolla y cilantro, servido sobre una cama de arroz blanco y maíz. Honra los sabores de nuestra tierra.',
+          es: 'Pollo cocinado en salsa criolla de tomate, cebolla y cilantro, servido sobre una cama de arroz blanco y maíz.',
           en: 'Chicken braised in Colombian creole sauce (tomato, onion, cilantro) over white rice and sweet corn.',
           pt: 'Frango cozido em molho criollo tradicional de tomate, cebola e coentro sobre arroz branco e milho.'
         }
@@ -465,8 +549,8 @@
         name: { es: 'Pechuga Gratinada', en: 'Au Gratin Chicken Breast', pt: 'Peito de Frango Gratinado' },
         desc: {
           es: 'Filete de pollo gratinado con queso mozzarella y parmesano; acompañado de ensalada de la casa y papas criollas.',
-          en: 'Chicken breast gratin with melted mozzarella and parmesan cheese, served with house salad and baby yellow potatoes.',
-          pt: 'Filé de frango gratinado com queijo muçarela e parmesão, salada da casa e batatas crioulas.'
+          en: 'Chicken breast gratin with melted mozzarella and parmesan cheese, salad, and baby yellow potatoes.',
+          pt: 'Filé de frango gratinado com queijo muçarela e parmesão, salada e batatas crioulas.'
         }
       },
       {
@@ -477,9 +561,9 @@
         img: 'Trucha Asada.png',
         name: { es: 'Trucha Asada', en: 'Wood-Smoked River Trout', pt: 'Truta Defumada na Brasa' },
         desc: {
-          es: 'Trucha fresca ahumada durante 5 horas en madera de naranjo, servida sobre una crema de queso y ajo, con patacón tradicional y ensalada fresca de la casa.',
-          en: 'Fresh local trout smoked for 5 hours in orange wood, served over garlic cream cheese, crispy plantain toston, and fresh salad.',
-          pt: 'Truta fresca defumada por 5 horas em lenha de laranjeira sobre creme de queijo e alho, patacão tradicional e salada fresca.'
+          es: 'Trucha fresca ahumada durante 5 horas en madera de naranjo sobre crema de queso y ajo, patacón y ensalada.',
+          en: 'Fresh local trout smoked for 5 hours in orange wood over garlic cream cheese, plantain toston, and salad.',
+          pt: 'Truta fresca defumada por 5 horas em lenha de laranjeira sobre creme de alho, patacão e salada.'
         }
       },
       {
@@ -490,9 +574,9 @@
         img: 'Costillas al Horno.png',
         name: { es: 'Costillas al Horno', en: 'Slow-Baked BBQ Ribs', pt: 'Costelinha BBQ ao Forno' },
         desc: {
-          es: 'Costillas de cerdo cocinadas lentamente durante 8 horas hasta que la carne se desprende del hueso, bañadas en salsa BBQ de la casa y servidas sobre papas cremosas. Un plato insignia.',
-          en: '8-hour slow-cooked tender pork ribs glazed in house BBQ sauce and served over creamy mashed potatoes. Signature dish.',
-          pt: 'Costelinha de porco assada lentamente por 8 horas, glacê barbecue da casa e batatas cremosas. Prato assinatura.'
+          es: 'Costillas de cerdo cocinadas lentamente durante 8 horas, bañadas en salsa BBQ de la casa y servidas sobre papas cremosas.',
+          en: '8-hour slow-cooked tender pork ribs glazed in house BBQ sauce and served over creamy mashed potatoes.',
+          pt: 'Costelinha de porco assada lentamente por 8 horas, molho barbecue da casa e batatas cremosas.'
         }
       },
       {
@@ -503,9 +587,9 @@
         img: 'Estofado de Cerdo.png',
         name: { es: 'Estofado de Cerdo', en: 'Red Wine Pork Stew', pt: 'Ensopado de Porco ao Vinho' },
         desc: {
-          es: 'Cerdo cocinado lentamente durante 8 horas con zanahoria, bean y arveja, en una reducción de vino tinto, servidos con arroz blanco y papa criolla colombiana.',
-          en: '8-hour braised pork stew with carrots and peas in rich red wine reduction, served with white rice and baby yellow potatoes.',
-          pt: 'Carne de porco cozida lentamente por 8 horas com legumes em redução de vinho tinto, arroz branco e batata crioula.'
+          es: 'Cerdo cocinado lentamente durante 8 horas con verduras en reducción de vino tinto con arroz blanco y papa criolla.',
+          en: '8-hour braised pork stew with vegetables in red wine reduction, served with white rice and baby yellow potatoes.',
+          pt: 'Carne de porco cozida lentamente por 8 horas com legumes em redução de vinho tinto, arroz e batata crioula.'
         }
       },
       {
@@ -516,9 +600,9 @@
         img: 'Salteado de Res.png',
         name: { es: 'Salteado de Res', en: 'Wok Beef Stir-Fry', pt: 'Salteado de Carne ao Wok' },
         desc: {
-          es: 'Res salteada al wok con tomate, cebolla, cilantro, papas fritas, salsa soya y una reducción de vino tinto. Servidos sobre arroz blanco.',
-          en: 'Wok-seared beef with tomatoes, onions, cilantro, fries, soy sauce, and red wine reduction over white rice.',
-          pt: 'Tiras de carne salteadas na wok com tomate, cebola, coentro, batata frita, shoyu e vinho tinto sobre arroz branco.'
+          es: 'Res salteada al wok con tomate, cebolla, cilantro, papas fritas, salsa soya y reducción de vino tinto sobre arroz.',
+          en: 'Wok-seared beef with tomatoes, onions, cilantro, fries, soy sauce, and red wine reduction over rice.',
+          pt: 'Tiras de carne salteadas na wok com legumes, batata frita, shoyu e vinho tinto sobre arroz branco.'
         }
       },
       {
@@ -529,9 +613,9 @@
         img: 'Patacón de Birria.png',
         name: { es: 'Patacón de Birria', en: 'Birria Plantain Toston', pt: 'Patacão com Birria' },
         desc: {
-          es: 'Patacón crujiente servido con birria de res cocinada lentamente, queso mozzarella, cheddar, guacamole, pico de gallo y cilantro.',
-          en: 'Crispy green plantain topped with slow-braised beef birria, melted mozzarella, cheddar, guacamole, pico de gallo, and cilantro.',
-          pt: 'Patacão crocante coberto com birria bovina, queijo muçarela, cheddar, guacamole, pico de gallo e coentro.'
+          es: 'Patacón crujiente servido con birria de res cocinada lentamente, queso mozzarella, cheddar, guacamole y pico de gallo.',
+          en: 'Crispy green plantain topped with slow-braised beef birria, melted cheeses, guacamole, and pico de gallo.',
+          pt: 'Patacão crocante coberto com birria bovina, queijos derretidos, guacamole e pico de gallo.'
         }
       },
       {
@@ -542,9 +626,9 @@
         img: 'Fajitas Mixtas.png',
         name: { es: 'Fajitas Mixtas', en: 'Mixed Sizzling Fajitas', pt: 'Fajitas Mistas' },
         desc: {
-          es: 'Res y pollo salteados con cebolla y pimentón, servidos con tortillas de trigo calientes, guacamole fresco, pico de gallo y lechugas. Una invitación a crear cada bocado.',
+          es: 'Res y pollo salteados con cebolla y pimentón, servidos con tortillas de trigo calientes, guacamole y pico de gallo.',
           en: 'Sautéed beef and chicken with peppers and onions, warm wheat tortillas, fresh guacamole, and pico de gallo.',
-          pt: 'Carne e frango salteados com cebola e pimentão, servidos com tortilhas de trigo quentes, guacamole e pico de gallo.'
+          pt: 'Carne e frango salteados com vegetais, servidos com tortilhas de trigo quentes, guacamole e pico de gallo.'
         }
       },
       {
@@ -555,9 +639,9 @@
         img: 'Tacos x 5.png',
         name: { es: 'Tacos x 5', en: 'Street Tacos Tasting (5 pcs)', pt: 'Combo 5 Tacos Variados' },
         desc: {
-          es: 'Cinco tacos que reúnen los sabores más icónicos de México: Asada de res, cochinita, chicharrón, tinga de pollo y pastor. Elaborados con ingredientes frescos.',
+          es: 'Cinco tacos tradicionales: Asada de res, cochinita pibil, chicharrón, tinga de pollo y pastor con ingredientes frescos.',
           en: 'Five authentic street tacos: grilled beef, cochinita pibil, crispy pork, chicken tinga, and al pastor.',
-          pt: 'Cinco tacos mexicanos autênticos: carne assada, cochinita, torresmo, frango tinga e pastor com temperos frescos.'
+          pt: 'Cinco tacos mexicanos autênticos: carne assada, cochinita, torresmo, frango tinga e pastor.'
         }
       },
       {
@@ -568,9 +652,9 @@
         img: 'Tacos de Birria.png',
         name: { es: 'Tacos de Birria', en: 'Cheesy Birria Tacos (4 pcs)', pt: 'Tacos de Birria com Consomé' },
         desc: {
-          es: '4 Tortillas de maíz rellenas con queso fundido y birria de res cocinada lentamente. Servidos con cebolla, cilantro fresco y el tradicional consomé caliente.',
+          es: '4 Tortillas de maíz con queso fundido y birria de res, servidas con cebolla, cilantro y consomé caliente.',
           en: '4 corn tortillas with melted cheese and juicy beef birria, served with onions, cilantro, and warm dipping broth.',
-          pt: '4 tortilhas de milho com queijo derretido e birria bovina, servidas com cebola, coentro e caldo quente para mergulhar.'
+          pt: '4 tortilhas de milho com queijo derretido e birria bovina, servidas com cebola, coentro e caldo quente.'
         }
       },
       {
@@ -581,9 +665,9 @@
         img: 'Quesadilla.png',
         name: { es: 'Quesadilla', en: 'Signature Stuffed Quesadilla', pt: 'Quesadilla Especial' },
         desc: {
-          es: 'Tortilla de trigo dorada rellena de quesos fundidos, pollo desmechado y frijol caraota en salsa de birria. Finalizada con guacamole, pico de gallo, cebolla encurtida, crema y cilantro.',
-          en: 'Golden flour tortilla filled with melted cheese, shredded chicken, and black beans in birria sauce with guacamole and pico de gallo.',
-          pt: 'Tortilha de trigo tostada recheada com queijo derretido, frango desfiado e feijão preto ao molho de birria, servida com guacamole.'
+          es: 'Tortilla de trigo dorada rellena de quesos fundidos, pollo desmechado y frijol en salsa birria con guacamole.',
+          en: 'Golden flour tortilla filled with melted cheese, shredded chicken, and black beans in birria sauce with guacamole.',
+          pt: 'Tortilha de trigo tostada recheada com queijo derretido, frango desfiado e feijão ao molho de birria.'
         }
       },
 
@@ -596,9 +680,9 @@
         img: 'Tinto Colombiano.png',
         name: { es: 'Tinto Colombiano', en: 'Colombian Drip Coffee', pt: 'Tinto Colombiano' },
         desc: {
-          es: 'Café negro caliente preparado usando el método filtrado con granos de café colombiano seleccionado.',
+          es: 'Café negro caliente filtrado con granos de café colombiano seleccionado.',
           en: 'Hot black coffee brewed with selected Colombian coffee beans using traditional drip filter method.',
-          pt: 'Café preto quente preparado com o método coado tradicional usando grãos colombianos selecionados.'
+          pt: 'Café preto quente preparado com o método coado tradicional usando grãos colombianos.'
         }
       },
       {
@@ -611,7 +695,7 @@
         desc: {
           es: 'Bebida caliente hecha a base de espresso suavizado con agua caliente.',
           en: 'Hot classic beverage made with rich espresso diluted with hot water.',
-          pt: 'Bebida quente clássica feita com uma dose de espresso suavizada com água quente.'
+          pt: 'Bebida quente clássica feita com dose de espresso suavizada com água quente.'
         }
       },
       {
@@ -622,9 +706,9 @@
         img: 'Espresso.png',
         name: { es: 'Espresso', en: 'Single Espresso', pt: 'Café Espresso' },
         desc: {
-          es: 'Extracción corta de café colombiano finamente molido, preparada a alta presión.',
+          es: 'Extracción corta de café colombiano finamente molido a alta presión.',
           en: 'Short extraction of finely ground single origin Colombian coffee brewed under high pressure.',
-          pt: 'Extração curta de café colombiano finamente moído, preparado sob alta pressão.'
+          pt: 'Extração curta de café colombiano finamente moído preparado sob alta pressão.'
         }
       },
       {
@@ -648,7 +732,7 @@
         img: 'Capuchino.png',
         name: { es: 'Capuchino', en: 'Artisan Cappuccino', pt: 'Cappuccino Cremoso' },
         desc: {
-          es: 'Bebida a base de espresso con leche vaporizada, finalizada con espuma de leche cremosa.',
+          es: 'Espresso con leche vaporizada, finalizado con espuma de leche cremosa.',
           en: 'Balanced espresso with hot textured milk topped with velvety thick milk foam.',
           pt: 'Bebida à base de espresso com leite vaporizado e finalizada com espuma cremosa.'
         }
@@ -661,9 +745,9 @@
         img: 'Café con Leche.png',
         name: { es: 'Café con Leche', en: 'Café Latte', pt: 'Café com Leite' },
         desc: {
-          es: 'Espresso coronado con una pequeña porción de leche vaporizada.',
-          en: 'Smooth espresso crowned with a small portion of steamed milk.',
-          pt: 'Espresso finalizado com uma pequena porção de leite vaporizado.'
+          es: 'Espresso coronado con una suave porción de leche vaporizada.',
+          en: 'Smooth espresso crowned with a generous portion of steamed milk.',
+          pt: 'Espresso finalizado com uma porção equilibrada de leite vaporizado.'
         }
       },
       {
@@ -674,9 +758,9 @@
         img: 'Mokaccino.png',
         name: { es: 'Mokaccino', en: 'Caffè Mocha', pt: 'Mocaccino' },
         desc: {
-          es: 'Bebida caliente hecha con espresso, cacao y leche vaporizada, finalizada con espuma cremosa.',
-          en: 'Hot beverage made with espresso, cocoa, and steamed milk, finished with creamy foam.',
-          pt: 'Bebida quente feita com espresso, cacau e leite vaporizado, finalizada com espuma cremosa.'
+          es: 'Bebida caliente hecha con espresso, cacao y leche vaporizada con espuma cremosa.',
+          en: 'Hot beverage made with espresso, cocoa, and steamed milk with foam.',
+          pt: 'Bebida quente feita com espresso, cacau e leite vaporizado com espuma cremosa.'
         }
       },
       {
@@ -687,9 +771,9 @@
         img: 'Green Chai.png',
         name: { es: 'Green Chai', en: 'Spiced Green Chai', pt: 'Chá Verde Chai Especiado' },
         desc: {
-          es: 'Bebida caliente hecha con leche, clavos, anís, jengibre, pimienta negra, cardamomo, spirulina y endulzada con panela orgánica.',
-          en: 'Warm milk infusion with cloves, star anise, ginger, black pepper, cardamom, spirulina, sweetened with organic panela.',
-          pt: 'Bebida quente com leite, cravo, anis, gengibre, pimenta-do-reino, cardamomo, spirulina e rapadura orgânica.'
+          es: 'Infusión de leche con clavos, anís, jengibre, pimienta, cardamomo, spirulina y panela orgánica.',
+          en: 'Warm milk infusion with spices, ginger, cardamom, spirulina, and organic panela.',
+          pt: 'Bebida quente com especiarias orientais, spirulina e rapadura orgânica.'
         }
       },
       {
@@ -701,8 +785,8 @@
         name: { es: 'Chocolate Caliente', en: 'Organic Hot Chocolate', pt: 'Chocolate Quente' },
         desc: {
           es: 'Bebida caliente a base de leche con cacao orgánico endulzado con panela.',
-          en: 'Traditional hot drink prepared with organic cocoa and steamed milk sweetened with raw cane sugar.',
-          pt: 'Bebida quente à base de leite com cacau orgânico adoçado com rapadura.'
+          en: 'Traditional hot drink prepared with organic cocoa and milk sweetened with raw cane sugar.',
+          pt: 'Bebida quente com cacau orgânico adoçado com rapadura.'
         }
       },
       {
@@ -713,9 +797,9 @@
         img: 'Agua Panela.png',
         name: { es: 'Agua Panela', en: 'Traditional Agua Panela', pt: 'Água de Panela Quente' },
         desc: {
-          es: 'Bebida caliente tradicional hecha con panela orgánica.',
+          es: 'Bebida caliente tradicional elaborada con panela orgánica.',
           en: 'Comforting traditional hot beverage made with organic raw cane sugar.',
-          pt: 'Bebida quente típica tradicional feita com rapadura orgânica.'
+          pt: 'Bebida quente tradicional feita com rapadura orgânica.'
         }
       },
 
@@ -729,8 +813,8 @@
         name: { es: 'Vaso de Jugo Natural', en: 'Fresh Fruit Juice Glass', pt: 'Copo de Suco Natural' },
         desc: {
           es: 'Mango, maracuyá, lulo, fresa, mora, piña, guanábana, coco o uva.',
-          en: 'Choice of: Mango, passion fruit, lulo, strawberry, blackberry, pineapple, soursop, coconut, or grape.',
-          pt: 'Sabores à sua escolha: Manga, maracujá, lulo, morango, amora, abacaxi, graviola, coco ou uva.'
+          en: 'Choice of fresh tropical fruits: Mango, passion fruit, lulo, strawberry, blackberry, etc.',
+          pt: 'Sabores tropicais frescos à escolha: Manga, maracujá, lulo, morango, amora, abacaxi, etc.'
         }
       },
       {
@@ -741,9 +825,9 @@
         img: 'Margarita Tamarindo.png',
         name: { es: 'Margarita Tamarindo', en: 'Tamarind Margarita Cocktail', pt: 'Margarita de Tamarindo' },
         desc: {
-          es: 'Bebida alcohólica, frapeada con hielo, tequila y almíbar de tamarindo hecho en casa.',
-          en: 'Frozen alcoholic cocktail blended with ice, tequila, and house-made tamarind syrup.',
-          pt: 'Bebida alcoólica frappé com gelo, tequila e xarope artesanal de tamarindo da casa.'
+          es: 'Cóctel frapeado con hielo, tequila y almíbar artesanal de tamarindo.',
+          en: 'Frozen alcoholic cocktail blended with ice, tequila, and house tamarind syrup.',
+          pt: 'Bebida alcoólica frappé com tequila e xarope artesanal de tamarindo da casa.'
         }
       },
       {
@@ -752,11 +836,11 @@
         price: 30000,
         pop: false,
         img: 'Margarita Jamaica.png',
-        name: { es: 'Margarita Jamaica', en: 'Hibiscus Margarita Cocktail', pt: 'Margarita de Hibisco (Jamaica)' },
+        name: { es: 'Margarita Jamaica', en: 'Hibiscus Margarita Cocktail', pt: 'Margarita de Hibisco' },
         desc: {
-          es: 'Bebida alcohólica, frapeada con hielo, tequila y almíbar de flor de jamaica hecha en casa.',
+          es: 'Cóctel frapeado con hielo, tequila y flor de jamaica hecha en casa.',
           en: 'Frozen alcoholic cocktail with tequila and house-crafted hibiscus flower syrup.',
-          pt: 'Bebida alcoólica frappé com gelo, tequila e xarope artesanal de flor de hibisco da casa.'
+          pt: 'Coquetel frappé com tequila e infusão artesanal de flor de hibisco.'
         }
       },
       {
@@ -767,9 +851,9 @@
         img: 'Jardín Tropical (Mocktail).png',
         name: { es: 'Jardín Tropical (Mocktail)', en: 'Tropical Garden Mocktail', pt: 'Jardim Tropical (Sem Álcool)' },
         desc: {
-          es: 'Bebida fría a base de mango, piña y maracuyá, macerado con albahaca, limón mandarina y finalizada con soda.',
-          en: 'Refreshing mocktail with mango, pineapple, passion fruit, muddled fresh basil, mandarin lime, and sparkling soda.',
-          pt: 'Mocktail refrescante de manga, abacaxi e maracujá com manjericão macerado, limão-cravo e água com gás.'
+          es: 'Mango, piña, maracuyá, albahaca macerada, limón mandarina y soda.',
+          en: 'Refreshing mocktail with mango, pineapple, passion fruit, fresh basil, and soda.',
+          pt: 'Mocktail refrescante com frutas tropicais, manjericão e água com gás.'
         }
       },
       {
@@ -780,9 +864,9 @@
         img: 'Rojo Andino (Mocktail).png',
         name: { es: 'Rojo Andino (Mocktail)', en: 'Andean Red Berry Mocktail', pt: 'Vermelho Andino (Sem Álcool)' },
         desc: {
-          es: 'Bebida fría elaborada con mora, fresa, uva, menta jengibre, endulzada con jarabe de flor de jamaica y terminada con soda fría.',
-          en: 'Cold beverage made with blackberry, strawberry, grape, ginger mint, hibiscus syrup, and chilled soda.',
-          pt: 'Bebida fria com amora, morango, uva, hortelã, gengibre, xarope de hibisco e água com gás gelada.'
+          es: 'Mora, fresa, uva, menta, jengibre, jarabe de jamaica y soda fría.',
+          en: 'Cold beverage made with berries, ginger mint, hibiscus syrup, and chilled soda.',
+          pt: 'Bebida refrescante de frutas vermelhas andinas, gengibre e hortelã.'
         }
       },
       {
@@ -793,9 +877,9 @@
         img: 'Cafetal Cítrico.png',
         name: { es: 'Cafetal Cítrico', en: 'Citrus Cold Brew Coffee Mocktail', pt: 'Cafetal Cítrico Gelado' },
         desc: {
-          es: 'Bebida fría de café colombiano, mezclado con jarabe de panela y limón mandarina, servido con hielo, finalizado con soda.',
-          en: 'Iced Colombian coffee mixed with raw cane panela syrup, mandarin lime, lots of ice, topped with sparkling soda.',
-          pt: 'Bebida gelada de café colombiano com xarope de rapadura, limão-cravo e água com gás sobre gelo.'
+          es: 'Café colombiano frío con jarabe de panela, limón mandarina, hielo y soda.',
+          en: 'Iced Colombian coffee mixed with raw cane panela syrup, lime, and sparkling soda.',
+          pt: 'Café colombiano gelado com xarope de rapadura, limão e água com gás.'
         }
       },
       {
@@ -806,9 +890,9 @@
         img: 'Batido Amarillo.png',
         name: { es: 'Batido Amarillo', en: 'Yellow Sunshine Smoothie', pt: 'Smoothie Amarelo Tropical' },
         desc: {
-          es: 'Bebida fría preparada con piña, mango, maracuyá, zucchini, aloe de vera.',
-          en: 'Refreshing yellow smoothie prepared with pineapple, sweet mango, passion fruit, zucchini, and aloe vera.',
-          pt: 'Bebida fria e nutritiva com abacaxi, manga madura, maracujá, abobrinha e aloe vera.'
+          es: 'Piña, mango, maracuyá, zucchini y aloe vera natural.',
+          en: 'Refreshing smoothie prepared with pineapple, sweet mango, passion fruit, zucchini, and aloe vera.',
+          pt: 'Smoothie natural de abacaxi, manga madura, maracujá e aloe vera.'
         }
       },
       {
@@ -819,9 +903,9 @@
         img: 'Batido Verde.png',
         name: { es: 'Batido Verde', en: 'Green Detox Smoothie', pt: 'Smoothie Verde Detox' },
         desc: {
-          es: 'Batido frío preparado con pepino, espinaca, piña, apio y limón, endulzado con miel y servido con hielo.',
-          en: 'Cold detox smoothie prepared with cucumber, spinach, pineapple, celery, lime, pure honey, and ice.',
-          pt: 'Smoothie verde com pepino, espinafre, abacaxi, aipo, limão, adoçado com mel puro e servido com gelo.'
+          es: 'Pepino, espinaca, piña, apio, limón y miel pura servido con hielo.',
+          en: 'Detox smoothie with cucumber, spinach, pineapple, celery, lime, honey, and ice.',
+          pt: 'Smoothie verde detox com espinafre, abacaxi, aipo, pepino e mel puro.'
         }
       },
       {
@@ -832,9 +916,9 @@
         img: 'Refajo Colombiano.png',
         name: { es: 'Refajo Colombiano', en: 'Colombian Refajo Beer Cocktail', pt: 'Refajo Típico Colombiano' },
         desc: {
-          es: 'Bebida alcohólica tradicional con cerveza rubia y soda de Kola.',
-          en: 'Traditional Colombian social beverage pairing crisp blonde lager with refreshing Colombian Kola soda.',
-          pt: 'Bebida alcoólica tradicional colombiana combinando cerveja clara com refrigerante de cola regional.'
+          es: 'Bebida tradicional con cerveza rubia y soda Kola colombiana.',
+          en: 'Traditional Colombian social beverage pairing blonde lager with Kola soda.',
+          pt: 'Bebida típica colombiana combinando cerveja clara e refrigerante regional.'
         }
       },
       {
@@ -845,9 +929,9 @@
         img: 'Uva Colada Cocktail.png',
         name: { es: 'Uva Colada Cocktail', en: 'Uva Colada Cream Cocktail', pt: 'Uva Colada Cocktail' },
         desc: {
-          es: 'Bebida alcohólica, cremosa a base de uva negra, crema de coco y ron.',
-          en: 'Rich and creamy cocktail made with dark grapes, thick coconut cream, and aged rum.',
-          pt: 'Coquetel cremoso à base de uvas pretas frescas, creme de coco e rum.'
+          es: 'Cóctel cremoso con uva negra fresca, crema de coco y ron.',
+          en: 'Creamy cocktail made with fresh dark grapes, rich coconut cream, and rum.',
+          pt: 'Coquetel cremoso à base de uvas pretas, creme de coco e rum.'
         }
       },
       {
@@ -858,9 +942,9 @@
         img: 'Mojito de Piña.png',
         name: { es: 'Mojito de Piña', en: 'Pineapple Passion Mojito', pt: 'Mojito de Abacaxi Tropical' },
         desc: {
-          es: 'Bebida alcohólica, con piña, mango, maracuyá, hierbabuena y ron.',
-          en: 'Tropical rum mojito shaken with fresh pineapple, mango, passion fruit, and aromatic garden mint.',
-          pt: 'Mojito especial com rum, abacaxi, manga, maracujá e folhas frescas de hortelã.'
+          es: 'Cóctel con piña, mango, maracuyá, hierbabuena y ron añejo.',
+          en: 'Tropical rum mojito shaken with fresh pineapple, passion fruit, and garden mint.',
+          pt: 'Mojito tropical com abacaxi, maracujá, hortelã e rum.'
         }
       },
       {
@@ -996,6 +1080,9 @@
     ];
 
     function formatPrice(priceCop, lang) {
+      if (priceCop === 0) {
+        return lang === 'es' ? 'Bajo Reserva' : (lang === 'pt' ? 'Sob Reserva' : 'Upon Request');
+      }
       const formattedCop = `$${priceCop.toLocaleString('es-CO')}`;
       if (lang === 'en') {
         const usdVal = priceCop / RATES.USD;
@@ -1093,14 +1180,18 @@
       if (filtered.length === 0) {
         grid.innerHTML = `
           <div class="col-span-full text-center py-12">
-            <p class="text-sm text-[#6E5D57]">No se encontraron platos para esta búsqueda.</p>
+            <p class="text-sm text-[#6E5D57]">No se encontraron resultados.</p>
           </div>
         `;
         return;
       }
 
-      grid.innerHTML = filtered.map(item => `
-        <div class="bg-white rounded-2xl border border-[#F0E5DE] overflow-hidden hover:shadow-md transition-shadow flex flex-col justify-between">
+      grid.innerHTML = filtered.map(item => {
+        const isExp = item.isExp;
+        const expWaMsg = encodeURIComponent(`Hola Meraki, quiero información y reservar la experiencia: ${item.name[currentLang]}`);
+
+        return `
+        <div class="bg-white rounded-2xl border ${isExp ? 'border-[#A44A27]/30 shadow-sm' : 'border-[#F0E5DE]'} overflow-hidden hover:shadow-md transition-shadow flex flex-col justify-between">
           <div>
             ${item.img ? `
               <div class="w-full aspect-[4/5] bg-[#F0E5DE]/40 overflow-hidden relative">
@@ -1112,7 +1203,15 @@
                 />
               </div>
             ` : ''}
+
             <div class="p-5">
+              ${isExp ? `
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="bg-[#A44A27]/10 text-[#A44A27] text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full">Experiencia</span>
+                  <span class="text-[11px] text-[#6E5D57] font-medium">${item.meta}</span>
+                </div>
+              ` : ''}
+
               <div class="flex justify-between items-baseline gap-2 mb-2">
                 <h3 class="font-serif text-lg text-[#2B1E1A] font-medium leading-snug">
                   ${item.name[currentLang]}
@@ -1127,15 +1226,26 @@
             </div>
           </div>
 
-          ${item.pop ? `
-            <div class="px-5 pb-5">
+          <div class="px-5 pb-5 pt-2 flex items-center justify-between">
+            ${item.pop ? `
               <span class="inline-block bg-[#A44A27]/10 text-[#A44A27] text-[10px] uppercase font-bold tracking-wider px-2.5 py-0.5 rounded-full">
-                Popular
+                ${isExp ? 'Destacada' : 'Popular'}
               </span>
-            </div>
-          ` : '<div class="pb-2"></div>'}
+            ` : '<div></div>'}
+
+            ${isExp ? `
+              <a 
+                href="https://wa.me/573222858658?text=${expWaMsg}" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="bg-[#A44A27] hover:bg-[#C86B47] text-white text-xs px-3.5 py-1.5 rounded-full font-medium transition-colors"
+              >
+                ${DICTIONARY[currentLang].bookExp} →
+              </a>
+            ` : ''}
+          </div>
         </div>
-      `).join('');
+      `}).join('');
     }
 
     // Initialize
