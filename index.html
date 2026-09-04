@@ -138,7 +138,7 @@
   <!-- MENU GRID -->
   <main class="max-w-6xl mx-auto px-4 py-8">
     <div id="menu-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Items dynamically populated via JS -->
+      <!-- Items populated via JS -->
     </div>
   </main>
 
@@ -262,7 +262,9 @@
         hours: 'Lunes a Domingo: 12:00 PM – 10:00 PM',
         openMap: 'Abrir en Google Maps →',
         whatsappMsg: '¡Hola! Quiero consultar disponibilidad y hacer una reserva en Meraki Salento.',
-        bookExp: 'Reservar Experiencia'
+        bookExp: 'Reservar Experiencia',
+        tagExp: 'Experiencia',
+        tagFeatured: 'Destacada'
       },
       en: {
         badge: 'Salento, Quindío · Gastronomy & Cultural Experiences',
@@ -293,7 +295,9 @@
         hours: 'Monday to Sunday: 12:00 PM – 10:00 PM',
         openMap: 'Open in Google Maps →',
         whatsappMsg: 'Hello! I would like to inquire about bookings and experiences at Meraki Salento.',
-        bookExp: 'Book Experience'
+        bookExp: 'Book Experience',
+        tagExp: 'Experience',
+        tagFeatured: 'Featured'
       },
       pt: {
         badge: 'Salento, Quindío · Experiência Gastronômica & Cultural',
@@ -324,12 +328,14 @@
         hours: 'Segunda a Domingo: 12:00 – 22:00',
         openMap: 'Abrir no Google Maps →',
         whatsappMsg: 'Olá! Gostaria de consultar informações e reservas no Meraki Salento.',
-        bookExp: 'Reservar Experiência'
+        bookExp: 'Reservar Experiência',
+        tagExp: 'Experiência',
+        tagFeatured: 'Destaque'
       }
     };
 
     const MENU_ITEMS = [
-      // ================= EXPERIENCIAS TURÍSTICAS & GASTRONÓMICAS =================
+      // ================= EXPERIENCIAS (CORREGIDAS 100% POR IDIOMA) =================
       {
         id: 'exp1',
         cat: 'experiencias',
@@ -337,16 +343,20 @@
         isExp: true,
         pop: true,
         img: '',
-        meta: '60–75 min · Meraki Salento · ES / EN',
+        meta: {
+          es: '60–75 min · En Meraki · ES / EN',
+          en: '60–75 min · At Meraki · ES / EN',
+          pt: '60–75 min · No Meraki · ES / EN'
+        },
         name: { 
-          es: '🍍 Flavors of Salento (by Meraki)', 
+          es: '🍍 Sabores de Salento (por Meraki)', 
           en: '🍍 Flavors of Salento (by Meraki)', 
-          pt: '🍍 Flavors of Salento (by Meraki)' 
+          pt: '🍍 Sabores de Salento (por Meraki)' 
         },
         desc: {
-          es: 'Un viaje a fuego lento por los sabores locales. Experiencia gastronómica de 4 tiempos: bienvenida, pequeña degustación, plato principal artesanal a elección, bebida de la casa y cierre con café colombiano especial. "El amor se cocina a fuego lento."',
-          en: 'A slow-cooked journey through local flavors. 4-course culinary experience: welcome, tasting, slow-cooked main course of choice, house beverage, and specialty Colombian coffee finish. "Love is slow-cooked."',
-          pt: 'Uma viagem em fogo lento pelos sabores locais. Experiência gastronômica em 4 tempos: boas-vindas, pequena degustação, prato principal artesanal à escolha, bebida da casa e encerramento com café colombiano especial.'
+          es: 'Un viaje a fuego lento por los sabores locales. Experiencia gastronómica de 4 tiempos: bienvenida con introducción a la filosofía de Meraki, pequeña degustación, plato principal artesanal a elección, bebida de la casa y cierre con café colombiano especial. "El amor se cocina a fuego lento."',
+          en: 'A slow-cooked journey through local flavors. 4-course culinary experience: welcome introduction to Meraki’s philosophy, tasting appetizer, slow-cooked signature main dish of choice, house drink, and single-origin Colombian coffee finish. "Love is slow-cooked."',
+          pt: 'Uma viagem em fogo lento pelos sabores locais. Experiência gastronômica em 4 tempos: introdução à filosofia Meraki, degustação de entrada, prato principal artesanal à escolha, bebida da casa e encerramento com café colombiano especial. "O amor se cozinha em fogo lento."'
         }
       },
       {
@@ -356,16 +366,20 @@
         isExp: true,
         pop: true,
         img: '',
-        meta: '90–120 min · Grow Ganja / Meraki · ES / EN',
+        meta: {
+          es: '90–120 min · Jardín & Laboratorio',
+          en: '90–120 min · Garden & Lab',
+          pt: '90–120 min · Jardim & Laboratório'
+        },
         name: { 
-          es: '🌿 The Voice of Plants (Grow Ganja)', 
+          es: '🌿 La Voz de las Plantas (Grow Ganja)', 
           en: '🌿 The Voice of Plants (Grow Ganja)', 
-          pt: '🌿 The Voice of Plants (Grow Ganja)' 
+          pt: '🌿 A Voz das Plantas (Grow Ganja)' 
         },
         desc: {
-          es: 'Experiencia botánica y sensorial en 4 momentos: 1. El Jardín (conocer plantas medicinales y aromáticas) · 2. Los Sentidos (exploración sensorial) · 3. El Laboratorio (procesos de transformación botánica) · 4. Crea & Lleva: prepara tu propio producto botánico para llevar a casa.',
-          en: 'Botanical & sensory experience in 4 steps: 1. The Garden (medicinal herbs) · 2. The Senses (aromatherapy exploration) · 3. The Lab (botanical transformations) · 4. Create & Take Home your own crafted product.',
-          pt: 'Experiência botânica e sensorial em 4 momentos: 1. O Jardim · 2. Os Sentidos · 3. O Laboratório de formulações · 4. Crie e leve seu próprio produto botânico como lembrança de Salento.'
+          es: 'Experiencia botánica y sensorial en 4 momentos: 1. El Jardín (reconocimiento de plantas medicinales y aromáticas) · 2. Los Sentidos (aromaterapia y texturas) · 3. El Laboratorio (procesos de extracción y formulación botánica) · 4. Crea & Lleva: prepara tu propio producto botánico guiado como recuerdo de Salento.',
+          en: 'Botanical and sensory journey in 4 stages: 1. The Garden (identifying aromatic & medicinal herbs) · 2. The Senses (aromatherapy exploration) · 3. The Lab (extraction & botanical formulation) · 4. Create & Take Home: handcraft your own botanical product to take home from Salento.',
+          pt: 'Vivência botânica e sensorial em 4 etapas: 1. O Jardim (ervas aromáticas e medicinais) · 2. Os Sentidos (aromaterapia e texturas) · 3. O Laboratório (extração e formulações) · 4. Crie & Leve: prepare seu próprio produto botânico guiado para levar de lembrança.'
         }
       },
       {
@@ -375,16 +389,20 @@
         isExp: true,
         pop: true,
         img: '',
-        meta: '2h 30 min · 3:00 PM · Grupos máx. 6 pers.',
+        meta: {
+          es: '2h 30 min · 3:00 PM · Máx. 6 personas',
+          en: '2h 30 min · 3:00 PM · Max 6 guests',
+          pt: '2h 30 min · 15:00 · Máx. 6 pessoas'
+        },
         name: { 
-          es: '🏘️ Salento Real: The Stories Behind the Streets', 
-          en: '🏘️ Salento Real: The Stories Behind the Streets', 
-          pt: '🏘️ Salento Real: As Histórias por Trás das Ruas' 
+          es: '🏘️ Salento Real: Historias Detrás de sus Calles', 
+          en: '🏘️ Salento Real: Stories Behind the Streets', 
+          pt: '🏘️ Salento Real: Histórias por Trás das Ruas' 
         },
         desc: {
-          es: 'No vengas solo a ver Salento, ven a entenderlo. Caminata cultural en 5 momentos: Origen, Memoria (historias que no están en Google), Calle Real y sus personajes, Mirador del territorio y Sabores & Memoria fotográfica, finalizando en Meraki.',
-          en: 'Don’t just see Salento, understand it. Cultural walking tour: Origin, Untold Memories, Calle Real artisans, Panoramic Viewpoint, and Local Flavors, concluding back at Meraki.',
-          pt: 'Não venha apenas ver Salento, venha compreendê-lo. Caminhada cultural por histórias locais, personagens da Calle Real, mirante panorâmico e sabores tradicionais, finalizando no Meraki.'
+          es: 'No vengas solo a ver Salento, ven a entenderlo. Caminata cultural en 5 momentos: Origen, Memoria local (historias que no están en Google), Calle Real con sus personajes y artesanos, Mirador panorámico para interpretar el territorio, y degustación de Sabores & Memoria fotográfica, concluyendo en Meraki.',
+          en: 'Don’t just see Salento, understand it. Cultural walking tour in 5 parts: Origins, Untold local heritage, Calle Real artisan encounters, Panoramic mountain viewpoint, and Regional tasting with photographic history, finishing back at Meraki.',
+          pt: 'Não venha apenas ver Salento, venha compreendê-lo. Passeio a pé cultural em 5 atos: Origem, Memória oral do vilarejo, personagens da Calle Real, Mirante panorâmico e degustação de Sabores com memória fotográfica, finalizando no Meraki.'
         }
       },
       {
@@ -394,16 +412,20 @@
         isExp: true,
         pop: false,
         img: '',
-        meta: '~2 horas · Educación Cannábica · Laboratorio',
+        meta: {
+          es: '~2 horas · Educación Cannábica · Laboratorio',
+          en: '~2 hours · Cannabis Education · Lab',
+          pt: '~2 horas · Educação Canábica · Laboratório'
+        },
         name: { 
-          es: '🌱 Grow Ganja: Auto Cultivo (Seed to Transformation)', 
-          en: '🌱 Grow Ganja: Auto Cultivation (Seed to Transformation)', 
-          pt: '🌱 Grow Ganja: Cultivo & Transformação' 
+          es: '🌱 Grow Ganja: De la Semilla a la Transformación', 
+          en: '🌱 Grow Ganja: From Seed to Transformation', 
+          pt: '🌱 Grow Ganja: Da Semente à Transformação' 
         },
         desc: {
-          es: 'Experiencia turística pionera en educación cannábica. Recorrido estructurado desde la selección de semillas, germinación, fases de cultivo, anatomía, terpenos y cannabinoides, hasta los procesos de formulación botánica en laboratorio.',
-          en: 'Pioneering educational cannabis tour in Salento. Learn the full life-cycle from seed selection and grow stages to terpenes, cannabinoids, and laboratory botanical formulations.',
-          pt: 'Experiência turística pioneira em educação canábica em Salento. Conheça todo o ciclo da planta: da semente e cultivo aos terpenos, canabinoides e processos de transformação botânica em laboratório.'
+          es: 'Experiencia turística pionera en Salento enfocada en educación cannábica sin tabúes. Recorrido estructurado a través de todo el ciclo: selección de semillas, germinación, fases de cultivo, anatomía, perfiles de terpenos y cannabinoides, culminando en el laboratorio con sus procesos de formulación botánica.',
+          en: 'Pioneering educational cannabis experience in Salento. A complete masterclass through the plant’s entire cycle: seed genetics, germination, growth phases, terpene profiles, cannabinoids, and modern laboratory botanical formulation methods.',
+          pt: 'Experiência pioneira em educação canábica em Salento sem estigmas. Conheça todo o ciclo da planta: genética de sementes, germinação, etapas de cultivo, terpenos, canabinoides e formulação botânica contemporânea em laboratório.'
         }
       },
 
@@ -1188,6 +1210,7 @@
 
       grid.innerHTML = filtered.map(item => {
         const isExp = item.isExp;
+        const metaText = isExp ? (typeof item.meta === 'object' ? item.meta[currentLang] : item.meta) : '';
         const expWaMsg = encodeURIComponent(`Hola Meraki, quiero información y reservar la experiencia: ${item.name[currentLang]}`);
 
         return `
@@ -1207,8 +1230,10 @@
             <div class="p-5">
               ${isExp ? `
                 <div class="flex items-center gap-2 mb-2">
-                  <span class="bg-[#A44A27]/10 text-[#A44A27] text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full">Experiencia</span>
-                  <span class="text-[11px] text-[#6E5D57] font-medium">${item.meta}</span>
+                  <span class="bg-[#A44A27]/10 text-[#A44A27] text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full">
+                    ${DICTIONARY[currentLang].tagExp}
+                  </span>
+                  <span class="text-[11px] text-[#6E5D57] font-medium">${metaText}</span>
                 </div>
               ` : ''}
 
@@ -1229,7 +1254,7 @@
           <div class="px-5 pb-5 pt-2 flex items-center justify-between">
             ${item.pop ? `
               <span class="inline-block bg-[#A44A27]/10 text-[#A44A27] text-[10px] uppercase font-bold tracking-wider px-2.5 py-0.5 rounded-full">
-                ${isExp ? 'Destacada' : 'Popular'}
+                ${isExp ? DICTIONARY[currentLang].tagFeatured : 'Popular'}
               </span>
             ` : '<div></div>'}
 
