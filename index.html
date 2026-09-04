@@ -104,7 +104,7 @@
       <!-- Categories Tabs -->
       <div class="flex items-center gap-2 overflow-x-auto w-full sm:w-auto pb-1 sm:pb-0 no-scrollbar" id="category-tabs">
         <button onclick="setCategory('all')" data-cat="all" class="cat-btn whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-medium transition-all bg-[#2B1E1A] text-white shadow-sm">Todo</button>
-        <button onclick="setCategory('experiencias')" data-cat="experiencias" class="cat-btn whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-medium transition-all bg-white text-[#6E5D57] hover:bg-[#FDF8F5] border border-[#F0E5DE]">✨ Experiencias</button>
+        <button onclick="setCategory('experiencias')" data-cat="experiencias" class="cat-btn whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-medium transition-all bg-white text-[#6E5D57] hover:bg-[#FDF8F5] border border-[#F0E5DE]">Experiencias</button>
         <button onclick="setCategory('entradas')" data-cat="entradas" class="cat-btn whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-medium transition-all bg-white text-[#6E5D57] hover:bg-[#FDF8F5] border border-[#F0E5DE]">Entradas</button>
         <button onclick="setCategory('fuertes')" data-cat="fuertes" class="cat-btn whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-medium transition-all bg-white text-[#6E5D57] hover:bg-[#FDF8F5] border border-[#F0E5DE]">Fuertes</button>
         <button onclick="setCategory('calientes')" data-cat="calientes" class="cat-btn whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-medium transition-all bg-white text-[#6E5D57] hover:bg-[#FDF8F5] border border-[#F0E5DE]">Bebidas Calientes</button>
@@ -244,7 +244,7 @@
         cannabisText: 'Puedes adicionar Gotas de Cannabis a cualquier bebida',
         categories: {
           all: 'Todo',
-          experiencias: '✨ Experiencias',
+          experiencias: 'Experiencias',
           entradas: 'Entradas',
           fuertes: 'Fuertes',
           calientes: 'Bebidas Calientes',
@@ -277,7 +277,7 @@
         cannabisText: 'You can add Cannabis Drops to any beverage',
         categories: {
           all: 'All',
-          experiencias: '✨ Experiences',
+          experiencias: 'Experiences',
           entradas: 'Appetizers',
           fuertes: 'Main Courses',
           calientes: 'Hot Drinks',
@@ -310,7 +310,7 @@
         cannabisText: 'Você pode adicionar Gotas de Cannabis em qualquer bebida',
         categories: {
           all: 'Tudo',
-          experiencias: '✨ Experiências',
+          experiencias: 'Experiências',
           entradas: 'Entradas',
           fuertes: 'Pratos Principais',
           calientes: 'Bebidas Quentes',
@@ -335,23 +335,23 @@
     };
 
     const MENU_ITEMS = [
-      // ================= EXPERIENCIAS FORMATADAS CON PASOS VISUALES =================
+      // ================= EXPERIENCIAS (Imágenes 1024x640 px · aspect-[16/10] · Sin Emojis) =================
       {
         id: 'exp1',
         cat: 'experiencias',
         price: 0,
         isExp: true,
         pop: true,
-        img: '',
+        img: 'Sabores de Salento (por Meraki).png',
         meta: {
           es: '60–75 min · En Meraki · ES / EN',
           en: '60–75 min · At Meraki · ES / EN',
           pt: '60–75 min · No Meraki · ES / EN'
         },
         name: { 
-          es: '🍍 Sabores de Salento (por Meraki)', 
-          en: '🍍 Flavors of Salento (by Meraki)', 
-          pt: '🍍 Sabores de Salento (por Meraki)' 
+          es: 'Sabores de Salento (por Meraki)', 
+          en: 'Flavors of Salento (by Meraki)', 
+          pt: 'Sabores de Salento (por Meraki)' 
         },
         intro: {
           es: 'Un viaje a fuego lento por los sabores de Salento y la cocina de autor:',
@@ -390,16 +390,16 @@
         price: 0,
         isExp: true,
         pop: true,
-        img: '',
+        img: 'La Voz de las Plantas (Grow Ganja).png',
         meta: {
           es: '90–120 min · Jardín & Laboratorio',
           en: '90–120 min · Garden & Lab',
           pt: '90–120 min · Jardim & Laboratório'
         },
         name: { 
-          es: '🌿 La Voz de las Plantas (Grow Ganja)', 
-          en: '🌿 The Voice of Plants (Grow Ganja)', 
-          pt: '🌿 A Voz das Plantas (Grow Ganja)' 
+          es: 'La Voz de las Plantas (Grow Ganja)', 
+          en: 'The Voice of Plants (Grow Ganja)', 
+          pt: 'A Voz das Plantas (Grow Ganja)' 
         },
         intro: {
           es: 'Recorrido botánico y sensorial para reconectar con el bienestar vegetal:',
@@ -438,16 +438,16 @@
         price: 0,
         isExp: true,
         pop: true,
-        img: '',
+        img: 'Salento Real Historias Detrás de sus Calles.png',
         meta: {
           es: '2h 30 min · 3:00 PM · Máx. 6 personas',
           en: '2h 30 min · 3:00 PM · Max 6 guests',
           pt: '2h 30 min · 15:00 · Máx. 6 pessoas'
         },
         name: { 
-          es: '🏘️ Salento Real: Historias Detrás de sus Calles', 
-          en: '🏘️ Salento Real: Stories Behind the Streets', 
-          pt: '🏘️ Salento Real: Histórias por Trás das Ruas' 
+          es: 'Salento Real: Historias Detrás de sus Calles', 
+          en: 'Salento Real: Stories Behind the Streets', 
+          pt: 'Salento Real: Histórias por Trás das Ruas' 
         },
         intro: {
           es: 'No vengas solo a ver Salento, ven a entenderlo. Caminata cultural en 5 momentos:',
@@ -489,16 +489,16 @@
         price: 0,
         isExp: true,
         pop: false,
-        img: '',
+        img: 'Grow Ganja De la Semilla a la Transformacion.png',
         meta: {
           es: '~2 horas · Educación Cannábica · Laboratorio',
           en: '~2 hours · Cannabis Education · Lab',
           pt: '~2 horas · Educação Canábica · Laboratório'
         },
         name: { 
-          es: '🌱 Grow Ganja: De la Semilla a la Transformación', 
-          en: '🌱 Grow Ganja: From Seed to Transformation', 
-          pt: '🌱 Grow Ganja: Da Semente à Transformação' 
+          es: 'Grow Ganja: De la Semilla a la Transformación', 
+          en: 'Grow Ganja: From Seed to Transformation', 
+          pt: 'Grow Ganja: Da Semente à Transformação' 
         },
         intro: {
           es: 'Experiencia turística pionera en educación cannábica sin mitos ni estigmas:',
@@ -532,7 +532,7 @@
         }
       },
 
-      // ================= ENTRADAS =================
+      // ================= ENTRADAS (1080x1350 px · aspect-[4/5]) =================
       { 
         id: 'e1', 
         cat: 'entradas', 
@@ -612,7 +612,7 @@
         } 
       },
 
-      // ================= FUERTES =================
+      // ================= FUERTES (1080x1350 px · aspect-[4/5]) =================
       {
         id: 'f1',
         cat: 'fuertes',
@@ -796,7 +796,7 @@
         }
       },
 
-      // ================= BEBIDAS CALIENTES =================
+      // ================= BEBIDAS CALIENTES (1080x1350 px · aspect-[4/5]) =================
       {
         id: 'bc1',
         cat: 'calientes',
@@ -928,7 +928,7 @@
         }
       },
 
-      // ================= BEBIDAS FRÍAS =================
+      // ================= BEBIDAS FRÍAS (1080x1350 px · aspect-[4/5]) =================
       {
         id: 'bf1',
         cat: 'frias',
@@ -1316,12 +1316,13 @@
         const isExp = item.isExp;
         const metaText = isExp ? (typeof item.meta === 'object' ? item.meta[currentLang] : item.meta) : '';
         const expWaMsg = encodeURIComponent(`Hola Meraki, quiero información y reservar la experiencia: ${item.name[currentLang]}`);
+        const aspectClass = isExp ? 'aspect-[16/10]' : 'aspect-[4/5]';
 
         return `
         <div class="bg-white rounded-2xl border ${isExp ? 'border-[#A44A27]/30 shadow-sm' : 'border-[#F0E5DE]'} overflow-hidden hover:shadow-md transition-shadow flex flex-col justify-between">
           <div>
             ${item.img ? `
-              <div class="w-full aspect-[4/5] bg-[#F0E5DE]/40 overflow-hidden relative">
+              <div class="w-full ${aspectClass} bg-[#F0E5DE]/40 overflow-hidden relative">
                 <img 
                   src="${item.img}" 
                   alt="${item.name[currentLang]}" 
