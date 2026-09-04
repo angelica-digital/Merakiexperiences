@@ -72,12 +72,11 @@
       transform: translateY(-3px);
       border-color: #A44A27;
     }
-    /* Botón flotante con los colores de acento de Meraki (Terracota/Marrón) */
     .whatsapp-float-btn {
       position: fixed;
       bottom: 24px;
       right: 24px;
-      background: linear-gradient(135deg, #A44A27 0%, #C86B47 100%);
+      background: #25D366;
       color: white;
       width: 60px;
       height: 60px;
@@ -85,19 +84,19 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 28px;
-      box-shadow: 0 8px 24px rgba(164, 74, 39, 0.4);
+      font-size: 30px;
+      box-shadow: 0 0 25px rgba(37, 211, 102, 0.7);
       z-index: 9998;
       transition: all 0.3s ease;
       animation: pulse-float 2s ease-in-out infinite;
     }
     @keyframes pulse-float {
-      0%, 100% { transform: scale(1); box-shadow: 0 8px 24px rgba(164, 74, 39, 0.4); }
-      50% { transform: scale(1.08); box-shadow: 0 12px 35px rgba(200, 107, 71, 0.6); }
+      0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(37, 211, 102, 0.6); }
+      50% { transform: scale(1.08); box-shadow: 0 0 35px rgba(37, 211, 102, 0.9); }
     }
     .whatsapp-float-btn:hover {
-      transform: scale(1.12);
-      background: linear-gradient(135deg, #C86B47 0%, #A44A27 100%);
+      transform: scale(1.15);
+      background: #20bd5a;
     }
   </style>
 </head>
@@ -203,6 +202,39 @@
     </div>
   </section>
 
+  <!-- RESTAURANT ATMOSPHERE GALLERY SECTION (NUEVA SECCIÓN ESTÁTICA) -->
+  <section class="bg-[#FDF8F5] py-16 px-4 border-t border-[#F0E5DE]">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-10">
+        <span class="text-xs uppercase tracking-[0.2em] text-[#A44A27] font-semibold mb-2 block">Atmósfera &amp; Tradición</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-[#2B1E1A] font-normal">El Espacio Meraki</h2>
+        <p class="text-xs text-[#6E5D57] mt-2">Un refugio de cocina de autor y bienestar en el corazón de Salento.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-2xl border border-[#F0E5DE] overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="aspect-[16/10] bg-[#F0E5DE]/40 overflow-hidden relative">
+            <img src="1.jpg" alt="Meraki Salento Fachada Nocturna" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          </div>
+          <div class="p-4 text-center">
+            <h3 class="font-serif text-base text-[#2B1E1A] font-medium">Nuestra Fachada &amp; Terraza</h3>
+            <p class="text-xs text-[#6E5D57] mt-1 font-light">Un espacio acogedor rodeado de naturaleza y calidez artesanal.</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-[#F0E5DE] overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class="aspect-[16/10] bg-[#F0E5DE]/40 overflow-hidden relative">
+            <img src="2.jpg" alt="Meraki Salento Ambiente Interior" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          </div>
+          <div class="p-4 text-center">
+            <h3 class="font-serif text-base text-[#2B1E1A] font-medium">Experiencia Nocturna</h3>
+            <p class="text-xs text-[#6E5D57] mt-1 font-light">Luces cálidas y detalles pensados para cada momento especial.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- UBICACIÓN & HORARIOS INTERACTIVE SECTION -->
   <section class="bg-[#2B1E1A] text-[#FDF8F5] py-16 px-4">
     <div class="max-w-6xl mx-auto">
@@ -304,7 +336,7 @@
     </div>
   </footer>
 
-  <!-- FLOATING WHATSAPP BUTTON (Con los colores y diseño corporativo de Meraki) -->
+  <!-- FLOATING WHATSAPP BUTTON -->
   <a
     id="floating-wa"
     href="https://wa.me/573222858658"
@@ -1044,7 +1076,7 @@
         desc: {
           es: 'Bebida caliente tradicional elaborada con panela orgánica.',
           en: 'Comforting traditional hot beverage made with organic raw cane sugar.',
-          pt: 'Bebida quente tradicional feita com rapadura orgânica.'
+          pt: 'Bebida quente típica tradicional feita com rapadura orgânica.'
         }
       },
 
@@ -1512,20 +1544,20 @@
 
             <a 
               href="https://wa.me/573222858658?text=${waMsgEncoded}" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              class="bg-[#A44A27] hover:bg-[#C86B47] text-white text-xs px-4 py-2 rounded-full font-medium transition-colors shadow-sm ml-auto"
-            >
-              ${isExp ? DICTIONARY[currentLang].bookExp : DICTIONARY[currentLang].orderBtn}
-            </a>
-          </div>
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="bg-[#A44A27] hover:bg-[#C86B47] text-white text-xs px-4 py-2 rounded-full font-medium transition-colors shadow-sm ml-auto"
+          >
+            ${isExp ? DICTIONARY[currentLang].bookExp : DICTIONARY[currentLang].orderBtn}
+          </a>
         </div>
-      `}).join('');
-    }
+      </div>
+    `}).join('');
+  }
 
-    // Initialize
-    setLanguage('es');
-    fetchExchangeRates();
-  </script>
+  // Initialize
+  setLanguage('es');
+  fetchExchangeRates();
+</script>
 </body>
 </html>
