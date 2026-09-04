@@ -190,7 +190,7 @@
         </a>
       </div>
     </div>
-  </footer
+  </footer>
 
   <!-- FLOATING WHATSAPP BUTTON -->
   <a
@@ -321,6 +321,7 @@
       }
     };
 
+    // LISTA ÚNICA E OFICIAL DE ITENS (SEM DUPLICATAS)
     const MENU_ITEMS = [
       // ================= ENTRADAS (1080x1350 px) =================
       { 
@@ -1086,7 +1087,7 @@
                   src="${item.img}" 
                   alt="${item.name[currentLang]}" 
                   class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                  onerror="this.parentElement.style.display='none'"
+                  onerror="this.closest('.bg-white').style.display='none'"
                 />
               </div>
             ` : ''}
