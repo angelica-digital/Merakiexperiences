@@ -321,9 +321,9 @@
       }
     };
 
-    // LISTA ÚNICA E OFICIAL DE ITENS (SEM DUPLICATAS)
+    // LISTA ÚNICA Y COMPLETA CON TODAS LAS IMÁGENES (1080x1350 px)
     const MENU_ITEMS = [
-      // ================= ENTRADAS (1080x1350 px) =================
+      // ================= ENTRADAS =================
       { 
         id: 'e1', 
         cat: 'entradas', 
@@ -403,7 +403,7 @@
         } 
       },
 
-      // ================= FUERTES (1080x1350 px) =================
+      // ================= FUERTES =================
       {
         id: 'f1',
         cat: 'fuertes',
@@ -587,7 +587,7 @@
         }
       },
 
-      // ================= BEBIDAS CALIENTES (1080x1350 px) =================
+      // ================= BEBIDAS CALIENTES =================
       {
         id: 'bc1',
         cat: 'calientes',
@@ -719,7 +719,7 @@
         }
       },
 
-      // ================= BEBIDAS FRÍAS (1080x1350 px com imagens exatas) =================
+      // ================= BEBIDAS FRÍAS =================
       {
         id: 'bf1',
         cat: 'frias',
@@ -868,6 +868,7 @@
         cat: 'frias',
         price: 20000,
         pop: false,
+        img: 'Copa de Vino.png',
         name: { es: 'Copa de Vino', en: 'Glass of Wine', pt: 'Taça de Vinho' },
         desc: {
           es: 'Copa de vino tinto o blanco seleccionado de la casa.',
@@ -880,6 +881,7 @@
         cat: 'frias',
         price: 20000,
         pop: true,
+        img: 'Cerveza Local Artesanal.png',
         name: { es: 'Cerveza Local Artesanal', en: 'Local Craft Beer', pt: 'Cerveja Artesanal Local' },
         desc: {
           es: 'Cerveza artesanal elaborada en el Quindío.',
@@ -892,6 +894,7 @@
         cat: 'frias',
         price: 10000,
         pop: false,
+        img: 'Cerveza Nacional.png',
         name: { es: 'Cerveza Nacional', en: 'National Beer', pt: 'Cerveja Nacional' },
         desc: {
           es: 'Cerveza nacional fría tradicional.',
@@ -904,6 +907,7 @@
         cat: 'frias',
         price: 12000,
         pop: false,
+        img: 'Cerveza Corona.png',
         name: { es: 'Cerveza Corona', en: 'Corona Extra Beer', pt: 'Cerveja Corona Extra' },
         desc: {
           es: 'Botella de cerveza Corona servida fría con rodaja de limón.',
@@ -916,6 +920,7 @@
         cat: 'frias',
         price: 7000,
         pop: false,
+        img: 'Gaseosa Coca Cola servida con hielo y limon.png',
         name: { es: 'Coca Cola', en: 'Coca Cola Classic', pt: 'Coca-Cola Tradicional' },
         desc: {
           es: 'Gaseosa Coca Cola servida con hielo y limón.',
@@ -928,6 +933,7 @@
         cat: 'frias',
         price: 7000,
         pop: false,
+        img: 'Coca Cola Zero.png',
         name: { es: 'Coca Cola Zero', en: 'Coca Cola Zero Sugar', pt: 'Coca-Cola Zero Açúcar' },
         desc: {
           es: 'Gaseosa Coca Cola Zero azúcar servida fría con hielo.',
@@ -940,6 +946,7 @@
         cat: 'frias',
         price: 7000,
         pop: false,
+        img: 'Bretaña.png',
         name: { es: 'Bretaña', en: 'Bretaña Sparkling Club Soda', pt: 'Água com Gás Bretaña' },
         desc: {
           es: 'Agua carbonatada Bretaña servida fría.',
@@ -952,6 +959,7 @@
         cat: 'frias',
         price: 12000,
         pop: false,
+        img: 'Agua de Coco.png',
         name: { es: 'Agua de Coco', en: 'Pure Coconut Water', pt: 'Água de Coco Natural' },
         desc: {
           es: 'Agua de coco natural refrescante.',
@@ -964,6 +972,7 @@
         cat: 'frias',
         price: 5000,
         pop: false,
+        img: 'Agua Sin Gas.png',
         name: { es: 'Agua Sin Gas', en: 'Still Spring Water', pt: 'Água Mineral Sem Gás' },
         desc: {
           es: 'Botella de agua pura sin gas.',
@@ -976,6 +985,7 @@
         cat: 'frias',
         price: 5000,
         pop: false,
+        img: 'Agua Con Gas.png',
         name: { es: 'Agua Con Gas', en: 'Sparkling Spring Water', pt: 'Água Mineral Com Gás' },
         desc: {
           es: 'Botella de agua mineral con gas servida con limón.',
@@ -1098,7 +1108,7 @@
                   src="${item.img}" 
                   alt="${item.name[currentLang]}" 
                   class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                  onerror="this.parentElement.style.display='none'"
+                  onerror="this.closest('.bg-white').style.display='none'"
                 />
               </div>
             ` : ''}
