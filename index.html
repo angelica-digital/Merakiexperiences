@@ -324,12 +324,13 @@
     };
 
     const MENU_ITEMS = [
-      // ================= ENTRADAS (100% CARTA OFICIAL) =================
+      // ================= ENTRADAS (Con imágenes subidas a la raíz de GitHub) =================
       { 
         id: 'e1', 
         cat: 'entradas', 
         price: 20000, 
         pop: true, 
+        img: 'nachossencillos.png',
         name: { es: 'Nachos Sencillos', en: 'Classic Nachos', pt: 'Nachos Clássicos' }, 
         desc: { 
           es: 'Totopos de maíz recién horneados, acompañados de guacamole artesanal y un toque cítrico que despertará el paladar. El comienzo perfecto para compartir, conversar y abrir el apetito.', 
@@ -342,6 +343,7 @@
         cat: 'entradas', 
         price: 35000, 
         pop: true, 
+        img: 'nachosconbirria.png',
         name: { es: 'Nachos con Birria', en: 'Birria Nachos', pt: 'Nachos com Birria' }, 
         desc: { 
           es: 'Crujientes totopos de maíz cubiertos con queso fundido y nuestra birria cocinada lentamente durante horas. Coronados con guacamole fresco, pico de gallo y cebolla encurtida. Intensos y jugosos.', 
@@ -354,6 +356,7 @@
         cat: 'entradas', 
         price: 40000, 
         pop: false, 
+        img: 'Ceviche.png',
         name: { es: 'Ceviche', en: 'House Ceviche', pt: 'Ceviche da Casa' }, 
         desc: { 
           es: 'Porción de cerdo crujiente marinado en limón fresco, mezclado con tomate, cebolla morada, cilantro y un toque de ají. Servido sobre guacamole artesanal y acompañado de tostones de plátano.', 
@@ -366,6 +369,7 @@
         cat: 'entradas', 
         price: 35000, 
         pop: true, 
+        img: 'Papas con Birria.png',
         name: { es: 'Papas con Birria', en: 'Birria Fries', pt: 'Batatas com Birria' }, 
         desc: { 
           es: 'Papas crocantes cubiertas con queso fundido y birria de res cocinada lentamente en sus propios jugos. Coronadas con guacamole, pico de gallo y cebolla encurtida.', 
@@ -378,6 +382,7 @@
         cat: 'entradas', 
         price: 28000, 
         pop: false, 
+        img: 'Papas con Parmesano.png',
         name: { es: 'Papas con Parmesano', en: 'Parmesan Herb Fries', pt: 'Batatas com Parmesão' }, 
         desc: { 
           es: 'Papas doradas y crujientes bañadas en mantequilla aromatizada con ajo y perejil, terminadas con queso parmesano y un toque de finas hierbas. Simples, irresistibles y llenas de carácter.', 
@@ -390,6 +395,7 @@
         cat: 'entradas', 
         price: 25000, 
         pop: false, 
+        img: 'Patacones de la Casa.png',
         name: { es: 'Patacones de la Casa', en: 'House Fried Plantains', pt: 'Patacões da Casa' }, 
         desc: { 
           es: 'Tostones de plátano crocante típicos de Salento acompañados de guacamole y salsa de la casa.', 
@@ -398,7 +404,7 @@
         } 
       },
 
-      // ================= FUERTES (100% CARTA OFICIAL) =================
+      // ================= FUERTES =================
       {
         id: 'f1',
         cat: 'fuertes',
@@ -568,7 +574,7 @@
         }
       },
 
-      // ================= BEBIDAS CALIENTES (100% CARTA OFICIAL) =================
+      // ================= BEBIDAS CALIENTES =================
       {
         id: 'bc1',
         cat: 'calientes',
@@ -690,7 +696,7 @@
         }
       },
 
-      // ================= BEBIDAS FRÍAS (100% CARTA OFICIAL: JUGOS, COCKTAILS, MOCKTAILS & OTRAS) =================
+      // ================= BEBIDAS FRÍAS =================
       {
         id: 'bf1',
         cat: 'frias',
@@ -1058,8 +1064,18 @@
 
       grid.innerHTML = filtered.map(item => `
         <div class="bg-white rounded-2xl border border-[#F0E5DE] overflow-hidden hover:shadow-md transition-shadow flex flex-col justify-between">
-          <div class="p-5 flex-1 flex flex-col justify-between">
-            <div>
+          <div>
+            ${item.img ? `
+              <div class="w-full h-48 bg-[#F0E5DE]/40 overflow-hidden relative">
+                <img 
+                  src="${item.img}" 
+                  alt="${item.name[currentLang]}" 
+                  class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                  onerror="this.parentElement.style.display='none'"
+                />
+              </div>
+            ` : ''}
+            <div class="p-5">
               <div class="flex justify-between items-baseline gap-2 mb-2">
                 <h3 class="font-serif text-lg text-[#2B1E1A] font-medium leading-snug">
                   ${item.name[currentLang]}
@@ -1072,14 +1088,15 @@
                 ${item.desc[currentLang]}
               </p>
             </div>
-            ${item.pop ? `
-              <div class="mt-4">
-                <span class="inline-block bg-[#A44A27]/10 text-[#A44A27] text-[10px] uppercase font-bold tracking-wider px-2.5 py-0.5 rounded-full">
-                  Popular
-                </span>
-              </div>
-            ` : ''}
           </div>
+
+          ${item.pop ? `
+            <div class="px-5 pb-5">
+              <span class="inline-block bg-[#A44A27]/10 text-[#A44A27] text-[10px] uppercase font-bold tracking-wider px-2.5 py-0.5 rounded-full">
+                Popular
+              </span>
+            </div>
+          ` : '<div class="pb-2"></div>'}
         </div>
       `).join('');
     }
