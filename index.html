@@ -72,7 +72,6 @@
       transform: translateY(-3px);
       border-color: #A44A27;
     }
-    /* Botón flotante y WhatsApp con el color marron/terracota de Meraki y sombra suave */
     .whatsapp-float-btn {
       position: fixed;
       bottom: 24px;
@@ -111,7 +110,6 @@
       </a>
 
       <div class="flex items-center gap-3">
-        <!-- Language Switcher -->
         <div class="flex bg-[#F0E5DE]/70 rounded-full p-1 text-xs font-semibold">
           <button onclick="setLanguage('es')" id="btn-es" class="px-2.5 py-1 rounded-full uppercase transition-all bg-[#A44A27] text-white shadow-sm">ES</button>
           <button onclick="setLanguage('en')" id="btn-en" class="px-2.5 py-1 rounded-full uppercase transition-all text-[#6E5D57] hover:text-[#2B1E1A]">EN</button>
@@ -150,7 +148,6 @@
   <!-- STICKY MENU NAVIGATION & SEARCH -->
   <section id="menu" class="sticky top-[73px] sm:top-[81px] z-30 bg-[#FDF8F5]/95 backdrop-blur-md py-3 border-y border-[#F0E5DE]">
     <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row gap-3 items-center justify-between">
-      <!-- Categories Tabs -->
       <div class="flex items-center gap-2 overflow-x-auto w-full sm:w-auto pb-1 sm:pb-0 no-scrollbar" id="category-tabs">
         <button onclick="setCategory('all')" data-cat="all" class="cat-btn whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-medium transition-all bg-[#2B1E1A] text-white shadow-sm">Todo</button>
         <button onclick="setCategory('experiencias')" data-cat="experiencias" class="cat-btn whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-medium transition-all bg-white text-[#6E5D57] hover:bg-[#FDF8F5] border border-[#F0E5DE]">Experiencias</button>
@@ -160,7 +157,6 @@
         <button onclick="setCategory('frias')" data-cat="frias" class="cat-btn whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-medium transition-all bg-white text-[#6E5D57] hover:bg-[#FDF8F5] border border-[#F0E5DE]">Bebidas Frías</button>
       </div>
 
-      <!-- Search Input -->
       <div class="w-full sm:w-64">
         <input
           type="text"
@@ -207,9 +203,9 @@
   <section class="bg-[#FDF8F5] py-16 px-4 border-t border-[#F0E5DE]">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-10">
-        <span class="text-xs uppercase tracking-[0.2em] text-[#A44A27] font-semibold mb-2 block">Atmósfera &amp; Tradición</span>
-        <h2 class="font-serif text-3xl sm:text-4xl text-[#2B1E1A] font-normal">El Espacio Meraki</h2>
-        <p class="text-xs text-[#6E5D57] mt-2">Un refugio de cocina de autor y bienestar en el corazón de Salento.</p>
+        <span id="gallery-tag" class="text-xs uppercase tracking-[0.2em] text-[#A44A27] font-semibold mb-2 block">Atmósfera &amp; Tradición</span>
+        <h2 id="gallery-title" class="font-serif text-3xl sm:text-4xl text-[#2B1E1A] font-normal">El Espacio Meraki</h2>
+        <p id="gallery-sub" class="text-xs text-[#6E5D57] mt-2">Un refugio de cocina de autor y bienestar en el corazón de Salento.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -218,8 +214,8 @@
             <img src="restaurante1.png" alt="Meraki Salento Ambiente" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
           </div>
           <div class="p-4 text-center">
-            <h3 class="font-serif text-base text-[#2B1E1A] font-medium">Fachada &amp; Terraza Meraki</h3>
-            <p class="text-xs text-[#6E5D57] mt-1 font-light">Un espacio acogedor con calidez artesanal en Salento.</p>
+            <h3 id="gallery-c1-title" class="font-serif text-base text-[#2B1E1A] font-medium">Fachada &amp; Terraza Meraki</h3>
+            <p id="gallery-c1-desc" class="text-xs text-[#6E5D57] mt-1 font-light">Un espacio acogedor con calidez artesanal en Salento.</p>
           </div>
         </div>
 
@@ -228,8 +224,8 @@
             <img src="restaurante2.png" alt="Meraki Salento Interior" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
           </div>
           <div class="p-4 text-center">
-            <h3 class="font-serif text-base text-[#2B1E1A] font-medium">Atmósfera Nocturna</h3>
-            <p class="text-xs text-[#6E5D57] mt-1 font-light">Iluminación íntima y detalles pensados para cada experiencia.</p>
+            <h3 id="gallery-c2-title" class="font-serif text-base text-[#2B1E1A] font-medium">Atmósfera Nocturna</h3>
+            <p id="gallery-c2-desc" class="text-xs text-[#6E5D57] mt-1 font-light">Iluminación íntima y detalles pensados para cada experiencia.</p>
           </div>
         </div>
       </div>
@@ -240,9 +236,9 @@
   <section class="bg-[#2B1E1A] text-[#FDF8F5] py-16 px-4">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-12">
-        <span class="text-xs uppercase tracking-[0.2em] text-[#C86B47] font-semibold mb-2 block">Encuéntranos</span>
-        <h2 class="font-serif text-3xl sm:text-4xl text-white font-normal">Ubicación &amp; Horarios</h2>
-        <p class="text-xs text-[#F0E5DE]/70 mt-2">Visítanos en Salento, Quindío. Atendemos a viajeros, locales y huéspedes en convenio.</p>
+        <span id="loc-tag" class="text-xs uppercase tracking-[0.2em] text-[#C86B47] font-semibold mb-2 block">Encuéntranos</span>
+        <h2 id="loc-main-title" class="font-serif text-3xl sm:text-4xl text-white font-normal">Ubicación &amp; Horarios</h2>
+        <p id="loc-main-sub" class="text-xs text-[#F0E5DE]/70 mt-2">Visítanos en Salento, Quindío. Atendemos a viajeros, locales y huéspedes en convenio.</p>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
@@ -251,31 +247,32 @@
           <div class="bg-[#3A2A25] border border-[#523C35] rounded-2xl p-5 shadow-sm relative overflow-hidden flex items-start gap-4">
             <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-[#A44A27]"></div>
             <div>
-              <h3 class="text-xs uppercase tracking-wider text-[#C86B47] font-semibold mb-1">Nuestra Ubicación</h3>
+              <h3 id="loc-card-title1" class="text-xs uppercase tracking-wider text-[#C86B47] font-semibold mb-1">Nuestra Ubicación</h3>
               <p class="text-sm text-[#FDF8F5] font-medium">Cra. 3 #5-56</p>
-              <p class="text-xs text-[#F0E5DE]/80">Salento, Quindío, Colombia</p>
+              <p id="loc-card-sub1" class="text-xs text-[#F0E5DE]/80">Salento, Quindío, Colombia</p>
             </div>
           </div>
 
           <div class="bg-[#3A2A25] border border-[#523C35] rounded-2xl p-5 shadow-sm relative overflow-hidden flex items-start gap-4">
             <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-[#A44A27]"></div>
             <div>
-              <h3 class="text-xs uppercase tracking-wider text-[#C86B47] font-semibold mb-1">Horarios de Atención</h3>
-              <p class="text-sm text-[#FDF8F5] font-medium">Lunes a Domingo</p>
-              <p class="text-xs text-[#F0E5DE]/80">12:00 PM – 10:00 PM</p>
+              <h3 id="loc-card-title2" class="text-xs uppercase tracking-wider text-[#C86B47] font-semibold mb-1">Horarios de Atención</h3>
+              <p id="loc-card-days" class="text-sm text-[#FDF8F5] font-medium">Lunes a Domingo</p>
+              <p id="loc-card-hours" class="text-xs text-[#F0E5DE]/80">2:00 PM – 10:00 PM</p>
             </div>
           </div>
 
           <div class="bg-[#3A2A25] border border-[#523C35] rounded-2xl p-5 shadow-sm relative overflow-hidden flex items-start gap-4">
             <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-[#A44A27]"></div>
             <div>
-              <h3 class="text-xs uppercase tracking-wider text-[#C86B47] font-semibold mb-1">Contacto Directo</h3>
+              <h3 id="loc-card-title3" class="text-xs uppercase tracking-wider text-[#C86B47] font-semibold mb-1">Contacto Directo</h3>
               <p class="text-xs text-[#F0E5DE]/80">WhatsApp: +57 322 285 8658</p>
               <p class="text-xs text-[#F0E5DE]/80 mt-0.5">Instagram: @merakilocal.cosmo</p>
             </div>
           </div>
 
           <a 
+            id="loc-map-btn"
             href="https://share.google/dESclTaohLZJgrkCX" 
             target="_blank" 
             rel="noopener noreferrer" 
@@ -307,7 +304,6 @@
   <footer class="bg-[#211612] text-[#FDF8F5] pt-12 pb-8 px-4 border-t border-[#3A2A25]">
     <div class="max-w-4xl mx-auto text-center flex flex-col items-center justify-center">
       
-      <!-- Redes Sociales Arriba -->
       <div class="flex items-center gap-4 mb-8">
         <a href="https://instagram.com/merakilocal.cosmo" target="_blank" rel="noopener noreferrer" class="footer-social-circle" aria-label="Instagram">
           <i class="fab fa-instagram"></i>
@@ -320,24 +316,21 @@
         </a>
       </div>
 
-      <!-- Logo Central -->
       <div class="mb-6">
         <img src="logo merakibranco.png" alt="Meraki" class="h-16 sm:h-20 w-auto object-contain mx-auto">
       </div>
 
-      <!-- Línea Divisoria Sutil -->
       <div class="w-full border-t border-[#3A2A25] my-6"></div>
 
-      <!-- Créditos y Copyright -->
       <div class="text-xs text-[#F0E5DE]/80 space-y-2">
-        <div>Diseñado con <span class="text-[#C86B47]">🔥</span> potencia <span class="text-white font-semibold"> Angélica Digital</span></div>
+        <div>Diseñado con <span class="text-[#C86B47]">🔥</span> potencia <span class="text-white font-semibold">Angélica Digital</span></div>
         <div class="text-[#F0E5DE]/50">&copy; 2026 Meraki. Todos los derechos reservados.</div>
       </div>
 
     </div>
   </footer>
 
-  <!-- FLOATING WHATSAPP BUTTON (En tono marron/terracota con sombra suave) -->
+  <!-- FLOATING WHATSAPP BUTTON -->
   <a
     id="floating-wa"
     href="https://wa.me/573222858658"
@@ -399,6 +392,23 @@
           { q: '¿Qué métodos de pago aceptan?', a: 'Aceptamos tarjetas internacionales (Visa, Mastercard, Amex), transferencias digitales y efectivo COP.' },
           { q: '¿Tienen opciones vegetarianas en la carta?', a: 'Sí, disponemos de opciones adaptables tanto en el menú regular como en la experiencia gastronómica.' }
         ],
+        galleryTag: 'Atmósfera & Tradición',
+        galleryTitle: 'El Espacio Meraki',
+        gallerySub: 'Un refugio de cocina de autor y bienestar en el corazón de Salento.',
+        galleryC1Title: 'Fachada & Terraza Meraki',
+        galleryC1Desc: 'Un espacio acogedor con calidez artesanal en Salento.',
+        galleryC2Title: 'Atmósfera Nocturna',
+        galleryC2Desc: 'Iluminación íntima y detalles pensados para cada experiencia.',
+        locTag: 'Encuéntranos',
+        locMainTitle: 'Ubicación & Horarios',
+        locMainSub: 'Visítanos en Salento, Quindío. Atendemos a viajeros, locales y huéspedes en convenio.',
+        locCardTitle1: 'Nuestra Ubicación',
+        locCardSub1: 'Salento, Quindío, Colombia',
+        locCardTitle2: 'Horarios de Atención',
+        locCardDays: 'Lunes a Domingo',
+        locCardHours: '2:00 PM – 10:00 PM',
+        locCardTitle3: 'Contacto Directo',
+        locMapBtn: 'Cómo llegar en Google Maps →',
         whatsappMsg: '¡Hola! Quiero consultar disponibilidad y hacer una reserva en Meraki Salento.',
         bookExp: 'Reservar Experiencia',
         orderBtn: 'Pedir →',
@@ -429,6 +439,23 @@
           { q: 'What payment methods do you accept?', a: 'We accept international credit cards (Visa, Mastercard, Amex), digital transfers, and cash COP.' },
           { q: 'Are there vegetarian options available?', a: 'Yes, we offer plant-based alternatives across both the regular menu and culinary experiences.' }
         ],
+        galleryTag: 'Atmosphere & Heritage',
+        galleryTitle: 'The Meraki Space',
+        gallerySub: 'A haven of signature cuisine and botanical wellness in the heart of Salento.',
+        galleryC1Title: 'Meraki Facade & Terrace',
+        galleryC1Desc: 'A warm and welcoming venue with handcrafted character in Salento.',
+        galleryC2Title: 'Evening Atmosphere',
+        galleryC2Desc: 'Intimate lighting and cozy spaces crafted for special moments.',
+        locTag: 'Find Us',
+        locMainTitle: 'Location & Hours',
+        locMainSub: 'Visit us in Salento, Quindío. We welcome travelers, locals, and partner accommodations.',
+        locCardTitle1: 'Our Location',
+        locCardSub1: 'Salento, Quindío, Colombia',
+        locCardTitle2: 'Opening Hours',
+        locCardDays: 'Monday to Sunday',
+        locCardHours: '2:00 PM – 10:00 PM',
+        locCardTitle3: 'Direct Contact',
+        locMapBtn: 'Get Directions on Google Maps →',
         whatsappMsg: 'Hello! I would like to inquire about bookings and experiences at Meraki Salento.',
         bookExp: 'Book Experience',
         orderBtn: 'Order →',
@@ -443,7 +470,7 @@
         howToGet: 'Abrir no Google Maps',
         reserve: 'Reservar Mesa',
         searchPlaceholder: 'Buscar prato ou experiência...',
-        cannabisText: 'Você pode adicionar Gotas de Cannabis em qualquer bebida',
+        cannabisText: 'Você pode adicionar Gotas de Cannabis a qualquer bebida',
         categories: {
           all: 'Tudo',
           experiencias: 'Experiências',
@@ -459,6 +486,23 @@
           { q: 'Quais formas de pagamento são aceitas?', a: 'Aceitamos cartões internacionais, pagamentos por aproximação e dinheiro em espécie (COP).' },
           { q: 'Existem opções vegetarianas?', a: 'Sim, dispomos de alternativas adaptadas tanto no menu quanto na experiência gastronômica.' }
         ],
+        galleryTag: 'Atmosfera & Tradição',
+        galleryTitle: 'O Espaço Meraki',
+        gallerySub: 'Um refúgio de gastronomia autoral e bem-estar no coração de Salento.',
+        galleryC1Title: 'Fachada e Varanda Meraki',
+        galleryC1Desc: 'Um espaço acolhedor com calor artesanal em Salento.',
+        galleryC2Title: 'Atmosfera Noturna',
+        galleryC2Desc: 'Iluminação intimista e detalhes pensados para momentos memoráveis.',
+        locTag: 'Onde Estamos',
+        locMainTitle: 'Localização e Horários',
+        locMainSub: 'Visite-nos em Salento, Quindío. Atendemos turistas, locais e hóspedes de hotéis parceiros.',
+        locCardTitle1: 'Nosso Endereço',
+        locCardSub1: 'Salento, Quindío, Colômbia',
+        locCardTitle2: 'Horários de Atendimento',
+        locCardDays: 'Segunda a Domingo',
+        locCardHours: '14:00 – 22:00',
+        locCardTitle3: 'Contato Direto',
+        locMapBtn: 'Como Chegar no Google Maps →',
         whatsappMsg: 'Olá! Gostaria de consultar informações e reservas no Meraki Salento.',
         bookExp: 'Reservar Experiência',
         orderBtn: 'Pedir →',
@@ -1397,6 +1441,28 @@
       document.getElementById('search-input').placeholder = t.searchPlaceholder;
       document.getElementById('cannabis-text').textContent = t.cannabisText;
       document.getElementById('cannabis-price').innerHTML = `+${formatPrice(5000, lang)}`;
+      document.getElementById('faq-title').textContent = t.faqTitle;
+
+      // Galería de fotos
+      document.getElementById('gallery-tag').textContent = t.galleryTag;
+      document.getElementById('gallery-title').textContent = t.galleryTitle;
+      document.getElementById('gallery-sub').textContent = t.gallerySub;
+      document.getElementById('gallery-c1-title').textContent = t.galleryC1Title;
+      document.getElementById('gallery-c1-desc').textContent = t.galleryC1Desc;
+      document.getElementById('gallery-c2-title').textContent = t.galleryC2Title;
+      document.getElementById('gallery-c2-desc').textContent = t.galleryC2Desc;
+
+      // Ubicación & Horarios
+      document.getElementById('loc-tag').textContent = t.locTag;
+      document.getElementById('loc-main-title').textContent = t.locMainTitle;
+      document.getElementById('loc-main-sub').textContent = t.locMainSub;
+      document.getElementById('loc-card-title1').textContent = t.locCardTitle1;
+      document.getElementById('loc-card-sub1').textContent = t.locCardSub1;
+      document.getElementById('loc-card-title2').textContent = t.locCardTitle2;
+      document.getElementById('loc-card-days').textContent = t.locCardDays;
+      document.getElementById('loc-card-hours').textContent = t.locCardHours;
+      document.getElementById('loc-card-title3').textContent = t.locCardTitle3;
+      document.getElementById('loc-map-btn').innerHTML = `<span>${t.locMapBtn}</span>`;
 
       document.querySelectorAll('.cat-btn').forEach(btn => {
         const catKey = btn.getAttribute('data-cat');
